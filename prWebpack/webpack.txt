@@ -26,4 +26,10 @@
   };
 
 7) Добавлям в джейсон скрипт для 
-  "build": "webpack"
+  "dev": "webpack --mode=development", ==> (для сборки под разработку)
+  "build": "webpack --mode=production" ==> (для сборки под разработку продакшен, минифицирован)
+
+8) Устанавливаем дев сервер
+  npm install webpack-dev-server --save-dev
+
+9)
