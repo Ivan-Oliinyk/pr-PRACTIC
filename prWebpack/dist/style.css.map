@@ -1,0 +1,1 @@
+{"version":3,"file":"style.css","mappings":";;;AAAA;EACE;AACF;AACE;EACE;AACJ,C;;;;ACJE;EACE;AAAJ,C","sources":["webpack://prwebpack/./src/scss/common.scss","webpack://prwebpack/./src/scss/main.scss"],"sourcesContent":["body {\n  background-color: tomato;\n\n  h1 {\n    color: green;\n  }\n}\n","body {\n  h1 {\n    font-size: 30px;\n  }\n}\n"],"names":[],"sourceRoot":""}
