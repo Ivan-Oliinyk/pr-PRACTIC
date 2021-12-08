@@ -1,4 +1,9 @@
 1) устанавливаем пакеты для вебпак
   npm install -D webpack webpack-cli 
 
-2)
+2) устанавливаем плагин 
+  npm install -D html-webpack-plugin
+  После подключаем его в конфиги и в плагины
+
+3)  устанавливаем плагин 
+  npm install -D clean-webpack-plugin
