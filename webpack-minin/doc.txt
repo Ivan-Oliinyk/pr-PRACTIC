@@ -1,0 +1,4 @@
+1) устанавливаем пакеты для вебпак
+  npm install -D webpack webpack-cli 
+
+2)
