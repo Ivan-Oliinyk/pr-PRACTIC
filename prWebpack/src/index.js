@@ -1,5 +1,5 @@
 import "./scss/common.scss";
-import "./scss/main.scss";
+// import "./scss/main.scss";
 
 console.log("sdasdassadd2");
 console.log(2);
