@@ -6,7 +6,7 @@ console.log(2);
 
 // создаем элемент заголовка
 const heading = document.createElement("h1");
-heading.textContent = "Как интересно 223!";
+heading.textContent = "Как интересно 222322!";
 
 // добавляем заголовок в DOM
 const root = document.querySelector("#root");
