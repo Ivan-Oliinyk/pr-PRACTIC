@@ -11,7 +11,7 @@ const generateAccessToken = (id, roles) => {
     roles,
   };
 
-  return kwt.sign(payload, secret, { expiresIn: "24h" });
+  return jwt.sign(payload, secret, { expiresIn: "24h" });
 };
 class authController {
   async registration(req, res) {
@@ -47,8 +47,6 @@ class authController {
       console.log(e);
       res.status(400).json({ message: "Registration error" });
     }
-    const token = generateAccessToken(user._id, user.roles);
-    return res.json({ token });
   }
   async login(req, res) {
     try {
@@ -62,23 +60,23 @@ class authController {
       }
 
       const validPassword = bcrypt.compareSync(password, user.password);
+
       if (!validPassword) {
         return res.status(400).json({ message: "Password is NOT TRUE" });
       }
+
+      const token = generateAccessToken(user._id, user.roles);
+      return res.json({ token });
     } catch (e) {
       console.log(e);
       res.status(400).json({ message: "Loggin error" });
     }
   }
+
   async getUsers(req, res) {
     try {
-      // const userRole = new Role();
-      // const adminRole = new Role({ value: "ADMIN" });
-
-      // await userRole.save();
-      // await adminRole.save();
-
-      res.json("server is work !!!");
+      const users = await User.find();
+      res.json(users);
     } catch (e) {}
   }
 }
