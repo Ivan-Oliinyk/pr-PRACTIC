@@ -17,6 +17,21 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), //папка куда будет собираться файлы
   },
 
+  resolve: {
+    // extensions: ["js", ".json", ".png"], // устанавливает раширения по умолчанию можно теперь при импоре их не ставить ВАЖНО!==== названия не должны совпадать
+    alias: {
+      "@models": path.resolve(__dirname, "src/models/"),
+      "@": path.resolve(__dirname, "src/"),
+    },
+  },
+
+  //для оптимизации работы с библиотеками
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+
   //плагины храняться в массиве, добавляются только через new ИМЯ ПЛАГИНА()
   plugins: [
     new HTMLWebpackPlagin({
@@ -26,4 +41,39 @@ module.exports = {
 
     new CleanWebpackPlugin(),
   ],
+
+  devServer: {
+    port: 8888,
+  }
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"], //порядок чтения в вебпаке справа налево
+      },
+
+      {
+        test: /\.(png|jpg|svg|gif)$/, // будет искать файлы с данным расширением
+        // use: ["asset/resource"], // указываем не работатет в 5вебпаке
+        type: "asset/resource", //для 5 вебпака
+      },
+
+      {
+        test: /\.(woff(2)?|ttf|woff|eot|otf)$/,
+        // use: ["file-loader"],
+        type: "asset/inline",
+      },
+
+      {
+        test: /\.xml$/,
+        use: ["xml-loader"],
+      },
+
+      {
+        test: /\.csv$/,
+        use: ["csv-loader"],
+      },
+    ],
+  },
 };

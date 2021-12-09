@@ -1,3 +1,5 @@
+import * as $ from "jquery";
+
 function createAnalitics() {
   let counter = 0;
   let isDestroyed = false;
