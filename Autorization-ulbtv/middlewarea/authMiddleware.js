@@ -7,7 +7,7 @@ module.exports = function (req, res, next) {
   }
 
   try {
-    const token = req.header.autorization.split(" ")[1];
+    const token = req.headers.autorization.split(" ")[1];
 
     if (!token) {
       return res.status(403).json({ message: "User is not autorization" });
