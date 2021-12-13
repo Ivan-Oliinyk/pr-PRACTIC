@@ -15,8 +15,8 @@
   </head>
   <body>
     <main>
-      <section class="container mainPage">
-        <div class="mainPage__img">
+      <section class="container hero">
+        <div class="hero__img">
           <div class="content-wrapper">
             <div class="logo-wrapper">
               <img class="logo" src="./assets/images/logo.png" alt="Logo" />
@@ -28,10 +28,51 @@
             </h2>
           </div>
         </div>
-        <div class="mainPage__context">
+        <div class="hero__context select-wallet">
           <a href="./index.html">
             <img src="./assets/images/goBack/goBack.png" alt="go Back" />
           </a>
+          <h2 class="title">Select wallet</h2>
+
+          <div class="radio-input__wrapper">
+            <input
+              class="radio-input"
+              type="radio"
+              name="check-wallet"
+              id="radio-check1"
+            />
+            <label for="radio-check1" class="radio-input__label">
+              <div class="label-content">
+                <img
+                  src="./assets/images/selectWallet/handCash.png"
+                  alt="hand-cash"
+                  width="44"
+                  height="44"
+                />
+                <div>Handcash</div>
+              </div>
+            </label>
+          </div>
+          <div class="radio-input__wrapper">
+            <input
+              class="radio-input"
+              type="radio"
+              name="check-wallet"
+              id="radio-check2"
+            />
+            <label for="radio-check2" class="radio-input__label">
+              <div class="label-content">
+                <img
+                  src="./assets/images/selectWallet/moneyButton.png"
+                  alt="Moneybutton"
+                  width="44"
+                  height="44"
+                />
+                <div>Moneybutton</div>
+              </div>
+            </label>
+          </div>
+          <a class="btn select-wallet__link" href="#"><p>Continue</p></a>
         </div>
       </section>
     </main>

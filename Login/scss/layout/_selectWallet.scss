@@ -1,0 +1,34 @@
+.select-wallet {
+  margin: 0;
+  padding: 95px 20px 20px 100px;
+
+  .title {
+    margin-top: 43px;
+  }
+
+  .select-wallet__link.btn {
+    margin-top: 75px;
+    background-color: #d1dcde;
+    border-color: #d1dcde;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .select-wallet {
+    margin: 0 auto;
+    padding: 95px 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .select-wallet {
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .select-wallet {
+    padding: 15px;
+  }
+}
