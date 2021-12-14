@@ -637,10 +637,23 @@ body {
   position: relative;
   display: block;
   border-radius: 50%;
-  border: 2px solid #10a5f5;
+  border: 2px solid transparent;
   min-width: 45px;
   min-height: 45px;
   cursor: pointer;
+}
+
+.header .header__avatar:hover, .header .header__avatar:focus {
+  border: 2px solid #10a5f5;
+}
+
+.header .header__avatar .user-menu__list {
+  display: none;
+}
+
+.header .header__avatar:hover .user-menu__list,
+.header .header__avatar:focus .user-menu__list {
+  display: block;
 }
 
 .header .header__avatar .header__avatar-img {
@@ -685,8 +698,8 @@ body {
 
 .user-menu__list {
   position: absolute;
-  top: 85px;
-  right: 85px;
+  top: 60px;
+  right: -15px;
   display: block;
   -webkit-box-shadow: 0 0 1px #d6d6d6;
           box-shadow: 0 0 1px #d6d6d6;

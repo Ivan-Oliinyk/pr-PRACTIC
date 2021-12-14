@@ -32,6 +32,7 @@
     display: flex;
     margin-right: 20px;
     cursor: pointer;
+
     .header__social-item:not(:last-of-type) {
       margin-right: 25px;
     }
@@ -41,10 +42,24 @@
     position: relative;
     display: block;
     border-radius: 50%;
-    border: 2px solid $color-blude-v1;
+    border: 2px solid transparent;
     min-width: 45px;
     min-height: 45px;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 2px solid $color-blude-v1;
+    }
+
+    .user-menu__list {
+      display: none;
+    }
+
+    &:hover .user-menu__list,
+    &:focus .user-menu__list {
+      display: block;
+    }
 
     .header__avatar-img {
       object-fit: cover;
