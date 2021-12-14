@@ -1,0 +1,45 @@
+.user-name {
+  .user-name__box {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 400px;
+    min-height: 112px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .user-name__box-img {
+    width: 70px;
+    height: 70px;
+    position: relative;
+
+    .img1 {
+      position: absolute;
+    }
+
+    .img2 {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .user-name__text {
+    margin-left: 25px;
+
+    .title {
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    .text {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+}
