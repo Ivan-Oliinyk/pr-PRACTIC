@@ -24,6 +24,10 @@
 @media screen and (max-width: 768px) {
   .select-wallet {
     padding: 30px 50px;
+
+    .select-wallet__link.btn {
+      margin-top: 30px;
+    }
   }
 }
 

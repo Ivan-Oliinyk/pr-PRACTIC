@@ -1,0 +1,53 @@
+.header {
+  padding: 20px 0;
+  min-height: 96px;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px #00000008;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-wrapper {
+    margin-right: 60px;
+    .logo {
+      width: 49px;
+      height: 49px;
+    }
+
+    .title {
+      font-size: 30px;
+      color: #000;
+    }
+  }
+
+  .btn.btn__gradient {
+    max-width: 184px;
+    min-height: 46px;
+    margin-right: 40px;
+  }
+
+  .header__social-list {
+    display: flex;
+    margin-right: 20px;
+    .header__social-item:not(:last-of-type) {
+      margin-right: 25px;
+    }
+  }
+
+  .header__avatar {
+    display: block;
+    border-radius: 50%;
+    border: 2px solid $color-blude-v1;
+    min-width: 45px;
+    min-height: 45px;
+
+    .header__avatar-img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 2px solid $color-white;
+    }
+  }
+}

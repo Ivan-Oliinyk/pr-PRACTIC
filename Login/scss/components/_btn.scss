@@ -19,6 +19,12 @@
   }
 }
 
+.btn.btn__gradient {
+  background: linear-gradient(45deg, #39dbff, #28a5f5);
+  border: 1px solid #39dbff;
+  color: $color-white;
+}
+
 @media screen and (max-width: 992px) {
   .btn {
     width: 250px;

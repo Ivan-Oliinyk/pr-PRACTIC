@@ -1,13 +1,24 @@
 //common
 @import "./common/normalize";
 @import "./common/base";
+@import "./common/container";
+
+//utils
+@import "./utils/variables";
 
 //components
+@import "./components/logo";
 @import "./components/btn";
 @import "./components/radio-input";
 @import "./components/inputText";
-//utils
+@import "./components/input-checkbox";
+@import "./components/arrow";
+@import "./components/_header";
+@import "./components/main";
+@import "./components/_input-search";
+
 //layout
 @import "./layout/heroPage";
 @import "./layout/selectWallet";
 @import "./layout/userName";
+@import "./layout/logInWithWallet";

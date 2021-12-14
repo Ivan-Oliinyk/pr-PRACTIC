@@ -15,7 +15,7 @@
   </head>
   <body>
     <main>
-      <section class="container hero">
+      <section class="hero">
         <div class="hero__img">
           <div class="content-wrapper">
             <div class="logo-wrapper">
@@ -29,9 +29,13 @@
           </div>
         </div>
         <div class="hero__context select-wallet">
-          <a href="./index.html">
-            <img src="./assets/images/goBack/goBack.png" alt="go Back" />
+          <a class="arrow__back" href="./index.html">
+            <svg class="arrow-svg" width="16" height="16">
+              <use href="./assets/images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+            Back
           </a>
+
           <h2 class="title">Select wallet</h2>
 
           <div class="radio-input__wrapper">
