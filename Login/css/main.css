@@ -380,6 +380,11 @@ body {
   color: #fff;
 }
 
+.btn.btn__gradient:hover, .btn.btn__gradient:focus {
+  background: linear-gradient(45deg, #00aecb, #0b91d9);
+  border-color: #28a5f5;
+}
+
 @media screen and (max-width: 992px) {
   .btn {
     width: 250px;
@@ -621,6 +626,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header .header__social-list .header__social-item:not(:last-of-type) {
@@ -628,11 +634,13 @@ body {
 }
 
 .header .header__avatar {
+  position: relative;
   display: block;
   border-radius: 50%;
   border: 2px solid #10a5f5;
   min-width: 45px;
   min-height: 45px;
+  cursor: pointer;
 }
 
 .header .header__avatar .header__avatar-img {
@@ -673,6 +681,70 @@ body {
   line-height: 16px;
   border: none;
   outline: none;
+}
+
+.user-menu__list {
+  position: absolute;
+  top: 85px;
+  right: 85px;
+  display: block;
+  -webkit-box-shadow: 0 0 1px #d6d6d6;
+          box-shadow: 0 0 1px #d6d6d6;
+  border-radius: 10px;
+}
+
+.user-menu__list .user-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  width: 200px;
+  min-height: 56px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+
+.user-menu__list .user-menu__item:not(:last-of-type) {
+  border-bottom: none;
+}
+
+.user-menu__list .user-menu__item:first-of-type {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.user-menu__list .user-menu__item:first-of-type:before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 28px;
+  z-index: 2;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #fff;
+}
+
+.user-menu__list .user-menu__item:first-of-type:after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: 27px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 18px solid #d6d6d6;
+}
+
+.user-menu__list .user-menu__item:last-of-type {
+  border-radius: 0 0 10px 10px;
 }
 
 .hero {

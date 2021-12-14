@@ -23,6 +23,12 @@
   background: linear-gradient(45deg, #39dbff, #28a5f5);
   border: 1px solid #39dbff;
   color: $color-white;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(45deg, #00aecb, #0b91d9);
+    border-color: #28a5f5;
+  }
 }
 
 @media screen and (max-width: 992px) {

@@ -31,17 +31,20 @@
   .header__social-list {
     display: flex;
     margin-right: 20px;
+    cursor: pointer;
     .header__social-item:not(:last-of-type) {
       margin-right: 25px;
     }
   }
 
   .header__avatar {
+    position: relative;
     display: block;
     border-radius: 50%;
     border: 2px solid $color-blude-v1;
     min-width: 45px;
     min-height: 45px;
+    cursor: pointer;
 
     .header__avatar-img {
       object-fit: cover;
