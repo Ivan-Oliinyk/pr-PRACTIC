@@ -1,0 +1,17 @@
+.arrow__back {
+  display: flex;
+  align-items: center;
+  color: #10a5f5;
+  fill: #10a5f5;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #00dbff;
+    fill: #00dbff;
+  }
+
+  .arrow-svg {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    <main>
+      <div class="backdrop main-container make-post__wrapper">
+        <div class="make-post">
+          <div class="make-post__header-wrapper">
+            <h2 class="make-post__title">Make a post</h2>
+
+            <div class="close__wrapper">
+              <svg class="close" width="20" height="20">
+              <use
+                href="./assets/images/sprites/symbol-defs.svg#icon-close"
+              ></use>
+            </div>
+            </svg>
+          </div>
+
+          <div class="make-post__input">
+            <div class="input-wrapper">
+              <input
+                class="input-text"
+                type="text"
+                name="name"
+                placeholder="Say something nice…"
+              />
+              <span class="user-name__input-descr">Say something nice…</span>
+            </div>
+          </div>
+
+          <div class="make-post__carusel-wrapper">
+            <div class="make-post__carusel">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 96 – 1.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+              <img class='make-post__carusel-post' src="./assets/images/posts/Component 95 – 2@2x.png" alt="post" width="208" height="208">
+            </div>
+            <!-- <div class="make-post__carusel-scroll">
+              <div class="caret"></div>
+            </div> -->
+          </div>
+          <div class="make-post__footer">
+            <button class="btn btn__gradient make-post__btn" type="button">Post</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

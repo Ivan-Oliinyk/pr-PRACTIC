@@ -1,0 +1,30 @@
+//common
+@import "./common/normalize.scss";
+@import "./common/base.scss";
+@import "./common/container.scss";
+@import "./common/main.scss";
+@import "./common/backdrop.scss";
+@import "./common/scroll.scss";
+
+//utils
+@import "./utils/variables";
+
+//components
+@import "./components/title";
+@import "./components/logo";
+@import "./components/btn";
+@import "./components/radio-input";
+@import "./components/inputText";
+@import "./components/input-checkbox";
+@import "./components/arrow";
+@import "./components/_header";
+@import "./components/_input-search";
+@import "./components/user-menu";
+@import "./components/user-post";
+
+//layout
+@import "./layout/heroPage";
+@import "./layout/selectWallet";
+@import "./layout/userName";
+@import "./layout/logInWithWallet";
+@import "./layout/_make-post";
