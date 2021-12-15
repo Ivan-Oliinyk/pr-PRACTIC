@@ -71,27 +71,13 @@
 
     .make-post__carusel-post {
       border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
 
       &:not(:last-of-type) {
         margin-right: 10px;
       }
     }
-
-    // .make-post__carusel-scroll {
-    //   margin-top: 25px;
-    //   width: 100%;
-    //   height: 5px;
-    //   border-radius: 15px;
-    //   background-color: #ededed;
-    //   cursor: pointer;
-
-    //   .caret {
-    //     background-color: #808080;
-    //     height: 100%;
-    //     width: 60%;
-    //     border-radius: 15px;
-    //   }
-    // }
   }
 
   .make-post__footer {

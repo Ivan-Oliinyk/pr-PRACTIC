@@ -1229,6 +1229,10 @@ body {
 
 .make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-post {
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-post:not(:last-of-type) {
