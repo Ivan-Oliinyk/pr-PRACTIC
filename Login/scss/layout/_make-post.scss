@@ -65,6 +65,8 @@
 
     .make-post__carusel {
       display: flex;
+      overflow: auto;
+      padding-bottom: 20px;
     }
 
     .make-post__carusel-post {
@@ -75,21 +77,21 @@
       }
     }
 
-    .make-post__carusel-scroll {
-      margin-top: 25px;
-      width: 100%;
-      height: 5px;
-      border-radius: 15px;
-      background-color: #ededed;
-      cursor: pointer;
+    // .make-post__carusel-scroll {
+    //   margin-top: 25px;
+    //   width: 100%;
+    //   height: 5px;
+    //   border-radius: 15px;
+    //   background-color: #ededed;
+    //   cursor: pointer;
 
-      .caret {
-        background-color: #808080;
-        height: 100%;
-        width: 60%;
-        border-radius: 15px;
-      }
-    }
+    //   .caret {
+    //     background-color: #808080;
+    //     height: 100%;
+    //     width: 60%;
+    //     border-radius: 15px;
+    //   }
+    // }
   }
 
   .make-post__footer {

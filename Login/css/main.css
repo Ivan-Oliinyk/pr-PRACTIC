@@ -337,6 +337,23 @@ body {
   height: 100vh;
 }
 
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 5px;
+  /* ширина для вертикального скролла */
+  height: 5px;
+  /* высота для горизонтального скролла */
+  background-color: #ededed;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #808080;
+  border-radius: 9em;
+  -webkit-box-shadow: inset 1px 1px 10px transparent;
+          box-shadow: inset 1px 1px 10px transparent;
+}
+
 .logo-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1206,6 +1223,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: auto;
+  padding-bottom: 20px;
 }
 
 .make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-post {
@@ -1214,22 +1233,6 @@ body {
 
 .make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-post:not(:last-of-type) {
   margin-right: 10px;
-}
-
-.make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-scroll {
-  margin-top: 25px;
-  width: 100%;
-  height: 5px;
-  border-radius: 15px;
-  background-color: #ededed;
-  cursor: pointer;
-}
-
-.make-post__wrapper .make-post__carusel-wrapper .make-post__carusel-scroll .caret {
-  background-color: #808080;
-  height: 100%;
-  width: 60%;
-  border-radius: 15px;
 }
 
 .make-post__wrapper .make-post__footer {
