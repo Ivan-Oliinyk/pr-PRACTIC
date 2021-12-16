@@ -25,8 +25,8 @@
             </div>
           </div>
 
-          <div class="chat__user-carts">
-            <div class="user-cart">
+          <ul class="chat__user-carts">
+            <li class="user-cart">
               <img
                 class="user__avatar"
                 src="./assets/images/chat/user1.png"
@@ -39,8 +39,9 @@
                 <h3 class="title">Layla Brown</h3>
                 <p class="text">Nice to meet you too!</p>
               </div>
-            </div>
-            <div class="user-cart">
+            </li>
+
+            <li class="user-cart">
               <img
                 class="user__avatar"
                 src="./assets/images/chat/user2.png"
@@ -55,9 +56,9 @@
               </div>
 
               <div class="message-count">2</div>
-            </div>
+            </li>
 
-            <div class="user-cart">
+            <li class="user-cart">
               <img
                 class="user__avatar"
                 src="./assets/images/chat/user3.png"
@@ -71,9 +72,9 @@
                 <p class="text">Nice to meet you too!</p>
               </div>
               <div class="message-count">9</div>
-            </div>
+            </li>
 
-            <div class="user-cart">
+            <li class="user-cart">
               <img
                 class="user__avatar"
                 src="./assets/images/chat/user4.png"
@@ -87,9 +88,9 @@
                 <p class="text">Nice to meet you too!</p>
               </div>
               <div class="message-count">12</div>
-            </div>
+            </li>
 
-            <div class="user-cart">
+            <li class="user-cart">
               <img
                 class="user__avatar"
                 src="./assets/images/chat/user5.png"
@@ -103,10 +104,52 @@
                 <p class="text">Nice to meet you too!</p>
               </div>
               <div class="message-count">1</div>
+            </li>
+          </ul>
+        </div>
+        <div class="chat__content">
+          <div class="active__active">
+            <img
+              src="./assets/images/chat/user3.png"
+              alt="user"
+              width="39"
+              height="39"
+            />
+            <h3 class="user-title">Max Richardson</h3>
+          </div>
+
+          <div class="chat-window">
+            <div class="message-date">Thursday, 12 Mar 2020</div>
+            <div class="my-message">It was nice meeting you!</div>
+            <div class="guest-message__wrapper">
+              <img
+                src="./assets/images/chat/user3.png"
+                alt="user"
+                width="39"
+                height="39"
+              />
+              <div class="guest-message">Nice to meet you too!</div>
+            </div>
+          </div>
+
+          <div class="message-input__wrapper">
+            <div class="load-file">
+              <svg class="icon" width="17" heigth="17">
+                <use
+                  href="./assets/images/symbol-defs.svg#icon-file-picture"
+                ></use>
+              </svg>
+            </div>
+            <div class="input-wrapper">
+              <input
+                class="input-text"
+                type="text"
+                name="name"
+                placeholder="Say something nice..."
+              />
             </div>
           </div>
         </div>
-        <div class="chat__content"></div>
       </section>
     </main>
   </body>

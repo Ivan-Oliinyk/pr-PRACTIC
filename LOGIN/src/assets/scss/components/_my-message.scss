@@ -1,0 +1,21 @@
+.my-message {
+  position: relative;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  padding: 0.7em 1.3em;
+  background-color: $color-blue-v1;
+  font-size: 1.6rem;
+  color: $color-white;
+  max-width: 22rem;
+  border-radius: 3rem 3rem 0 3rem;
+
+  &:before {
+    content: "7:12 am";
+    display: block;
+    position: absolute;
+    left: -4em;
+    bottom: -1em;
+    font-size: 1.1rem;
+    color: grey;
+  }
+}
