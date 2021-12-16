@@ -36,6 +36,17 @@
     .header__social-item:not(:last-of-type) {
       margin-right: 2.5rem;
     }
+
+    .header__social-item .icon {
+      fill: $color-grey-v3;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      &:hover,
+      &:focus {
+        fill: $color-blue-v1;
+      }
+    }
   }
 
   .header__avatar {

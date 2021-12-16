@@ -1,0 +1,42 @@
+.container {
+  padding: 0;
+}
+
+.chat__wrapper {
+  border-left: 1px solid $color-grey;
+  border-right: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+  min-height: calc(100vh - 9.6rem);
+  width: 100%;
+
+  .chat__users {
+    width: 37rem;
+    min-height: calc(100vh - 9.6rem);
+    border-right: 1px solid $color-grey;
+
+    .search-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 10rem;
+      width: 100%;
+      border-bottom: 1px solid $color-grey;
+
+      .input-search__wrapper {
+        max-width: 90%;
+        margin-right: 0;
+      }
+
+      .input-search {
+        background-color: transparent;
+      }
+    }
+
+    .chat__user-carts {
+      padding: 1rem 0;
+    }
+  }
+
+  .chat__content {
+  }
+}

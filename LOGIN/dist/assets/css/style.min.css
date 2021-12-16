@@ -592,6 +592,14 @@ body {
 .header .header__social-list .header__social-item:not(:last-of-type) {
   margin-right: 2.5rem;
 }
+.header .header__social-list .header__social-item .icon {
+  fill: #939393;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header .header__social-list .header__social-item .icon:hover, .header .header__social-list .header__social-item .icon:focus {
+  fill: #10a5f5;
+}
 .header .header__avatar {
   position: relative;
   display: block;
@@ -767,6 +775,52 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
 }
+.user-cart {
+  position: relative;
+  padding: 2.4rem 5rem 2.4rem 1.6rem;
+  display: flex;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background-color 250ms linear, border-left 250ms linear;
+}
+.user-cart:hover, .user-cart:focus {
+  background-color: #f0f9fd;
+  border-left: 3px solid #10a5f5;
+}
+.user-cart .user__avatar {
+  border-radius: 50%;
+}
+.user-cart .user__info {
+  margin-left: 1.4rem;
+}
+.user-cart .user__info .title {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.user-cart .user__info .text {
+  margin-top: 0.2em;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: #939393;
+}
+.user-cart .message-count {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  min-width: 22px;
+  background-color: #10a5f5;
+  border-radius: 15px;
+  padding: 0 9px;
+  color: #fff;
+}
+
 .hero {
   display: flex;
 }
@@ -1031,4 +1085,39 @@ body {
   margin-right: auto;
   margin-top: 2rem;
   max-width: 18.5rem;
+}
+
+.container {
+  padding: 0;
+}
+
+.chat__wrapper {
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  min-height: calc(100vh - 9.6rem);
+  width: 100%;
+}
+.chat__wrapper .chat__users {
+  width: 37rem;
+  min-height: calc(100vh - 9.6rem);
+  border-right: 1px solid #d6d6d6;
+}
+.chat__wrapper .chat__users .search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  width: 100%;
+  border-bottom: 1px solid #d6d6d6;
+}
+.chat__wrapper .chat__users .search-wrapper .input-search__wrapper {
+  max-width: 90%;
+  margin-right: 0;
+}
+.chat__wrapper .chat__users .search-wrapper .input-search {
+  background-color: transparent;
+}
+.chat__wrapper .chat__users .chat__user-carts {
+  padding: 1rem 0;
 }

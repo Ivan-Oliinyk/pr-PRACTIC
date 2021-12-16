@@ -1,10 +1,10 @@
 //common
-@import "./common/normalize.scss";
-@import "./common/base.scss";
-@import "./common/container.scss";
-@import "./common/main.scss";
-@import "./common/backdrop.scss";
-@import "./common/scroll.scss";
+@import "./common/normalize";
+@import "./common/base";
+@import "./common/container";
+@import "./common/main";
+@import "./common/backdrop";
+@import "./common/scroll";
 
 //utils
 @import "./utils/variables";
@@ -21,6 +21,7 @@
 @import "./components/_input-search";
 @import "./components/user-menu";
 @import "./components/user-post";
+@import "./components/user-cart";
 
 //layout
 @import "./layout/heroPage";
@@ -28,3 +29,4 @@
 @import "./layout/userName";
 @import "./layout/logInWithWallet";
 @import "./layout/_make-post";
+@import "./layout/_chat";
