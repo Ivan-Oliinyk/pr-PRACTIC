@@ -949,11 +949,22 @@ body {
     color: #fff;
 }
 
+.my-message__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.my-message__wrapper:not(:first-of-type) {
+    margin-top: 4.5rem;
+}
+
 .my-message {
     position: relative;
-    margin-left: auto;
-    margin-right: 1.5rem;
+    display: inline-block;
     padding: 0.7em 1.3em;
+    margin-right: 1.5rem;
     background-color: #10a5f5;
     font-size: 1.6rem;
     color: #fff;
@@ -1000,7 +1011,7 @@ body {
 }
 
 .guest-message__wrapper .guest-message:before {
-    content: "7:13 am";
+    content: "7:12 am";
     display: block;
     position: absolute;
     right: -4em;
@@ -1474,6 +1485,7 @@ body {
 }
 
 .chat__wrapper .message-input__wrapper .input-wrapper {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -1482,9 +1494,12 @@ body {
 
 .chat__wrapper .message-input__wrapper .input-wrapper.isHaveMessage:after {
     content: "";
+    position: absolute;
+    right: 3px;
     display: block;
     background: url("../images/svg/telegram.svg");
     background-repeat: no-repeat;
     width: 3.4rem;
     height: 3.4rem;
+    cursor: pointer;
 }
