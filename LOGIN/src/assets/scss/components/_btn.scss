@@ -2,38 +2,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 398px;
-  min-height: 56px;
-  border: 1px solid grey;
-  border-radius: 30px;
-  font-size: 16px;
+  width: 40rem;
+  min-height: 5.6rem;
+  border: 1px solid $color-grey-base;
+  border-radius: 3rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  box-shadow: 0 0 3px gray;
+  box-shadow: 0 0 3px $color-grey-base;
 
   &:hover,
   &:focus {
-    background: linear-gradient(45deg, #39dbff, #28a5f5);
-    border: 1px solid #39dbff;
-    box-shadow: 0 0 3px #39dbff;
-    color: #fff;
+    background: linear-gradient(45deg, $color-blue-v3, $color-blue-v4);
+    border: 1px solid $color-blue-v3;
+    box-shadow: 0 0 3px $color-blue-v3;
+    color: $color-white;
   }
 }
 
 .btn.btn__gradient {
-  background: linear-gradient(45deg, #39dbff, #28a5f5);
-  border: 1px solid #39dbff;
+  background: linear-gradient(45deg, $color-blue-v3, $color-blue-v4);
+  border: 1px solid $color-blue-v3;
   color: $color-white;
 
   &:hover,
   &:focus {
-    background: linear-gradient(45deg, #00aecb, #0b91d9);
-    border-color: #28a5f5;
+    background: linear-gradient(45deg, $color-blue-v5, $color-blue-v6);
+    border-color: $color-blue-v4;
   }
 }
 
 @media screen and (max-width: 992px) {
   .btn {
-    width: 250px;
+    width: 25rem;
   }
 }
 

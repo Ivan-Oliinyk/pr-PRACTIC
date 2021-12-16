@@ -12,18 +12,18 @@
   height: 100vh;
 
   .content-wrapper {
-    color: #fff;
+    color: $color-white;
 
     .title-desription {
-      margin: 40px 0 0 0;
-      font-size: 40px;
-      max-width: 490px;
+      margin: 4rem 0 0 0;
+      font-size: 4rem;
+      max-width: 49rem;
     }
   }
 }
 
 .hero__context {
-  padding: 160px 10px 10px 100px;
+  padding: 16rem 1rem 1rem 10rem;
   max-width: 44%;
 
   .question {
@@ -41,8 +41,8 @@
     .btn__link {
       &:hover .btn,
       &:focus .btn {
-        box-shadow: 0 0 6px #39dbff, inset 0 0 3px #39dbff;
-        border: 1px solid #39dbff;
+        box-shadow: 0 0 6px $color-blue-v3, inset 0 0 3px $color-blue-v3;
+        border: 1px solid $color-blue-v3;
       }
     }
   }

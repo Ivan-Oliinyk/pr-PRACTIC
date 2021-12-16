@@ -4,62 +4,155 @@
     {{> head }}
   </head>
   <body class="body__bg">
-    <header class="header">
-      <div class="header-container container">
-        <div class="logo-wrapper">
-          <img class="logo" src="./assets/images/logo.png" alt="Logo" />
-          <h1 class="title">Relica</h1>
-        </div>
+    {{> header }}
+    <main>
+      <section class="container chat__wrapper">
+        <div class="chat__users">
+          <div class="search-wrapper">
+            <div class="input-search__wrapper">
+              <img
+                class="input-search__img"
+                src="./assets/images/header/zoom-mini.svg"
+                alt="zoom"
+              />
+              <input
+                class="input-search"
+                type="search"
+                name="search"
+                aria-label="Search through site content"
+                placeholder="Search for users that you follow"
+              />
+            </div>
+          </div>
 
-        <div class="input-search__wrapper">
-          <img
-            class="input-search__img"
-            src="./assets/images/header/zoom-mini.svg"
-            alt="zoom"
-          />
-          <input
-            class="input-search"
-            type="search"
-            name="search"
-            aria-label="Search through site content"
-            placeholder="Search form"
-          />
-        </div>
+          <ul class="chat__user-carts">
+            <li class="user-cart">
+              <img
+                class="user__avatar"
+                src="./assets/images/chat/user1.png"
+                alt="user"
+                width="56"
+                height="56"
+              />
 
-        <button class="btn btn__gradient" type="button">Make a post</button>
+              <div class="user__info">
+                <h3 class="title">Layla Brown</h3>
+                <p class="text">Nice to meet you too!</p>
+              </div>
+            </li>
 
-        <ul class="header__social-list">
-          <li class="header__social-item">
-            <img
-              src="./assets/images/header/bubble-speak.svg"
-              alt="bubble-speak"
-            />
-          </li>
-          <li class="header__social-item">
-            <img src="./assets/images/header/alarm.svg" alt="alarm" />
-          </li>
-          <li class="header__social-item">
-            <img src="./assets/images/header/zoom.svg" alt="zoom" />
-          </li>
-        </ul>
+            <li class="user-cart">
+              <img
+                class="user__avatar"
+                src="./assets/images/chat/user2.png"
+                alt="user"
+                width="56"
+                height="56"
+              />
 
-        <div class="header__avatar">
-          <img
-            class="header__avatar-img"
-            src="./assets/images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
-            alt="avatar"
-            width="43px"
-            height="43px"
-          />
+              <div class="user__info">
+                <h3 class="title">Layla Brown</h3>
+                <p class="text">Nice to meet you too!</p>
+              </div>
 
-          <ul class="user-menu user-menu__list">
-            <li class="user-menu__item">Profile</li>
-            <li class="user-menu__item">Setting</li>
-            <li class="user-menu__item">Log out</li>
+              <div class="message-count">2</div>
+            </li>
+
+            <li class="user-cart">
+              <img
+                class="user__avatar"
+                src="./assets/images/chat/user3.png"
+                alt="user"
+                width="56"
+                height="56"
+              />
+
+              <div class="user__info">
+                <h3 class="title">Layla Brown</h3>
+                <p class="text">Nice to meet you too!</p>
+              </div>
+              <div class="message-count">9</div>
+            </li>
+
+            <li class="user-cart">
+              <img
+                class="user__avatar"
+                src="./assets/images/chat/user4.png"
+                alt="user"
+                width="56"
+                height="56"
+              />
+
+              <div class="user__info">
+                <h3 class="title">Layla Brown</h3>
+                <p class="text">Nice to meet you too!</p>
+              </div>
+              <div class="message-count">12</div>
+            </li>
+
+            <li class="user-cart">
+              <img
+                class="user__avatar"
+                src="./assets/images/chat/user5.png"
+                alt="user"
+                width="56"
+                height="56"
+              />
+
+              <div class="user__info">
+                <h3 class="title">Layla Brown</h3>
+                <p class="text">Nice to meet you too!</p>
+              </div>
+              <div class="message-count">1</div>
+            </li>
           </ul>
         </div>
-      </div>
-    </header>
-    <main class="container main"></main>
+        <div class="chat__content">
+          <div class="active__active">
+            <img
+              src="./assets/images/chat/user3.png"
+              alt="user"
+              width="39"
+              height="39"
+            />
+            <h3 class="user-title">Max Richardson</h3>
+          </div>
+
+          <div class="chat-window">
+            <div class="message-date">Thursday, 12 Mar 2020</div>
+            <div class="my-message__wrapper">
+              <div class="my-message">It was nice meeting you!</div>
+            </div>
+            <div class="guest-message__wrapper">
+              <img
+                src="./assets/images/chat/user3.png"
+                alt="user"
+                width="39"
+                height="39"
+              />
+              <div class="guest-message">Nice to meet you too!</div>
+            </div>
+          </div>
+
+          <div class="message-input__wrapper">
+            <div class="load-file">
+              <svg class="icon" width="17" heigth="17">
+                <use
+                  href="./assets/images/symbol-defs.svg#icon-file-picture"
+                ></use>
+              </svg>
+            </div>
+            <div class="input-wrapper">
+              <input
+                class="input-text"
+                type="text"
+                name="name"
+                placeholder="Say something nice..."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
