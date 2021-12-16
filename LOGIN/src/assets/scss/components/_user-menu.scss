@@ -1,19 +1,32 @@
 .user-menu__list {
   position: absolute;
-  top: 60px;
-  right: -15px;
+  top: 6rem;
+  right: -1.5rem;
   display: block;
   box-shadow: 0 0 1px #d6d6d6;
-  border-radius: 10px;
+  border-radius: 1rem;
 
   .user-menu__item {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
-    width: 200px;
-    min-height: 56px;
+    padding: 0.65em 1em;
+    width: 12.5em;
+    min-height: 3.5em;
     border: 1px solid #d6d6d6;
     background-color: $color-white;
+    font-size: 1.6rem;
+
+    &:hover,
+    &:focus {
+      background-color: $color-grey;
+    }
+
+    &:first-of-type:hover,
+    &:first-of-type:focus {
+      &:before {
+        border-bottom: 1.6rem solid $color-grey;
+      }
+    }
 
     &:not(:last-of-type) {
       border-bottom: none;
@@ -21,13 +34,13 @@
 
     &:first-of-type {
       position: relative;
-      border-radius: 10px 10px 0 0;
+      border-radius: 1rem 1rem 0 0;
 
       &:before {
         content: "";
         position: absolute;
-        top: -16px;
-        right: 28px;
+        top: -1rem;
+        right: 2.8rem;
         z-index: 2;
         display: block;
         width: 0;
@@ -40,8 +53,8 @@
       &:after {
         content: "";
         position: absolute;
-        top: -18px;
-        right: 27px;
+        top: -1.8rem;
+        right: 2.7rem;
         display: block;
         width: 0;
         height: 0;

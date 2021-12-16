@@ -1,17 +1,18 @@
 .arrow__back {
   display: flex;
   align-items: center;
-  color: #10a5f5;
-  fill: #10a5f5;
+  color: $color-blue-v1;
+  fill: $color-blue-v1;
   cursor: pointer;
+  font-size: 1.6rem;
 
   &:hover,
   &:focus {
-    color: #00dbff;
-    fill: #00dbff;
+    color: $color-blue-v2;
+    fill: $color-blue-v2;
   }
 
   .arrow-svg {
-    margin-right: 5px;
+    margin-right: 0.35em;
   }
 }

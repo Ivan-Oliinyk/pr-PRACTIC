@@ -1,19 +1,19 @@
 .user-name {
   .user-name__box {
-    margin-top: 44px;
+    margin-top: 4em;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    max-width: 400px;
-    min-height: 112px;
-    border: 1px solid #dbdbdb;
-    border-radius: 10px;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    min-height: 11rem;
+    border: 1px solid $color-grey-v2;
+    border-radius: 1rem;
     cursor: pointer;
   }
 
   .user-name__box-img {
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     position: relative;
 
     .img1 {
@@ -30,16 +30,16 @@
   }
 
   .user-name__text {
-    margin-left: 25px;
+    margin-left: 2.5rem;
 
     .title {
-      font-size: 20px;
+      font-size: 2rem;
       margin-top: 0;
     }
 
     .text {
-      margin-top: 10px;
-      font-size: 12px;
+      margin-top: 1rem;
+      font-size: 1.2rem;
     }
   }
 }

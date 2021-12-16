@@ -1,12 +1,16 @@
 .input-wrapper__logIn {
-  margin-top: 22px;
+  margin-top: 2.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .link_color {
+    font-size: 1.6rem;
+  }
 }
 
 .link_color {
-  color: #10a5f5;
+  color: $color-blue-v1;
 }
 
 @media screen and (max-width: 992px) {
@@ -16,7 +20,7 @@
   }
 
   .link_color {
-    margin-top: 10px;
+    margin-top: 0.65em;
   }
 }
 

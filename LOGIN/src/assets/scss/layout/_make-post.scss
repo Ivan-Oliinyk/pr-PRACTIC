@@ -6,7 +6,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: $color-white;
     min-height: 600px;
     width: 770px;
     border-radius: 10px;
@@ -15,18 +15,18 @@
     .make-post__header-wrapper {
       position: relative;
       padding: 20px 0;
-      border-bottom: 2px solid #ededed;
+      border-bottom: 2px solid $color-grey-v4;
     }
 
     .make-post__title {
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
       text-align: center;
     }
 
     .close__wrapper {
       position: absolute;
-      right: 20px;
+      right: 2rem;
       top: 50%;
       transform: translateY(-50%);
 
@@ -34,61 +34,61 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 3.2rem;
+      height: 3.2rem;
       cursor: pointer;
       transition: background-color 250ms linear;
 
       .close {
-        fill: #c3c3c3;
+        fill: $color-grey-v5;
         transition: fill 250ms linear;
       }
 
       &:hover,
       &:focus {
-        background-color: #ededed;
+        background-color: $color-grey-v4;
 
         .close {
-          fill: #000;
+          fill: $color-black;
         }
       }
     }
   }
 
   .make-post__input {
-    padding: 0 25px;
+    padding: 0 2.5rem;
   }
 
   .make-post__carusel-wrapper {
-    margin-top: 20px;
-    padding: 0 25px;
+    margin-top: 2rem;
+    padding: 0 2.5rem;
 
     .make-post__carusel {
       display: flex;
       overflow: auto;
-      padding-bottom: 20px;
+      padding-bottom: 2rem;
     }
 
     .make-post__carusel-post {
-      border-radius: 10px;
+      border-radius: 1rem;
       object-fit: cover;
       object-position: center;
 
       &:not(:last-of-type) {
-        margin-right: 10px;
+        margin-right: 1rem;
       }
     }
   }
 
   .make-post__footer {
-    margin-top: 100px;
-    border-top: 2px solid #ededed;
+    margin-top: 10rem;
+    border-top: 2px solid $color-grey-v4;
 
     .make-post__btn {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 20px;
-      max-width: 185px;
+      margin-top: 2rem;
+      max-width: 18.5rem;
     }
   }
 }
