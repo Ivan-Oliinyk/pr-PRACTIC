@@ -1,0 +1,66 @@
+.post-detail {
+  display: flex;
+  min-height: 100rem;
+
+  .post-detail__img {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    min-width: 630px;
+    img {
+      border-radius: 1.5rem;
+    }
+  }
+
+  .post-detail__content {
+    margin-left: 2rem;
+    padding: 2.5rem 2rem;
+    border-left: 1px solid $color-grey-v1;
+
+    .post-detail__content-wrapper {
+      min-height: 55rem;
+    }
+
+    .post-detail__autor {
+      display: flex;
+    }
+
+    .post-detail__autor-img {
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .post-detail__autor-info {
+      margin-left: 1.5rem;
+
+      .title {
+        font-size: 2.8rem;
+      }
+
+      .subtitle {
+        font-size: 1.6rem;
+        color: $color-grey-v3;
+      }
+    }
+
+    .post-detail__description {
+      margin-top: 2em;
+      margin-bottom: 5rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-weight: 500;
+      max-width: 48.5rem;
+    }
+
+    .post-detail__input-wrapper {
+      padding: 4rem 3rem 2rem 2.5rem;
+      border-top: 1px solid $color-grey-v1;
+
+      .input-text {
+        background-color: transparent;
+      }
+    }
+  }
+}

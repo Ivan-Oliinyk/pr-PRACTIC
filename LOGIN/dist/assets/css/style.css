@@ -1030,6 +1030,96 @@ body {
     color: grey;
 }
 
+.img-wrapper {
+    position: relative;
+    width: 31.6rem;
+    height: 31.6rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.img-wrapper:hover .icon-wrapper, .img-wrapper:focus .icon-wrapper {
+    opacity: 1;
+}
+
+.img-wrapper:hover img, .img-wrapper:focus img {
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+}
+
+.img-wrapper img {
+    border-radius: 1.5rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    transition: -webkit-filter 250ms linear;
+    transition: filter 250ms linear;
+    transition: filter 250ms linear, -webkit-filter 250ms linear;
+}
+
+.img-wrapper .icon-wrapper {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 600;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.img-wrapper .icon-wrapper .icon-context {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.img-wrapper .icon-wrapper .icon-context:first-of-type {
+    margin-right: 1em;
+}
+
+.img-wrapper .icon-wrapper .icon {
+    fill: #fff;
+    margin-right: 1rem;
+}
+
+.post-detail__comment {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.post-detail__comment .img img {
+    border-radius: 50%;
+}
+
+.post-detail__comment .comment-info {
+    margin-left: 1.5rem;
+}
+
+.post-detail__comment .comment-info .user-name {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+.post-detail__comment .comment-info .user-comment {
+    margin-bottom: 0.2em;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.post-detail__comment .comment-info .time-ago {
+    font-size: 1.6rem;
+    color: #939393;
+}
+
 .hero {
     display: -ms-flexbox;
     display: flex;
@@ -1514,6 +1604,10 @@ body {
     cursor: pointer;
 }
 
+.chat-3 {
+    padding-bottom: 5rem;
+}
+
 .chat-3 .chat-3__bg {
     position: relative;
     background: url("../images/bg@2x.png");
@@ -1530,6 +1624,7 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    padding-top: 10rem;
     min-height: 29rem;
     width: 100%;
     background-color: #fff;
@@ -1537,7 +1632,7 @@ body {
     box-shadow: 0 0 9px grey;
 }
 
-.chat-3 .chat-3__bg .img-wrapper {
+.chat-3 .chat-3__bg .chat-3__profile .img__title-wrapper {
     position: absolute;
     top: -30%;
     left: 50%;
@@ -1545,11 +1640,157 @@ body {
     transform: translateX(-50%);
 }
 
-.chat-3 .chat-3__bg .img-wrapper .profile-img {
+.chat-3 .chat-3__bg .chat-3__profile .img__title-wrapper .profile-img {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 7px solid #fff;
+    background-color: #fff;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-title {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-subtitle {
+    margin-top: 0.6em;
+    color: #939393;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-link {
+    margin-top: 1em;
+    display: block;
+    color: #00dbff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: color 250ms linear;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-link:hover, .chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-link:focus {
+    color: #10a5f5;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-statistic {
+    margin: 2rem auto 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-statistic .statistic {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    margin-left: 2.5em;
+    margin-right: 1em;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-statistic .counter {
+    font-weight: 700;
+    text-align: center;
+}
+
+.chat-3 .chat-3__bg .chat-3__profile .chat-3__profile-statistic .subsc {
+    color: #939393;
+    text-align: center;
+}
+
+.chat-3 .chat-3__gallary-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 970px;
+    padding-top: 25rem;
+}
+
+.chat-3 .chat-3__gallary-wrapper .chat-3__gallary {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-bottom: -1rem;
+}
+
+.post-detail {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100rem;
+}
+
+.post-detail .post-detail__img {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    min-width: 630px;
+}
+
+.post-detail .post-detail__img img {
+    border-radius: 1.5rem;
+}
+
+.post-detail .post-detail__content {
+    margin-left: 2rem;
+    padding: 2.5rem 2rem;
+    border-left: 1px solid #d1dcde;
+}
+
+.post-detail .post-detail__content .post-detail__content-wrapper {
+    min-height: 55rem;
+}
+
+.post-detail .post-detail__content .post-detail__autor {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.post-detail .post-detail__content .post-detail__autor-img img {
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.post-detail .post-detail__content .post-detail__autor-info {
+    margin-left: 1.5rem;
+}
+
+.post-detail .post-detail__content .post-detail__autor-info .title {
+    font-size: 2.8rem;
+}
+
+.post-detail .post-detail__content .post-detail__autor-info .subtitle {
+    font-size: 1.6rem;
+    color: #939393;
+}
+
+.post-detail .post-detail__content .post-detail__description {
+    margin-top: 2em;
+    margin-bottom: 5rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    max-width: 48.5rem;
+}
+
+.post-detail .post-detail__content .post-detail__input-wrapper {
+    padding: 4rem 3rem 2rem 2.5rem;
+    border-top: 1px solid #d1dcde;
+}
+
+.post-detail .post-detail__content .post-detail__input-wrapper .input-text {
+    background-color: transparent;
 }

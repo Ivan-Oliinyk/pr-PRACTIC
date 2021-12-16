@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body class="body__bg">
+    {{> header }}
+    <main>
+      <section class="container post-detail">
+        <div class="post-detail__img">
+          <img
+            src="./assets/images/chat/img1.png"
+            width="630"
+            height="630"
+            alt="post image"
+          />
+        </div>
+        <div class="post-detail__content">
+          <div class="post-detail__content-wrapper">
+            <div class="post-detail__autor">
+              <div class="post-detail__autor-img">
+                <img
+                  src="./assets/images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
+                  alt="autor"
+                  width="50"
+                  height="50"
+                />
+              </div>
+              <div class="post-detail__autor-info">
+                <h2 class="title">Mikaela White</h2>
+                <span class="subtitle">3 minute ago</span>
+              </div>
+            </div>
+            <p class="post-detail__description">
+              Japanese food with my friends Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua ali
+            </p>
+
+            <div class="post-detail__comment">
+              <div class="img">
+                <img
+                  src="./assets/images/chat/user3.png"
+                  alt="user"
+                  width="36"
+                  height="36"
+                />
+              </div>
+              <div class="comment-info">
+                <h3 class="user-name">John Smith</h3>
+                <p class="user-comment">This looks delicious!</p>
+                <span class="time-ago">3 minute ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-detail__input-wrapper">
+            <div class="user-name__input-wrapper input-wrapper">
+              <input
+                class="input-text"
+                type="text"
+                name="name"
+                placeholder="Add comment"
+              />
+              <span class="user-name__input-descr">Add comment</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

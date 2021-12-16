@@ -1,0 +1,29 @@
+.post-detail__comment {
+  display: flex;
+
+  .img {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .comment-info {
+    margin-left: 1.5rem;
+
+    .user-name {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    .user-comment {
+      margin-bottom: 0.2em;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .time-ago {
+      font-size: 1.6rem;
+      color: #939393;
+    }
+  }
+}

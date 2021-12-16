@@ -25,6 +25,8 @@
 @import "./components/user-cart";
 @import "./components/_my-message";
 @import "./components/_guest-message";
+@import "./components/_image-chat";
+@import "./components/_post-detail-comments";
 
 //layout
 @import "./layout/heroPage";
@@ -34,3 +36,4 @@
 @import "./layout/_make-post";
 @import "./layout/_chat";
 @import "./layout/_chat-3";
+@import "./layout/post-in-detail";

@@ -1,4 +1,5 @@
 .chat-3 {
+  padding-bottom: 5rem;
   .chat-3__bg {
     position: relative;
     background: url("../images/bg@2x.png");
@@ -21,7 +22,7 @@
       border-radius: 1.5rem;
       box-shadow: 0 0 9px grey;
 
-      .img-wrapper {
+      .img__title-wrapper {
         position: absolute;
         top: -30%;
         left: 50%;
@@ -77,10 +78,6 @@
           font-weight: 500;
           margin-left: 2.5em;
           margin-right: 1em;
-
-          // &:not(:first-of-type) {
-          //   margin-left: 3.5em;
-          // }
         }
 
         .counter {
@@ -107,61 +104,6 @@
       flex-wrap: wrap;
       margin-right: -1rem;
       margin-bottom: -1rem;
-
-      .img-wrapper {
-        position: relative;
-        width: 31.6rem;
-        height: 31.6rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-          .icon-wrapper {
-            opacity: 1;
-          }
-
-          img {
-            filter: brightness(60%);
-          }
-        }
-
-        img {
-          border-radius: 1.5rem;
-          object-fit: cover;
-          object-position: center;
-          transition: filter 250ms linear;
-        }
-
-        .icon-wrapper {
-          opacity: 0;
-          transition: opacity 250ms linear;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: #fff;
-          font-size: 3rem;
-          line-height: 3rem;
-          font-weight: 600;
-          display: flex;
-
-          .icon-context {
-            display: flex;
-            align-items: center;
-
-            &:first-of-type {
-              margin-right: 1em;
-            }
-          }
-
-          .icon {
-            fill: #fff;
-            margin-right: 1rem;
-          }
-        }
-      }
     }
   }
 }

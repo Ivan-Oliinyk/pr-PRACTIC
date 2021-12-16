@@ -1,0 +1,54 @@
+.img-wrapper {
+  position: relative;
+  width: 31.6rem;
+  height: 31.6rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .icon-wrapper {
+      opacity: 1;
+    }
+
+    img {
+      filter: brightness(60%);
+    }
+  }
+
+  img {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 250ms linear;
+  }
+
+  .icon-wrapper {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 600;
+    display: flex;
+
+    .icon-context {
+      display: flex;
+      align-items: center;
+
+      &:first-of-type {
+        margin-right: 1em;
+      }
+    }
+
+    .icon {
+      fill: #fff;
+      margin-right: 1rem;
+    }
+  }
+}
