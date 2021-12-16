@@ -29,6 +29,10 @@
       font-size: 1.6rem;
       line-height: 2.1rem;
       color: $color-grey-v3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 20rem;
     }
   }
 

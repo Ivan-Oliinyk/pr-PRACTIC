@@ -5,6 +5,7 @@
 @import "./common/main";
 @import "./common/backdrop";
 @import "./common/scroll";
+@import "./common/container-mini";
 
 //utils
 @import "./utils/variables";
@@ -32,3 +33,4 @@
 @import "./layout/logInWithWallet";
 @import "./layout/_make-post";
 @import "./layout/_chat";
+@import "./layout/_chat-3";

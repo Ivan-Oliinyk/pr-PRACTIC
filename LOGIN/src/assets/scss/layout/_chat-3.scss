@@ -1,0 +1,36 @@
+.chat-3 {
+  .chat-3__bg {
+    position: relative;
+    background: url("../images/bg@2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 32.8rem;
+
+    .chat-3__profile {
+      position: absolute;
+      top: 24rem;
+      left: 50%;
+      transform: translateX(-50%);
+      min-height: 29rem;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 9px grey;
+    }
+
+    .img-wrapper {
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      .profile-img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        border: 5px solid #fff;
+      }
+    }
+  }
+}
