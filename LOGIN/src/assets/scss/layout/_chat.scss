@@ -106,12 +106,27 @@
       border: none;
       display: flex;
       align-items: center;
-      padding: 1rem 1.5rem;
+      padding: 1rem 4rem 1rem 1.5rem;
     }
 
     .input-wrapper {
+      position: relative;
       display: flex;
       align-items: center;
+
+      &.isHaveMessage {
+        &:after {
+          content: "";
+          position: absolute;
+          right: 3px;
+          display: block;
+          background: url("../images/svg/telegram.svg");
+          background-repeat: no-repeat;
+          width: 3.4rem;
+          height: 3.4rem;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

@@ -848,6 +848,9 @@ body {
   margin-top: 4.5rem;
   display: flex;
 }
+.guest-message__wrapper:not(:first-of-type) {
+  margin-top: 4.6rem;
+}
 .guest-message__wrapper img {
   border-radius: 50%;
 }
@@ -1232,9 +1235,21 @@ body {
   border: none;
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 4rem 1rem 1.5rem;
 }
 .chat__wrapper .message-input__wrapper .input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
+}
+.chat__wrapper .message-input__wrapper .input-wrapper.isHaveMessage:after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  display: block;
+  background: url("../images/svg/telegram.svg");
+  background-repeat: no-repeat;
+  width: 3.4rem;
+  height: 3.4rem;
+  cursor: pointer;
 }
