@@ -362,6 +362,12 @@ body {
     margin-right: auto;
 }
 
+.container-middle {
+    max-width: 97rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .title {
     font-size: 4rem;
 }
@@ -636,6 +642,8 @@ body {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .header .logo-wrapper {
@@ -1728,7 +1736,9 @@ body {
 .post-detail {
     display: -ms-flexbox;
     display: flex;
-    min-height: 100rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 75rem;
 }
 
 .post-detail .post-detail__img {
@@ -1748,7 +1758,7 @@ body {
 }
 
 .post-detail .post-detail__content .post-detail__content-wrapper {
-    min-height: 55rem;
+    min-height: 53rem;
 }
 
 .post-detail .post-detail__content .post-detail__autor {
@@ -1787,10 +1797,68 @@ body {
 }
 
 .post-detail .post-detail__content .post-detail__input-wrapper {
+    position: relative;
     padding: 4rem 3rem 2rem 2.5rem;
-    border-top: 1px solid #d1dcde;
 }
 
 .post-detail .post-detail__content .post-detail__input-wrapper .input-text {
     background-color: transparent;
+    margin-top: 0;
+}
+
+.post-detail .post-detail__content .post-detail__input-wrapper:before {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #d6d6d6;
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 200%;
+}
+
+.chat-4 {
+    padding: 6rem 0;
+}
+
+.chat-4 .chat-3__gallary-wrapper {
+    padding: 0;
+}
+
+.chat-4 .chat-4__title {
+    margin-bottom: 0.7em;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.chat-4 .chat-4__nav {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+.chat-4 .chat-4__nav .nav__list {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.6rem;
+    color: #939393;
+}
+
+.chat-4 .chat-4__nav .nav__list .nav__item {
+    padding: 0.5em;
+    width: 33.3333333333%;
+    text-align: center;
+    border-bottom: 3px solid #939393;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.chat-4 .chat-4__nav .nav__list .nav__item:hover, .chat-4 .chat-4__nav .nav__list .nav__item:focus {
+    border-bottom: 3px solid #10a5f5;
+    color: #10a5f5;
+}
+
+.notification .notification__title {
+    font-size: 3.5rem;
 }

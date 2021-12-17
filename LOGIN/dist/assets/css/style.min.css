@@ -359,6 +359,12 @@ body {
   margin-right: auto;
 }
 
+.container-middle {
+  max-width: 97rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .title {
   font-size: 4rem;
 }
@@ -573,7 +579,7 @@ body {
 .header .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .header .logo-wrapper {
   margin-right: 6rem;
@@ -960,6 +966,76 @@ body {
 .post-detail__comment .comment-info .time-ago {
   font-size: 1.6rem;
   color: #939393;
+}
+
+.active-log {
+  padding: 2rem 0 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.active-log .info-wrapper {
+  display: flex;
+}
+.active-log .info-wrapper .like {
+  margin-right: 2.2rem;
+  display: flex;
+  align-items: center;
+}
+.active-log .info-wrapper .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.active-log .info-wrapper .info .info-wrapper {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+}
+.active-log .info-wrapper .info .title {
+  margin-right: 0.5em;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.active-log .info-wrapper .info .desc {
+  font-size: 1.6rem;
+}
+.active-log .info-wrapper .info .time-ago {
+  font-size: 1.6rem;
+  color: #939393;
+}
+.active-log .target-img {
+  position: relative;
+}
+.active-log .target-img .not-image {
+  border: 1px solid #939393;
+  padding: 7px;
+}
+.active-log .target-img.change:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 8px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.active-log .target-img.change:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 2.8rem;
+  height: 2.8rem;
+  fill: red;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url("../images/svg/user-v2.svg");
+}
+.active-log .target-img img {
+  border-radius: 50%;
 }
 
 .hero {
@@ -1536,4 +1612,48 @@ body {
 .chat-4 .chat-4__nav .nav__list .nav__item:hover, .chat-4 .chat-4__nav .nav__list .nav__item:focus {
   border-bottom: 3px solid #10a5f5;
   color: #10a5f5;
+}
+
+.notification {
+  padding: 6rem 0;
+}
+.notification .notification__title {
+  margin-bottom: 0.8em;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.notification .notification__nav {
+  font-size: 1.6rem;
+  color: #939393;
+}
+.notification .notification__nav .item {
+  display: flex;
+}
+.notification .notification__nav .list {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+.notification .notification__nav .list:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #939393;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.notification .notification__nav .list:hover, .notification .notification__nav .list:focus {
+  color: #10a5f5;
+}
+.notification .notification__nav .list:hover:after, .notification .notification__nav .list:focus:after {
+  background-color: #10a5f5;
+  height: 3px;
+}
+.notification .notification__content .notification__active-logs {
+  padding: 2rem 0;
 }

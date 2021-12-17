@@ -6,6 +6,7 @@
 @import "./common/backdrop";
 @import "./common/scroll";
 @import "./common/container-mini";
+@import "./common/_container-middle";
 
 //utils
 @import "./utils/variables";
@@ -27,6 +28,7 @@
 @import "./components/_guest-message";
 @import "./components/_image-chat";
 @import "./components/_post-detail-comments";
+@import "./components/active-log";
 
 //layout
 @import "./layout/heroPage";
@@ -38,3 +40,4 @@
 @import "./layout/_chat-3";
 @import "./layout/post-in-detail";
 @import "./layout/_chat-4";
+@import "./layout/_notification";
