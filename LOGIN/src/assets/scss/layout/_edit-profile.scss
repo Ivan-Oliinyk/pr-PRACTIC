@@ -1,0 +1,140 @@
+.edit-profile {
+  padding: 0 1.5rem;
+  display: flex;
+
+  .nav-wrapper {
+    .nav-list {
+      width: 30rem;
+    }
+
+    .nav-item {
+      min-height: 8rem;
+      padding: 1.5em 0.75em;
+      border-left: 3px solid transparent;
+
+      font-size: 2rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: $color-blue-v7;
+        border-left: 3px solid $color-blue-v1;
+      }
+
+      &.twitter-link {
+        color: $color-blue-v1;
+        font-size: 2rem;
+
+        a {
+          border-bottom: 1px solid $color-blue-v1;
+        }
+
+        &:hover,
+        &:focus {
+          color: $color-blue-v2;
+          background-color: transparent;
+          border-color: transparent;
+
+          a {
+            border-bottom: 1px solid $color-blue-v2;
+          }
+        }
+      }
+    }
+  }
+
+  .edit-profile__content {
+    min-height: calc(100vh - 9.6rem);
+    border-left: 1px solid $color-grey;
+    width: 100%;
+
+    .title {
+      margin-top: 1.6em;
+      margin-bottom: 0.8em;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    .bg-image {
+      background: url("../images/bg@2x.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 22rem;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background: url("../images/svg/edit-grey.svg");
+        background-size: 2.5rem 2.5rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: $color-grey-base;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      :before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background: url("../images/svg/edit.svg");
+        background-size: 2.5rem 2.5rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        border: 2px solid #10a5f5;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .img-wrapper {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        width: 114px;
+        height: 114px;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+          filter: none;
+        }
+      }
+    }
+
+    .user-name {
+      margin-top: 4em;
+      margin-bottom: 2em;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .input-wrapper {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .input-text {
+        margin-top: 2rem;
+      }
+
+      .user-name__input-descr {
+        margin-top: -1.5rem;
+      }
+    }
+  }
+}

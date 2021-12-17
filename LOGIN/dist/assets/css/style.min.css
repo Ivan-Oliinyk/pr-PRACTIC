@@ -1739,3 +1739,121 @@ body {
   font-size: 3rem;
   color: #2db922;
 }
+
+.edit-profile {
+  padding: 0 1.5rem;
+  display: flex;
+}
+.edit-profile .nav-wrapper .nav-list {
+  width: 30rem;
+}
+.edit-profile .nav-wrapper .nav-item {
+  min-height: 8rem;
+  padding: 1.5em 0.75em;
+  border-left: 3px solid transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.edit-profile .nav-wrapper .nav-item:hover, .edit-profile .nav-wrapper .nav-item:focus {
+  background-color: #f0f9fd;
+  border-left: 3px solid #10a5f5;
+}
+.edit-profile .nav-wrapper .nav-item.twitter-link {
+  color: #10a5f5;
+  font-size: 2rem;
+}
+.edit-profile .nav-wrapper .nav-item.twitter-link a {
+  border-bottom: 1px solid #10a5f5;
+}
+.edit-profile .nav-wrapper .nav-item.twitter-link:hover, .edit-profile .nav-wrapper .nav-item.twitter-link:focus {
+  color: #00dbff;
+  background-color: transparent;
+  border-color: transparent;
+}
+.edit-profile .nav-wrapper .nav-item.twitter-link:hover a, .edit-profile .nav-wrapper .nav-item.twitter-link:focus a {
+  border-bottom: 1px solid #00dbff;
+}
+.edit-profile .edit-profile__content {
+  min-height: calc(100vh - 9.6rem);
+  border-left: 1px solid #d6d6d6;
+  width: 100%;
+}
+.edit-profile .edit-profile__content .title {
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.edit-profile .edit-profile__content .bg-image {
+  background: url("../images/bg@2x.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 22rem;
+  position: relative;
+}
+.edit-profile .edit-profile__content .bg-image:after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url("../images/svg/edit-grey.svg");
+  background-size: 2.5rem 2.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.edit-profile .edit-profile__content .bg-image :before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: url("../images/svg/edit.svg");
+  background-size: 2.5rem 2.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border: 2px solid #10a5f5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.edit-profile .edit-profile__content .bg-image .img-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 114px;
+  height: 114px;
+}
+.edit-profile .edit-profile__content .bg-image .img-wrapper img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  filter: none;
+}
+.edit-profile .edit-profile__content .user-name {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  text-align: center;
+}
+.edit-profile .edit-profile__content .input-wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.edit-profile .edit-profile__content .input-wrapper .input-text {
+  margin-top: 2rem;
+}
+.edit-profile .edit-profile__content .input-wrapper .user-name__input-descr {
+  margin-top: -1.5rem;
+}
