@@ -1,0 +1,28 @@
+.statistic-item {
+  border-radius: 1.5rem;
+  border: 1px solid #e3e3e3;
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  max-width: 31rem;
+
+  // &:not(:last-of-type) {
+  //   margin-right: 1.5rem;
+  // }
+
+  .statistic-item__img {
+    margin-right: 1.2rem;
+  }
+
+  .stat-title {
+    margin-bottom: 0.3em;
+    font-size: 1.6rem;
+    color: #939393;
+  }
+
+  .price {
+    color: #10a5f5;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+}

@@ -571,7 +571,7 @@ body {
 }
 
 .header {
-  padding: 2rem 0;
+  padding: 2rem;
   min-height: 9.6rem;
   background-color: #fff;
   box-shadow: 0px 5px 15px #00000008;
@@ -1036,6 +1036,28 @@ body {
 }
 .active-log .target-img img {
   border-radius: 50%;
+}
+
+.statistic-item {
+  border-radius: 1.5rem;
+  border: 1px solid #e3e3e3;
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  max-width: 31rem;
+}
+.statistic-item .statistic-item__img {
+  margin-right: 1.2rem;
+}
+.statistic-item .stat-title {
+  margin-bottom: 0.3em;
+  font-size: 1.6rem;
+  color: #939393;
+}
+.statistic-item .price {
+  color: #10a5f5;
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 
 .hero {
@@ -1656,4 +1678,64 @@ body {
 }
 .notification .notification__content .notification__active-logs {
   padding: 2rem 0;
+}
+
+.income .title {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.income .statistic-list {
+  display: flex;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+}
+.income .statistic-list .statistic-item {
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  min-width: calc(33.3333333333% - 1.5rem);
+}
+.income .statistic-list .statistic-item .color-green {
+  color: #56e3c8;
+}
+.income .statistic-list .statistic-item .color-brown {
+  color: #e39578;
+}
+.income .stat-table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+.income .stat-table thead th {
+  padding: 1rem 1.5rem;
+  background-color: #ededed;
+  border-color: #ededed;
+  font-size: 1.6rem;
+  color: #939393;
+  text-align: start;
+}
+.income .stat-table thead th:first-of-type {
+  border-radius: 1rem 0 0 1rem;
+}
+.income .stat-table thead th:last-of-type {
+  border-radius: 0 1rem 1rem 0;
+}
+.income .stat-table thead th img {
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+.income .stat-table tbody td {
+  padding: 3rem 1.5rem;
+}
+.income .stat-table tbody img {
+  border-radius: 1rem;
+}
+.income .stat-table tbody .text1 {
+  display: block;
+  font-size: 1.6rem;
+}
+.income .stat-table tbody .text2 {
+  font-size: 3rem;
+  color: #2db922;
 }

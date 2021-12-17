@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notification-2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+  </head>
+  <body class="body__bg">
+    <header class="header">
+      <div class="header-container container">
+        <div class="logo-wrapper">
+          <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+          <h1 class="title">Relica</h1>
+        </div>
+    
+        <div class="input-search__wrapper">
+          <img
+            class="input-search__img"
+            src="./assets/images/header/zoom-mini.svg"
+            alt="zoom"
+          />
+          <input
+            class="input-search"
+            type="search"
+            name="search"
+            aria-label="Search through site content"
+            placeholder="Search form"
+          />
+        </div>
+    
+        <button class="btn btn__gradient" type="button">Make a post</button>
+    
+        <ul class="header__social-list">
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/bubble-speak.svg" alt="bubble-speak" /> -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </li>
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/alarm.svg" alt="alarm" /> -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-bell"></use>
+            </svg>
+          </li>
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/zoom.svg" alt="zoom" />s -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-bubble-speak"></use>
+            </svg>
+          </li>
+        </ul>
+    
+        <div class="header__avatar">
+          <img
+            class="header__avatar-img"
+            src="./assets/images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
+            alt="avatar"
+            width="43px"
+            height="43px"
+          />
+    
+          <ul class="user-menu user-menu__list">
+            <li class="user-menu__item">Profile</li>
+            <li class="user-menu__item">Setting</li>
+            <li class="user-menu__item">Log out</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container-middle notification">
+        <h1 class="notification__title">Notification</h1>
+        <nav class="notification__nav">
+          <ul class="item">
+            <li class="list">Activity Log</li>
+            <li class="list">Income</li>
+          </ul>
+        </nav>
+        <div class="notification__content">
+          <div class="contain-middle income">
+            <h1 class="title">Total earned</h1>
+            <ul class="statistic-list">
+              <li class="statistic-item">
+                <div class="statistic-item__img">
+                  <img
+                    src="./assets/images/svg/st3.svg"
+                    alt="image"
+                    width="58"
+                    height="58"
+                  />
+                </div>
+                <div class="statistic-item__context">
+                  <h2 class="stat-title">Total earned (USD)</h2>
+                  <span class="price">$5.00</span>
+                </div>
+              </li>
+              <li class="statistic-item">
+                <div class="statistic-item__img">
+                  <img
+                    src="./assets/images/svg/st2.svg"
+                    alt="image"
+                    width="58"
+                    height="58"
+                  />
+                </div>
+                <div class="statistic-item__context">
+                  <h2 class="stat-title">Total earned (USD)</h2>
+                  <span class="price color-green">$5.00</span>
+                </div>
+              </li>
+              <li class="statistic-item">
+                <div class="statistic-item__img">
+                  <img
+                    src="./assets/images/svg/st1.svg"
+                    alt="image"
+                    width="58"
+                    height="58"
+                  />
+                </div>
+                <div class="statistic-item__context">
+                  <h2 class="stat-title">Total earned (USD)</h2>
+                  <span class="price color-brown">243</span>
+                </div>
+              </li>
+            </ul>
+
+            <table class="stat-table">
+              <thead class="head">
+                <tr>
+                  <th>
+                    <img
+                      src="./assets/images/svg/comment1.svg"
+                      alt=""
+                      width="14"
+                      height="14"
+                    />
+                    <span class="title-1">Post</span>
+                  </th>
+                  <th>
+                    <img
+                      src="./assets/images/svg/comment1.svg"
+                      alt=""
+                      width="14"
+                      height="14"
+                    />
+                    <span>Likes</span>
+                  </th>
+                  <th>
+                    <img
+                      src="./assets/images/svg/comment1.svg"
+                      alt=""
+                      width="14"
+                      height="14"
+                    />
+                    <span>Comments</span>
+                  </th>
+                  <th>
+                    <img
+                      src="./assets/images/svg/comment1.svg"
+                      alt=""
+                      width="14"
+                      height="14"
+                    />
+                    <span>Favourites</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./assets/images/chat/img1.png"
+                      alt="photo"
+                      width="80"
+                      height="80"
+                    />
+                  </td>
+                  <td>
+                    <span class="text1">32</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">12</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">4</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./assets/images/chat/img6.png"
+                      alt="photo"
+                      width="80"
+                      height="80"
+                    />
+                  </td>
+                  <td>
+                    <span class="text1">32</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">12</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">4</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./assets/images/chat/img4.png"
+                      alt="photo"
+                      width="80"
+                      height="80"
+                    />
+                  </td>
+                  <td>
+                    <span class="text1">32</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">12</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">4</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./assets/images/chat/img5.png"
+                      alt="photo"
+                      width="80"
+                      height="80"
+                    />
+                  </td>
+                  <td>
+                    <span class="text1">32</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">12</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                  <td>
+                    <span class="text1">4</span>
+                    <span class="text2">+ $0.05</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

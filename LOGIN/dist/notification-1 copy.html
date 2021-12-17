@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notification-1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+  </head>
+  <body class="body__bg">
+    <header class="header">
+      <div class="header-container container">
+        <div class="logo-wrapper">
+          <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+          <h1 class="title">Relica</h1>
+        </div>
+    
+        <div class="input-search__wrapper">
+          <img
+            class="input-search__img"
+            src="./assets/images/header/zoom-mini.svg"
+            alt="zoom"
+          />
+          <input
+            class="input-search"
+            type="search"
+            name="search"
+            aria-label="Search through site content"
+            placeholder="Search form"
+          />
+        </div>
+    
+        <button class="btn btn__gradient" type="button">Make a post</button>
+    
+        <ul class="header__social-list">
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/bubble-speak.svg" alt="bubble-speak" /> -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </li>
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/alarm.svg" alt="alarm" /> -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-bell"></use>
+            </svg>
+          </li>
+          <li class="header__social-item">
+            <!-- <img src="./assets/images/header/zoom.svg" alt="zoom" />s -->
+            <svg class="icon">
+              <use href="./assets/images/symbol-defs.svg#icon-bubble-speak"></use>
+            </svg>
+          </li>
+        </ul>
+    
+        <div class="header__avatar">
+          <img
+            class="header__avatar-img"
+            src="./assets/images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
+            alt="avatar"
+            width="43px"
+            height="43px"
+          />
+    
+          <ul class="user-menu user-menu__list">
+            <li class="user-menu__item">Profile</li>
+            <li class="user-menu__item">Setting</li>
+            <li class="user-menu__item">Log out</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container-middle notification">
+        <h1 class="notification__title">Notification</h1>
+        <nav class="notification__nav">
+          <ul class="item">
+            <li class="list">Activity Log</li>
+            <li class="list">Income</li>
+          </ul>
+        </nav>
+        <div class="notification__content">
+          <div class="notification__active-logs">
+            <!-- 1 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">mikepradofoto</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img6.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">PXL3000</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img6.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">Hatty</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img4.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/circle-red.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">mikepradofoto</h3>
+                    <span class="desc">started following you</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  class="not-image"
+                  src="./assets/images/svg/logo-w.svg"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">mikepradofoto</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img4.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">wutao</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img6.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">Braden</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img6.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/heart.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">mikepradofoto</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img">
+                <img
+                  src="./assets/images/chat/img6.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="active-log">
+              <div class="info-wrapper">
+                <div class="like">
+                  <img
+                    src="./assets/images/svg/circle-red.svg"
+                    alt="heart"
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="info">
+                  <div class="info-wrapper">
+                    <h3 class="title">Neyrotphoto</h3>
+                    <span class="desc">liked your picture!</span>
+                  </div>
+                  <span class="time-ago">13m ago</span>
+                </div>
+              </div>
+              <div class="target-img change">
+                <img
+                  src="./assets/images/chat/user3.png"
+                  width="56"
+                  height="56"
+                  alt="images"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

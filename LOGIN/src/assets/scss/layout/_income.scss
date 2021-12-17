@@ -1,0 +1,78 @@
+.income {
+  .title {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .statistic-list {
+    display: flex;
+    margin-right: -1.5rem;
+    margin-bottom: -1.5rem;
+
+    .statistic-item {
+      margin-right: 1.5rem;
+      margin-bottom: 1.5rem;
+      min-width: calc((100% / 3) - 1.5rem);
+
+      .color-green {
+        color: #56e3c8;
+      }
+
+      .color-brown {
+        color: #e39578;
+      }
+    }
+  }
+
+  .stat-table {
+    margin-top: 2rem;
+    border-collapse: collapse;
+    width: 100%;
+
+    thead {
+      th {
+        padding: 1rem 1.5rem;
+        background-color: $color-grey-v4;
+        border-color: $color-grey-v4;
+        font-size: 1.6rem;
+        color: #939393;
+        text-align: start;
+
+        &:first-of-type {
+          border-radius: 1rem 0 0 1rem;
+        }
+
+        &:last-of-type {
+          border-radius: 0 1rem 1rem 0;
+        }
+
+        img {
+          display: inline-block;
+          margin-right: 0.7rem;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding: 3rem 1.5rem;
+      }
+
+      img {
+        border-radius: 1rem;
+      }
+
+      .text1 {
+        display: block;
+        font-size: 1.6rem;
+      }
+
+      .text2 {
+        font-size: 3rem;
+        color: #2db922;
+      }
+    }
+  }
+}
