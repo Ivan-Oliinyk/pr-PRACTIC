@@ -1,0 +1,90 @@
+.user-post__wrapper {
+  margin-bottom: 40px;
+  padding: 56px 0 47px;
+
+  .user-post {
+    display: flex;
+  }
+
+  .user-post-img {
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+
+  .user-post__text-wrapper {
+    .title {
+      font-size: 28px;
+    }
+
+    .time {
+      font-size: 16px;
+      color: #939393;
+    }
+  }
+
+  .user-post__description {
+    margin-top: 31px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .user-post__img-wraper {
+    width: 770px;
+    height: 770px;
+
+    .img {
+      width: 100%;
+      margin-top: 29px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+  }
+
+  .user-post__likes {
+    margin-top: 27px;
+    display: flex;
+
+    .user-post__likes-box {
+      display: flex;
+
+      .img {
+        border-radius: 15px;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 37px;
+      }
+    }
+
+    .counter {
+      margin-left: 7px;
+      font-size: 20px;
+    }
+  }
+
+  .user-post__comments {
+    margin-top: 27px;
+
+    .info {
+      margin-bottom: 27px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .user-post__comments-info {
+      display: flex;
+      margin-bottom: 19px;
+      font-size: 16px;
+
+      .user-info {
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .user-text {
+      }
+    }
+  }
+}

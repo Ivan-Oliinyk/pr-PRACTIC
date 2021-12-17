@@ -1,6 +1,7 @@
 .post-detail {
   display: flex;
-  min-height: 100rem;
+  justify-content: center;
+  min-height: 75rem;
 
   .post-detail__img {
     padding-top: 2.5rem;
@@ -17,7 +18,7 @@
     border-left: 1px solid $color-grey-v1;
 
     .post-detail__content-wrapper {
-      min-height: 55rem;
+      min-height: 53rem;
     }
 
     .post-detail__autor {
@@ -55,11 +56,23 @@
     }
 
     .post-detail__input-wrapper {
+      position: relative;
       padding: 4rem 3rem 2rem 2.5rem;
-      border-top: 1px solid $color-grey-v1;
 
       .input-text {
         background-color: transparent;
+        margin-top: 0;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: $color-grey;
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 200%;
       }
     }
   }

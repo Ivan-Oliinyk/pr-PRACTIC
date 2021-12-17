@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero__img">
+          <div class="content-wrapper">
+            <div class="logo-wrapper">
+              <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+              <h1 class="title">Relica</h1>
+            </div>
+
+            <h2 class="title-desription">
+              Post photos. Make money. Maintain ownership
+            </h2>
+          </div>
+        </div>
+        <div class="hero__context select-wallet">
+          <a class="arrow__back" href="./index.html">
+            <svg class="arrow-svg" width="16" height="16">
+              <use href="./assets/images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+            Back
+          </a>
+
+          <h2 class="title">Select wallet</h2>
+
+          <div class="radio-input__wrapper">
+            <input
+              class="radio-input"
+              type="radio"
+              name="check-wallet"
+              id="radio-check1"
+            />
+            <label for="radio-check1" class="radio-input__label">
+              <div class="label-content">
+                <img
+                  src="./assets/images/selectWallet/handCash.png"
+                  alt="hand-cash"
+                  width="44"
+                  height="44"
+                />
+                <div>Handcash</div>
+              </div>
+            </label>
+          </div>
+          <div class="radio-input__wrapper">
+            <input
+              class="radio-input"
+              type="radio"
+              name="check-wallet"
+              id="radio-check2"
+            />
+            <label for="radio-check2" class="radio-input__label">
+              <div class="label-content">
+                <img
+                  src="./assets/images/selectWallet/moneyButton.png"
+                  alt="Moneybutton"
+                  width="44"
+                  height="44"
+                />
+                <div>Moneybutton</div>
+              </div>
+            </label>
+          </div>
+          <a class="btn select-wallet__link" href="./userName.html"
+            ><p>Continue</p></a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

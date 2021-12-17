@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero__img">
+          <div class="content-wrapper">
+            <div class="logo-wrapper">
+              <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+              <h1 class="title">Relica</h1>
+            </div>
+
+            <h2 class="title-desription">
+              Post photos. Make money. Maintain ownership
+            </h2>
+          </div>
+        </div>
+        <div class="select-wallet user-name">
+          <a class="arrow__back" href="./select-wallet.html">
+            <svg class="arrow-svg" width="16" height="16">
+              <use href="./assets/images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+            Back
+          </a>
+
+          <h2 class="title">User name</h2>
+
+          <div class="user-name__box">
+            <div class="user-name__box-img">
+              <img
+                class="img1"
+                src="./assets/images/userName/userName.svg"
+                width="69"
+                height="69"
+                alt="photo"
+              />
+              <img
+                class="img2"
+                src="./assets/images/userName/photo-camera.svg"
+                width="30"
+                height="24"
+                alt="photo"
+              />
+            </div>
+
+            <div class="user-name__text">
+              <h2 class="title">Profile photo</h2>
+              <p class="text">Upload your profile photo here</p>
+            </div>
+          </div>
+
+          <div class="user-name__input-wrapper input-wrapper">
+            <input
+              class="input-text"
+              type="text"
+              name="name"
+              placeholder="User name"
+            />
+            <span class="user-name__input-descr">User name</span>
+          </div>
+
+          <a class="btn select-wallet__link" href="./logInWithWallet.html"
+            ><p>Continue</p></a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
