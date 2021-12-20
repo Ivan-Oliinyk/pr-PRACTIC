@@ -1,52 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavBar } from "./components/NavBar";
-import { ToDoForm } from "./components/ToDoForm";
-import { ToDoList } from "./components/ToDoList";
-import { IToDo } from "./Interfases";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToDoPages } from "./pages/ToDoPages";
+import { AboutPage } from "./pages/AboutPages";
 
 const App: React.FC = () => {
-  const [todos, setTodos] = useState<IToDo[]>([]);
-
-  const addHandler = (title: string) => {
-    const newToDo: IToDo = {
-      title: title,
-      id: Date.now(),
-      complited: false,
-    };
-
-    // setTodos([newToDo, ...todos]);
-    setTodos((prev) => [newToDo, ...prev]);
-  };
-
-  const toogleHandler = (id: number) => {
-    setTodos((prev) =>
-      prev.map((todo) => {
-        if (todo.id === id) {
-          return {
-            ...todo,
-            complited: !todo.complited,
-          };
-        }
-        return todo;
-      })
-    );
-  };
-  const removeHandler = (id: number) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  };
-
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
       <div className="container">
-        <ToDoForm onAdd={addHandler} />
-        <ToDoList
-          todos={todos}
-          onRemove={removeHandler}
-          onToggle={toogleHandler}
-        />
+        <Routes>
+          <Route element={<ToDoPages />} path="/"></Route>
+          <Route element={<AboutPage />} path="/about"></Route>
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 
