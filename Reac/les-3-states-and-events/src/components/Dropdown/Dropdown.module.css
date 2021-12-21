@@ -1,0 +1,18 @@
+.Dropdown__rooggle {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: green;
+  color: white;
+  width: 100px;
+}
+
+.Dropdown__menu {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
+  color: red;
+  width: 98px;
+  box-shadow: 0 0 3px black;
+}
