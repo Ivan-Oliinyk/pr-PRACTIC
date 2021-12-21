@@ -1,0 +1,23 @@
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 4.3rem;
+
+  .logo {
+    max-width: 1.82em;
+    max-height: 1.82em;
+  }
+
+  .title {
+    margin-left: 0.46em;
+    font-size: 4.3rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .logo-wrapper {
+    font-size: 3.6rem;
+  }
+}

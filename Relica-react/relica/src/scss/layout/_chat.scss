@@ -1,0 +1,132 @@
+.container {
+  padding: 0;
+}
+
+.chat__wrapper {
+  display: flex;
+  border-left: 1px solid $color-grey;
+  border-right: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+  min-height: calc(100vh - 9.6rem);
+  width: 100%;
+
+  .chat__users {
+    width: 37rem;
+    min-height: calc(100vh - 9.6rem);
+    border-right: 1px solid $color-grey;
+
+    .search-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 10rem;
+      width: 100%;
+      border-bottom: 1px solid $color-grey;
+
+      .input-search__wrapper {
+        max-width: 90%;
+        margin-right: 0;
+      }
+
+      .input-search {
+        background-color: transparent;
+      }
+    }
+
+    .chat__user-carts {
+      padding: 1rem 0;
+    }
+  }
+
+  .chat__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .active__active {
+      flex: 0 0 8rem;
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      // min-height: 8rem;
+      border-bottom: 1px solid $color-grey;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .user-title {
+        margin-left: 0.7em;
+        font-size: 2rem;
+      }
+    }
+
+    .chat-window {
+      flex: 1 1 auto;
+      padding-top: 4rem;
+      // height: calc(100vh - 8rem - 9.6rem - 8rem);
+      .message-date {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .message-input__wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 0 0 8rem;
+    width: 100%;
+    border-top: 1px solid $color-grey;
+    display: flex;
+    align-items: center;
+
+    .load-file {
+      background-color: #edf2f5cb;
+      border-radius: 50%;
+      width: 4.4rem;
+      height: 4.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      .icon {
+        fill: #afafaf;
+      }
+    }
+
+    .input-text {
+      margin-top: 0;
+      margin-left: 1.5rem;
+      width: 72rem;
+      background-color: #edf2f5cb;
+      border-radius: 15px;
+      font-size: 1.6rem;
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 1rem 4rem 1rem 1.5rem;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &.isHaveMessage {
+        &:after {
+          content: "";
+          position: absolute;
+          right: 3px;
+          display: block;
+          background: url("../../../public/images/svg/telegram.svg");
+          background-repeat: no-repeat;
+          width: 3.4rem;
+          height: 3.4rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

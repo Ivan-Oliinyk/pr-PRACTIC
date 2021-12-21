@@ -1,0 +1,109 @@
+.chat-3 {
+  padding-bottom: 5rem;
+  .chat-3__bg {
+    position: relative;
+    background: url("../images/bg@2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 32.8rem;
+
+    .chat-3__profile {
+      position: absolute;
+      top: 24rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      padding-top: 10rem;
+      min-height: 29rem;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 9px grey;
+
+      .img__title-wrapper {
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+        .profile-img {
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+          border: 7px solid #fff;
+          background-color: #fff;
+        }
+      }
+
+      .chat-3__profile-title {
+        text-align: center;
+        font-size: 3.5rem;
+      }
+
+      .chat-3__profile-subtitle {
+        margin-top: 0.6em;
+        color: $color-grey-v3;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .chat-3__profile-link {
+        margin-top: 1em;
+        display: block;
+        color: $color-blue-v2;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: color 250ms linear;
+
+        &:hover,
+        &:focus {
+          color: $color-blue-v1;
+        }
+      }
+
+      .chat-3__profile-statistic {
+        margin: 2rem auto 0;
+        display: flex;
+        justify-content: center;
+
+        .statistic {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+          font-weight: 500;
+          margin-left: 2.5em;
+          margin-right: 1em;
+        }
+
+        .counter {
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .subsc {
+          color: $color-grey-v3;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .chat-3__gallary-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 970px;
+    padding-top: 25rem;
+
+    .chat-3__gallary {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -1rem;
+      margin-bottom: -1rem;
+    }
+  }
+}

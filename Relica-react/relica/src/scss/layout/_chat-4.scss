@@ -1,0 +1,39 @@
+.chat-4 {
+  .chat-3__gallary-wrapper {
+    padding: 0;
+  }
+  padding: 6rem 0;
+
+  .chat-4__title {
+    margin-bottom: 0.7em;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  .chat-4__nav {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+
+    .nav__list {
+      display: flex;
+      font-size: 1.6rem;
+      color: $color-grey-v3;
+      .nav__item {
+        padding: 0.5em;
+        width: calc(100% / 3);
+        text-align: center;
+        border-bottom: 3px solid $color-grey-v3;
+        cursor: pointer;
+        transition: all 250ms linear;
+
+        &:hover,
+        &:focus {
+          border-bottom: 3px solid $color-blue-v1;
+          color: $color-blue-v1;
+        }
+      }
+    }
+  }
+}

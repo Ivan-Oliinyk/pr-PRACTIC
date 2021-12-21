@@ -1,0 +1,22 @@
+.input-search__wrapper {
+  margin-right: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1.6rem;
+  border: 1px solid $color-grey;
+  border-radius: 5px;
+  width: 50rem;
+  min-height: 4.6rem;
+
+  .input-search__img {
+    margin-right: 2rem;
+  }
+
+  .input-search {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border: none;
+    outline: none;
+  }
+}

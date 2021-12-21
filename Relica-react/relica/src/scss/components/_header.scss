@@ -1,0 +1,83 @@
+.header {
+  padding: 2rem;
+  min-height: 9.6rem;
+  background-color: $color-white;
+  box-shadow: 0px 5px 15px $shadow-v1;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    margin-right: 6rem;
+    .logo {
+      width: 4.9rem;
+      height: 4.9rem;
+    }
+
+    .title {
+      font-size: 3rem;
+      color: $color-black;
+    }
+  }
+
+  .btn.btn__gradient {
+    max-width: 18.4rem;
+    min-height: 4.6rem;
+    margin-right: 4rem;
+  }
+
+  .header__social-list {
+    display: flex;
+    margin-right: 2rem;
+    cursor: pointer;
+
+    .header__social-item:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
+
+    .header__social-item .icon {
+      fill: $color-grey-v3;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      &:hover,
+      &:focus {
+        fill: $color-blue-v1;
+      }
+    }
+  }
+
+  .header__avatar {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 2px solid $color-blue-v1;
+    }
+
+    .user-menu__list {
+      display: none;
+    }
+
+    &:hover .user-menu__list,
+    &:focus .user-menu__list {
+      display: block;
+    }
+
+    .header__avatar-img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 2px solid $color-white;
+    }
+  }
+}

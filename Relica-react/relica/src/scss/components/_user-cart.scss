@@ -1,0 +1,56 @@
+.user-cart {
+  position: relative;
+  padding: 2.4rem 5rem 2.4rem 1.6rem;
+  display: flex;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background-color 250ms linear, border-left 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #f0f9fd;
+    border-left: 3px solid $color-blue-v1;
+  }
+
+  .user__avatar {
+    border-radius: 50%;
+  }
+
+  .user__info {
+    margin-left: 1.4rem;
+
+    .title {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+
+    .text {
+      margin-top: 0.2em;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      color: $color-grey-v3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 20rem;
+    }
+  }
+
+  .message-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    min-width: 22px;
+    background-color: $color-blue-v1;
+    border-radius: 15px;
+    padding: 0 9px;
+    color: $color-white;
+  }
+}
