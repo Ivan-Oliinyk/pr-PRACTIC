@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.scss";
+import { LoginPage } from "./pages/Login-page";
 
 function App() {
-  return <p>Hello</p>;
+  return <LoginPage />;
 }
 
 export default App;

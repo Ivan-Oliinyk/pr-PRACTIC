@@ -8,8 +8,8 @@ export const HeroContext: React.FC = () => {
       <p className="question">How can we help you today?</p>
 
       <ul className="btn__list">
-        <Button value="Login with wallet" />
-        <Button value="Creete an account" />
+        <Button value="Login with wallet" prop="btn btn__link" />
+        <Button value="Creete an account" prop="btn btn__link" />
       </ul>
     </div>
   );
