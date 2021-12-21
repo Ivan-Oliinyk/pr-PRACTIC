@@ -1,17 +1,17 @@
 import React from "react";
 import { MainBg } from "../components/main-bg/main-bg";
-import { HeroContext } from "../components/heroContext/HeroContext";
-import { SelectWallet } from "../components/selectWallet/SelectWallet";
-import { LoginWithWallet } from "../components/LoginWithWallet/LoginWithWallet";
-import { UserName } from "../components/userName/UserName";
+import { HeroContext } from "../components/layout/HeroContext";
+import { SelectWallet } from "../components/layout/SelectWallet";
+import { LoginWithWallet } from "../components/layout/LoginWithWallet";
+import { UserName } from "../components/layout/UserName";
 
 export const LoginPage: React.FC = () => {
   return (
     <section className="hero">
       <MainBg />
-      {/* <HeroContext /> */}
+      <HeroContext />
       {/* <SelectWallet /> */}
-      <UserName />
+      {/* <UserName /> */}
       {/* <LoginWithWallet /> */}
     </section>
   );

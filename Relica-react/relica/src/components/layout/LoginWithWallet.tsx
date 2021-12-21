@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../Title/Title";
 import { LinkArrowBack } from "../linkArrowBack/LinkArrowBack";
 import { InputText } from "../inputText/InputText";
-import { Btn } from "../btn/Btn";
+import { Btn } from "../btns/Btn";
 import { CheckboxForgot } from "../checkBox&Forgot/CheckboxForgot";
 
 export const LoginWithWallet: React.FC = () => {

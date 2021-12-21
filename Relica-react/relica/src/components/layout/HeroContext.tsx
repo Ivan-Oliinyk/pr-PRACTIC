@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../btn/Button";
+import { Button } from "../btns/Button";
 
 export const HeroContext: React.FC = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { LinkArrowBack } from "../linkArrowBack/LinkArrowBack";
 import { Title } from "../Title/Title";
 import { RadioBtn } from "../radioBtn/RadioBtn";
-import { Btn } from "../btn/Btn";
+import { Btn } from "../btns/Btn";
 
 export const SelectWallet: React.FC = () => {
   return (
