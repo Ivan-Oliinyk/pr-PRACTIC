@@ -1,9 +1,9 @@
 import React from "react";
-import { MainBg } from "../main-bg/main-bg";
-import { LinkArrowBack } from "../btns/LinkArrowBack";
-import { Title } from "../Title/Title";
-import { RadioBtn } from "../btns/RadioBtn";
-import { Btn } from "../btns/Btn";
+import { MainBg } from "../../main-bg/main-bg";
+import { LinkArrowBack } from "../../btns/LinkArrowBack";
+import { Title } from "../../Title/Title";
+import { RadioBtn } from "../../btns/RadioBtn";
+import { Btn } from "../../btns/Btn";
 
 export const SelectWallet: React.FC = () => {
   return (

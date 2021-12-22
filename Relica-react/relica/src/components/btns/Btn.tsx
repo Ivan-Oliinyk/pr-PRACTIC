@@ -1,12 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type Value = { value: string; classname: string; linkTo: string };
 
 export const Btn: React.FC<Value> = ({ value, classname, linkTo }) => {
+  const navigate = useNavigate()
   return (
-    <NavLink className={classname} to={linkTo}>
+    <button className={classname} type="submit" onClick={() => navigate(linkTo)}>
       <p>{value}</p>
-    </NavLink>
+    </button>
   );
 };

@@ -3,7 +3,7 @@ import { Logo } from "../logo/Logo";
 import { InputSearch } from "./Input-search";
 import { BtnGradient } from "../btns/Btn-gradient";
 import { SocialListLinks } from "./SocialListLinks";
-import { Avatar } from "../common/Avatar";
+import { Avatar } from "../common/home/Avatar";
 
 export const Header: React.FC = () => {
   return (

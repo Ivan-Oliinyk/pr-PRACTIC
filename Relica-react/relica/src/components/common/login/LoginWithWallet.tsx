@@ -1,10 +1,10 @@
 import React from "react";
-import { MainBg } from "../main-bg/main-bg";
-import { Title } from "../Title/Title";
-import { LinkArrowBack } from "../btns/LinkArrowBack";
-import { InputText } from "../inputText/InputText";
-import { Btn } from "../btns/Btn";
-import { CheckboxForgot } from "../checkBox&Forgot/CheckboxForgot";
+import { MainBg } from "../../main-bg/main-bg";
+import { Title } from "../../Title/Title";
+import { LinkArrowBack } from "../../btns/LinkArrowBack";
+import { InputText } from "../../inputText/InputText";
+import { Btn } from "../../btns/Btn";
+import { CheckboxForgot } from "../../checkBox&Forgot/CheckboxForgot";
 
 export const LoginWithWallet: React.FC = () => {
   return (

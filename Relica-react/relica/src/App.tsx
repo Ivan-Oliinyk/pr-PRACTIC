@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import { LoginPage } from "./pages/Login-page";
 
 import { Login } from "./components/layout/Login";
-import { HomePage } from "./pages/Home-page";
+// import { HomePage } from "./pages/Home-page";
+import { Home } from "./components/layout/Home";
 
-import { HeroContext } from "./components/common/HeroContext";
-import { SelectWallet } from "./components/common/SelectWallet";
-import { LoginWithWallet } from "./components/common/LoginWithWallet";
-import { UserName } from "./components/common/UserName";
+import { HeroContext } from "./components/common/login/HeroContext";
+import { SelectWallet } from "./components/common/login/SelectWallet";
+import { LoginWithWallet } from "./components/common/login/LoginWithWallet";
+import { UserName } from "./components/common/login/UserName";
 import { NotFoundPage } from "./pages/NotfoundPage";
 
 function App() {
@@ -21,20 +21,11 @@ function App() {
           <Route path="/UserName" element={<UserName />} />
           <Route path="/LoginWithWallet" element={<LoginWithWallet />} />
         </Route>
-        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/HomePage" element={<Home />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
 }
-
-// function App() {
-//   return (
-//     <Routes>
-//       <Route path="*" element={<LoginPage />}></Route>
-//       <Route path="/HomePage" element={<HomePage />}></Route>
-//     </Routes>
-//   );
-// }
 
 export default App;
