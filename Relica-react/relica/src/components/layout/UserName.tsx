@@ -1,9 +1,9 @@
 import React from "react";
 import { LinkArrowBack } from "../linkArrowBack/LinkArrowBack";
 import { Title } from "../Title/Title";
-import { ButtonPhoto } from "./ButtonPhoto";
+import { ButtonPhoto } from "../btns/ButtonPhoto";
 import { InputText } from "../inputText/InputText";
-import { Btn } from "../btn/Btn";
+import { Btn } from "../btns/Btn";
 
 export const UserName: React.FC = () => {
   return (
