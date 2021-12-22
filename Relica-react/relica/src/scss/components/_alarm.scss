@@ -1,0 +1,20 @@
+.alarm.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+
+  .alarm-title {
+    font-size: 40px;
+    font-size: red;
+    text-shadow: 0 0 9px black;
+    text-align: center;
+  }
+
+  .alarm-subtitle {
+    font-size: 36px;
+    font-size: black;
+    text-shadow: 0 0 9px red;
+    text-align: center;
+  }
+}

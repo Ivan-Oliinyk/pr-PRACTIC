@@ -1,14 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-type Value = { value: string; prop: string };
+type Value = { value: string; prop: string; linkTo: string };
 
-export const Button: React.FC<Value> = ({ value, prop }) => {
+export const Button: React.FC<Value> = ({ value, prop, linkTo }) => {
   return (
     <li className="btn__item">
       {/* <a className="btn btn__link" href="/"> */}
-      <a className={prop} href="/">
+      <NavLink className={prop} to={linkTo}>
         <p>{value}</p>
-      </a>
+      </NavLink>
     </li>
   );
 };

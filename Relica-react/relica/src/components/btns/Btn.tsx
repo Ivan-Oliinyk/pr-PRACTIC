@@ -1,11 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-type Value = { value: string; classname: string };
+type Value = { value: string; classname: string; linkTo: string };
 
-export const Btn: React.FC<Value> = ({ value, classname }) => {
+export const Btn: React.FC<Value> = ({ value, classname, linkTo }) => {
   return (
-    <a className={classname} href="/">
+    <NavLink className={classname} to={linkTo}>
       <p>{value}</p>
-    </a>
+    </NavLink>
   );
 };
