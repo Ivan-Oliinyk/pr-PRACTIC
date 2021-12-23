@@ -9,25 +9,24 @@
   border-radius: 1.5rem;
   transition: all 0.3s;
 
+  &:hover,
+  &:focus {
+    img {
+      filter: brightness(60%);
+      transform: scale(1.1);
+    }
+
+    .icon-wrapper {
+      opacity: 1;
+    }
+  }
+
   img {
     border-radius: 1.5rem;
     object-fit: cover;
     object-position: center;
     transition: all 0.3s;
     transform: scale(1);
-    filter: brightness(60%);
-
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-    }
-  }
-
-  &:hover,
-  &:focus {
-    .icon-wrapper {
-      opacity: 1;
-    }
   }
 
   .icon-wrapper {
