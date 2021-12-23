@@ -12,6 +12,7 @@ import { Home } from "./components/layout/Home";
 import { Post } from "./components/common/home/Posts";
 import { Chat } from "./components/common/home/Chat";
 import { Gallery } from "./components/common/home/Gallery";
+import { Notification } from "./components/common/home/Notification";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<Post />} />
           <Route path="Chat" element={<Chat />} />
           <Route path="Gallery" element={<Gallery />} />
+          <Route path="Notification" element={<Notification />} />
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />

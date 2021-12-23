@@ -35,7 +35,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &.active {
         &:after {
           background-color: $color-blue-v1;
           height: 3px;
