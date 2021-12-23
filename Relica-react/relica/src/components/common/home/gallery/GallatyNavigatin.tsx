@@ -6,8 +6,10 @@ export const GallatyNavigatin: React.FC = () => {
   return (
     <nav className="chat-4__nav">
       <ul className="nav__list">
-        {listContent.map((el) => (
-          <li className="nav__item">{el}</li>
+        {listContent.map((el, i) => (
+          <li key={i} className="nav__item">
+            {el}
+          </li>
         ))}
       </ul>
     </nav>
