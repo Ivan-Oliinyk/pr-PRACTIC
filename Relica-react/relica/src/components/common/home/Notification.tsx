@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import { NotificationTitle } from "./notification/activeLog/NotificationTitle";
 import { NotificationNavigate } from "./notification/activeLog/NotificationNavigate";
 import { NotificationContent } from "./notification/activeLog/NotificationContent";
@@ -9,7 +10,9 @@ export const Notification: React.FC = () => {
     <section className="container-middle notification">
       <NotificationTitle title="Notification" />
       <NotificationNavigate />
-      <NotificationContent items={dataActiveLogs} />
+      <Outlet />
+
+      {/* <NotificationContent items={dataActiveLogs} /> */}
     </section>
   );
 };
