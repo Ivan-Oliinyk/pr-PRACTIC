@@ -7,7 +7,7 @@ export const MainBg: React.FC = () => {
   return (
     <div className="hero__img">
       <div className="content-wrapper">
-        <Logo />
+        <Logo linkTo="/" />
         <Title value="Post photos. Make money. Maintain ownership" />
       </div>
     </div>

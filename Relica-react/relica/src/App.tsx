@@ -2,14 +2,16 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Login } from "./components/layout/Login";
-// import { HomePage } from "./pages/Home-page";
-import { Home } from "./components/layout/Home";
-
 import { HeroContext } from "./components/common/login/HeroContext";
 import { SelectWallet } from "./components/common/login/SelectWallet";
 import { LoginWithWallet } from "./components/common/login/LoginWithWallet";
 import { UserName } from "./components/common/login/UserName";
 import { NotFoundPage } from "./pages/NotfoundPage";
+
+import { Home } from "./components/layout/Home";
+import { Post } from "./components/common/home/Posts";
+import { Chat } from "./components/common/home/Chat";
+import { Gallery } from "./components/common/home/Gallery";
 
 function App() {
   return (
@@ -21,7 +23,13 @@ function App() {
           <Route path="/UserName" element={<UserName />} />
           <Route path="/LoginWithWallet" element={<LoginWithWallet />} />
         </Route>
-        <Route path="/HomePage" element={<Home />} />
+
+        <Route path="/HomePage" element={<Home />}>
+          <Route index element={<Post />} />
+          <Route path="Chat" element={<Chat />} />
+          <Route path="Gallery" element={<Gallery />} />
+        </Route>
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

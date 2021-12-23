@@ -5,23 +5,29 @@
   margin-right: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transition: all 0.3s;
+
+  img {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s;
+    transform: scale(1);
+    filter: brightness(60%);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
 
   &:hover,
   &:focus {
     .icon-wrapper {
       opacity: 1;
     }
-
-    img {
-      filter: brightness(60%);
-    }
-  }
-
-  img {
-    border-radius: 1.5rem;
-    object-fit: cover;
-    object-position: center;
-    transition: filter 250ms linear;
   }
 
   .icon-wrapper {

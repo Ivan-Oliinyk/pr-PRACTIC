@@ -1,23 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SocialListLinks: React.FC = () => {
+  const navigate = useNavigate();
+  const listData = [
+    "/images/symbol-defs.svg#icon-search",
+    "/images/symbol-defs.svg#icon-bell",
+    "/images/symbol-defs.svg#icon-bubble-speak",
+  ];
+  const navigateList = ["Gallery", "", "Chat"];
+
   return (
     <ul className="header__social-list">
-      <li className="header__social-item">
-        <svg className="icon">
-          <use href="./images/symbol-defs.svg#icon-search"></use>
-        </svg>
-      </li>
-      <li className="header__social-item">
-        <svg className="icon">
-          <use href="./images/symbol-defs.svg#icon-bell"></use>
-        </svg>
-      </li>
-      <li className="header__social-item">
-        <svg className="icon">
-          <use href="./images/symbol-defs.svg#icon-bubble-speak"></use>
-        </svg>
-      </li>
+      {listData.map((el, i) => (
+        <li
+          key={i}
+          className="header__social-item"
+          onClick={() => navigate(navigateList[i])}
+        >
+          <svg className="icon">
+            <use href={el}></use>
+          </svg>
+        </li>
+      ))}
     </ul>
   );
 };

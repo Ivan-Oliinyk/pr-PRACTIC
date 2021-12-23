@@ -5,7 +5,7 @@ export const InputSearch: React.FC = () => {
     <div className="input-search__wrapper">
       <img
         className="input-search__img"
-        src="./images/header/zoom-mini.svg"
+        src="/images/header/zoom-mini.svg"
         alt="zoom"
       />
       <input

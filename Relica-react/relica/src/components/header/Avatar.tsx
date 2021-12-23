@@ -5,7 +5,7 @@ export const Avatar: React.FC = () => {
     <div className="header__avatar">
       <img
         className="header__avatar-img"
-        src="./images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
+        src="/images/header/sharon-garcia-KsSmVZJkHqo-unsplash.png"
         alt="avatar"
         width="43px"
         height="43px"

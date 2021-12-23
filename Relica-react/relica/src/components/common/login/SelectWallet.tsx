@@ -1,5 +1,4 @@
 import React from "react";
-import { MainBg } from "../../main-bg/main-bg";
 import { LinkArrowBack } from "../../btns/LinkArrowBack";
 import { Title } from "../../Title/Title";
 import { RadioBtn } from "../../btns/RadioBtn";
@@ -8,7 +7,6 @@ import { Btn } from "../../btns/Btn";
 export const SelectWallet: React.FC = () => {
   return (
     <>
-      {/* <MainBg /> */}
       <div className="select-wallet">
         <LinkArrowBack linkTo="/" />
         <Title value="Select wallet" />

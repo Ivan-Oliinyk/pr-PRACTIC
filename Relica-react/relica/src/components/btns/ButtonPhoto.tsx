@@ -6,17 +6,17 @@ export const ButtonPhoto: React.FC = () => {
       <div className="user-name__box-img">
         <img
           className="img1"
-          src="./images/userName/userName.svg"
+          src="/images/userName/userName.svg"
           width="69"
           height="69"
-          alt="photo"
+          alt="photo1"
         />
         <img
           className="img2"
-          src="./images/userName/photo-camera.svg"
+          src="/images/userName/photo-camera.svg"
           width="30"
           height="24"
-          alt="photo"
+          alt="photo2"
         />
       </div>
 
