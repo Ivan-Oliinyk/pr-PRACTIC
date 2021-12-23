@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Avatar: React.FC = () => {
+  const navigate = useNavigate();
+  const items = [
+    { text: "Profile", path: "Gallery" },
+    { text: "Setting", path: "" },
+    { text: "Log out", path: "/" },
+  ];
+
   return (
     <div className="header__avatar">
       <img
@@ -12,9 +20,15 @@ export const Avatar: React.FC = () => {
       />
 
       <ul className="user-menu user-menu__list">
-        <li className="user-menu__item">Profile</li>
-        <li className="user-menu__item">Setting</li>
-        <li className="user-menu__item">Log out</li>
+        {items.map(({ text, path }, i) => (
+          <li
+            key={i}
+            className="user-menu__item"
+            onClick={() => navigate(path)}
+          >
+            {text}
+          </li>
+        ))}
       </ul>
     </div>
   );
