@@ -10,9 +10,7 @@ export const EditBts: React.FC = () => {
   return (
     <ul className="profile__btn-list">
       {dataBtn.map(({ value, linkTo }, i) => (
-        <li key={i}>
-          <Button value={value} prop="btn" linkTo={linkTo} />
-        </li>
+        <Button key={i} value={value} prop="btn" linkTo={linkTo} />
       ))}
     </ul>
   );
