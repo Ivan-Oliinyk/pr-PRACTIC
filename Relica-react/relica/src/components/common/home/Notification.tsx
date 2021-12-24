@@ -2,8 +2,6 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { NotificationTitle } from "./notification/activeLog/NotificationTitle";
 import { NotificationNavigate } from "./notification/activeLog/NotificationNavigate";
-import { NotificationContent } from "./notification/activeLog/NotificationContent";
-import dataActiveLogs from "./notification/activeLog/dataActiveLogs.json";
 
 export const Notification: React.FC = () => {
   return (
@@ -11,8 +9,6 @@ export const Notification: React.FC = () => {
       <NotificationTitle title="Notification" />
       <NotificationNavigate />
       <Outlet />
-
-      {/* <NotificationContent items={dataActiveLogs} /> */}
     </section>
   );
 };
