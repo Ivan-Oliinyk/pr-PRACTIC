@@ -5,7 +5,7 @@ export const Avatar: React.FC = () => {
   const navigate = useNavigate();
   const items = [
     { text: "Profile", path: "Gallery" },
-    { text: "Setting", path: "" },
+    { text: "Setting", path: "EditProfile" },
     { text: "Log out", path: "/" },
   ];
 
