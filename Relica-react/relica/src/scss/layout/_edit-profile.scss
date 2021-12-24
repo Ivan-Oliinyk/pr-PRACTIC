@@ -155,5 +155,22 @@
         margin-top: -1.5rem;
       }
     }
+
+    .profile__btn-list {
+      margin-top: 5.6rem;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        max-width: 18.4rem;
+        .btn {
+          min-height: 4.6rem;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+      }
+    }
   }
 }

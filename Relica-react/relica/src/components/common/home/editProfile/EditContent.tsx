@@ -1,6 +1,7 @@
 import React from "react";
 import { EditVisual } from "./EditVisual";
 import { EditInputs } from "./EditInputs";
+import { EditBts } from "../editProfile/EditBts";
 
 export const EditContent: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const EditContent: React.FC = () => {
         userInfo="Mikaela White"
       />
       <EditInputs />
+      <EditBts />
     </div>
   );
 };
