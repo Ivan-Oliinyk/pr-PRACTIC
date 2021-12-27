@@ -1,0 +1,62 @@
+[
+  {
+    "image": "/images/chat/img1.png",
+    "likes": 120,
+    "comments": 23
+  },
+  {
+    "image": "/images/chat/img2.png",
+    "likes": 421,
+    "comments": 83
+  },
+  {
+    "image": "/images/chat/img3.png",
+    "likes": 140,
+    "comments": 13
+  },
+  {
+    "image": "/images/chat/img4.png",
+    "likes": 170,
+    "comments": 43
+  },
+  {
+    "image": "/images/chat/img5.png",
+    "likes": 150,
+    "comments": 43
+  },
+  {
+    "image": "/images/chat/img6.png",
+    "likes": 127,
+    "comments": 53
+  },
+  {
+    "image": "/images/chat/img7.png",
+    "likes": 520,
+    "comments": 123
+  },
+  {
+    "image": "/images/chat/img8.png",
+    "likes": 67,
+    "comments": 13
+  },
+  {
+    "image": "/images/chat/img9.png",
+    "likes": 80,
+    "comments": 41
+  },
+  {
+    "image": "/images/chat/img1.png",
+    "likes": 80,
+    "comments": 41
+  },
+  {
+    "image": "/images/chat/img3.png",
+    "likes": 80,
+    "comments": 41
+  },
+  {
+    "image": "/images/chat/img5.png",
+    "likes": 80,
+    "comments": 41
+  }
+]

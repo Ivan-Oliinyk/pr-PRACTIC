@@ -1,0 +1,12 @@
+.alarm.center {
+  background: url("../../../public/images/not-found.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}

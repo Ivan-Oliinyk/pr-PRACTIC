@@ -35,6 +35,8 @@
 
     .chat__user-carts {
       padding: 1rem 0;
+      overflow: auto;
+      height: calc(100vh - 19.6rem);
     }
   }
 
