@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 2rem;
   min-height: 9.6rem;
   background-color: $color-white;

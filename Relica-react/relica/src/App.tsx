@@ -12,6 +12,10 @@ import { Home } from "./components/layout/Home";
 import { Post } from "./components/common/home/Posts";
 import { Chat } from "./components/common/home/Chat";
 import { Gallery } from "./components/common/home/Gallery";
+import { Notification } from "./components/common/home/Notification";
+import { ActiveLog } from "./components/common/home/notification/ActiveLog";
+import { Income } from "./components/common/home/notification/Income";
+import { EditProfile } from "./components/common/home/EditProfile";
 
 function App() {
   return (
@@ -28,6 +32,11 @@ function App() {
           <Route index element={<Post />} />
           <Route path="Chat" element={<Chat />} />
           <Route path="Gallery" element={<Gallery />} />
+          <Route path="Notification" element={<Notification />}>
+            <Route index element={<ActiveLog />} />
+            <Route path="Income" element={<Income />} />
+          </Route>
+          <Route path="EditProfile" element={<EditProfile />} />
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />

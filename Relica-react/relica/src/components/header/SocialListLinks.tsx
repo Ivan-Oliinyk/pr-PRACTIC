@@ -11,7 +11,7 @@ export const SocialListLinks: React.FC = () => {
     },
     {
       src: "/images/symbol-defs.svg#icon-bell",
-      path: "",
+      path: "Notification",
     },
     {
       src: "/images/symbol-defs.svg#icon-bubble-speak",

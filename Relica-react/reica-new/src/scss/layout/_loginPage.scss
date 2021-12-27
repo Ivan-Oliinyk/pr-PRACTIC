@@ -1,0 +1,98 @@
+.loginPage {
+  display: flex;
+}
+
+.loginPage__img {
+  padding: 12.88% 1.46% 3.66% 7.32%;
+  background-image: url("../../../public/images/bg2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 56%;
+  height: 100vh;
+
+  .content-wrapper {
+    color: $color-white;
+
+    .title-desription {
+      margin: 4rem 0 0 0;
+      font-size: 4rem;
+      max-width: 51rem;
+    }
+  }
+}
+
+.loginPage__context {
+  padding: 16rem 1rem 1rem 10rem;
+  max-width: 44%;
+
+  .question {
+    margin-top: 0.7em;
+    font-size: 1.6rem;
+  }
+
+  .btn__list {
+    margin-top: 6rem;
+
+    .btn__item:last-of-type {
+      margin-top: 1.6rem;
+    }
+
+    .btn__link {
+      &:hover .btn,
+      &:focus .btn {
+        box-shadow: 0 0 6px $color-blue-v3, inset 0 0 3px $color-blue-v3;
+        border: 1px solid $color-blue-v3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .loginPage__context {
+    margin: 0 auto;
+    padding: 11.7% 0 2.2%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .loginPage {
+    flex-direction: column;
+  }
+
+  .loginPage__img {
+    width: 100%;
+    max-height: 50vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .title-desription {
+        text-align: center;
+        margin-top: 1em;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .loginPage__context {
+    padding: 2rem 0;
+    min-width: 100%;
+    max-height: 50vh;
+
+    .question {
+      text-align: center;
+    }
+
+    .btn__item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -24,8 +24,17 @@
       &.twitter-link {
         color: $color-blue-v1;
         font-size: 2rem;
+        button {
+          color: $color-blue-v1;
+          cursor: pointer;
 
-        a {
+          &:hover,
+          &:focus {
+            color: $color-blue-v2;
+          }
+        }
+
+        button {
           border-bottom: 1px solid $color-blue-v1;
         }
 
@@ -35,7 +44,7 @@
           background-color: transparent;
           border-color: transparent;
 
-          a {
+          button {
             border-bottom: 1px solid $color-blue-v2;
           }
         }
@@ -81,11 +90,12 @@
         cursor: pointer;
       }
 
-      :before {
+      &:before {
         content: "";
         position: absolute;
-        bottom: 0;
-        right: 0;
+        z-index: 2;
+        bottom: -5rem;
+        left: 52%;
         display: block;
         width: 4rem;
         height: 4rem;
@@ -107,11 +117,21 @@
         width: 114px;
         height: 114px;
 
+        &:hover,
+        &:focus {
+          transform: translate(-50%, 50%) scale(1);
+        }
+
         img {
           object-fit: cover;
           object-position: center;
           border-radius: 50%;
           filter: none;
+
+          &:hover,
+          &:focus {
+            transform: scale(1);
+          }
         }
       }
     }
@@ -134,6 +154,22 @@
 
       .user-name__input-descr {
         margin-top: -1.5rem;
+      }
+    }
+
+    .profile__btn-list {
+      margin-top: 5.6rem;
+      display: flex;
+      justify-content: flex-end;
+
+      .btn,
+      .btn-list {
+        max-width: 18.4rem;
+        min-height: 4.6rem;
+
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
       }
     }
   }

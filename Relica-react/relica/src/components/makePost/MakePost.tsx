@@ -6,13 +6,13 @@ type Value = {
 
 export const MakePost: React.FC<Value> = ({ cb }) => {
   const images = [
-    "./images/posts/Component 96 – 1@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
-    "./images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 96 – 1@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
+    "/images/posts/Component 95 – 2@2x.png",
   ];
 
   return (
@@ -23,7 +23,7 @@ export const MakePost: React.FC<Value> = ({ cb }) => {
 
           <div className="close__wrapper" onClick={cb}>
             <svg className="close" width="20" height="20">
-              <use href="./images/sprites/symbol-defs.svg#icon-close"></use>
+              <use href="/images/sprites/symbol-defs.svg#icon-close"></use>
             </svg>
           </div>
         </div>

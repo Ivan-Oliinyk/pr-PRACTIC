@@ -1,0 +1,73 @@
+[
+  {
+    "image": "/images/svg/heart.svg",
+    "alt": "heart",
+    "user": "mikepradofoto",
+    "reaction": "liked your picture!",
+    "timeAgo": "13m ago",
+    "targetImg": "/images/chat/img6.png"
+  },
+
+  {
+    "image": "/images/svg/heart.svg",
+    "alt": "heart",
+    "user": "PXL3000",
+    "reaction": "liked your picture!",
+    "timeAgo": "13m ago",
+    "targetImg": "/images/chat/img6.png"
+  },
+
+  {
+    "image": "/images/svg/heart.svg",
+    "alt": "heart",
+    "user": "Hatty",
+    "reaction": "liked your picture!",
+    "timeAgo": "13m ago",
+    "targetImg": "/images/chat/img4.png"
+  },
+
+  {
+    "image": "/images/svg/circle-red.svg",
+    "alt": "heart",
+    "user": "mikepradofoto",
+    "reaction": "started following you",
+    "timeAgo": "13m ago",
+    "targetImg": "/images/svg/logo-w.svg"
+  },
+
+  {
+    "image": "/images/svg/circle-red.svg",
+    "alt": "heart",
+    "user": "mikepradofoto",
+    "reaction": "liked your picture!",
+    "timeAgo": "13m ago",
+    "targetImg": "/images/chat/img4.png"
+  },
+
+  {
+    "image": "/images/svg/circle-red.svg",
+    "alt": "heart",
+    "user": "wutao",
+    "reaction": "liked your picture!",
+    "timeAgo": "15m ago",
+    "targetImg": "/images/chat/img6.png"
+  },
+
+  {
+    "image": "/images/svg/circle-red.svg",
+    "alt": "heart",
+    "user": "mikepradofoto",
+    "reaction": "liked your picture!",
+    "timeAgo": "15m ago",
+    "targetImg": "/images/chat/img6.png"
+  },
+
+  {
+    "image": "/images/svg/circle-red.svg",
+    "alt": "heart",
+    "user": "Neyrotphoto",
+    "reaction": "liked your picture!",
+    "timeAgo": "15m ago",
+    "targetImg": "/images/chat/img3.png"
+  }
+]
