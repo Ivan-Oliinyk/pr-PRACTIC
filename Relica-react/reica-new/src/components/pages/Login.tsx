@@ -4,9 +4,11 @@ import { LogoBgImage } from "../layout/login/LogoBgImage";
 
 export const Login: React.FC = () => {
   return (
-    <section className="logoPage">
+    <section className="loginPage">
       <LogoBgImage />
-      <Outlet />
+      <div className="login-content">
+        <Outlet />
+      </div>
     </section>
   );
 };

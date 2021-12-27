@@ -12,7 +12,6 @@ export const LogoBgImage: React.FC = () => {
           linkTo="/"
           image="/images/logo.png"
           classname="h1 big bolt"
-          color="white"
           text="Relica"
           tagname={TagVariants.p}
         />

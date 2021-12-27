@@ -12,11 +12,7 @@ export enum TagVariants {
   span = "span",
 }
 
-// export type Color = {
-//   color: string
-// }
-
-interface TypographyProps {
+export interface TypographyProps {
   classname: string;
   tagname: TagVariants;
   color?: string;
