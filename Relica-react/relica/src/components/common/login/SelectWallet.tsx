@@ -14,7 +14,7 @@ export const SelectWallet: React.FC = () => {
         <RadioBtn
           checkboxname="check-wallet"
           checkboxId="radio-check1"
-          sourse="./images/selectWallet/handCash.png"
+          sourse="/images/selectWallet/handCash.png"
           imgAlt="hand-cash"
           imgWidth="44"
           imgHeigth="44"

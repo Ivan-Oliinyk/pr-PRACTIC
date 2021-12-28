@@ -18,7 +18,7 @@ export const WelcomePage: React.FC = () => {
     <div className="welcome-wrapper">
       <Card classname="card">
         <CardHeader classname="card-header">
-          <BtnBack linkTo="" />
+          <BtnBack text="Back" />
         </CardHeader>
         <CardContent classname="card-content">
           <Typography

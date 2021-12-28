@@ -1,0 +1,13 @@
+.form {
+  margin-top: 2.8rem;
+
+  .radio-input__wrapper {
+    &:not(:first-of-type) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  .btn {
+    margin-top: 5.6rem;
+  }
+}

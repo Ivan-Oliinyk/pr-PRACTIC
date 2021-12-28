@@ -24,6 +24,12 @@
   border-color: $color-grey-base;
 }
 
+.disabled {
+  background-color: $color-grey;
+  border-color: $color-grey;
+  color: $color-white;
+}
+
 // .btn__blue-hover {
 //   &:hover,
 //   &:focus {
