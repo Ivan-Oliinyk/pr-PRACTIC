@@ -1,5 +1,4 @@
 import React from "react";
-// import BgImage from "../../assets/images/logo.png";
 import { Logo } from "../../logo/Logo";
 import { Typography } from "../../typography/Typography";
 import { TagVariants } from "../../typography/Typography";
@@ -17,7 +16,7 @@ export const LogoBgImage: React.FC = () => {
         />
         <Typography
           tagname={TagVariants.h1}
-          classname="h1 medium"
+          classname="h1 medium max-width-510"
           children="Post photos. Make money. Maintain ownership"
           color="white"
         />

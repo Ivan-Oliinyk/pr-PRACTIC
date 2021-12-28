@@ -1,0 +1,17 @@
+.card {
+  width: 40rem;
+}
+
+.card-header {
+  margin-bottom: 4.3rem;
+}
+
+.card-content {
+  .btn:first-of-type {
+    margin-top: 6.8rem;
+  }
+
+  .btn:not(:first-of-type) {
+    margin-top: 1.6rem;
+  }
+}

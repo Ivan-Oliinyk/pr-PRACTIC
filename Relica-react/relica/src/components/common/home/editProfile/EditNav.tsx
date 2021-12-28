@@ -6,6 +6,7 @@ export const EditNav: React.FC = () => {
     { title: "Push notifications" },
     { title: "Language" },
     { title: "Security" },
+    { title: "Security" },
     { title: "Contact" },
     { title: "About us" },
     { title: "Visit our Twitter page", twitter: true },

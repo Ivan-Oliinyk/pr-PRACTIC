@@ -1,6 +1,13 @@
 .login-content {
-  padding: 16rem 10rem 2rem;
+  padding: 9.5rem 10rem 2rem;
   width: 44%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.welcome-wrapper {
+  .btn__back {
+    opacity: 0;
+    cursor: auto;
+  }
 }

@@ -48,6 +48,14 @@
   font-weight: 700;
 }
 
+.medium {
+  font-weight: 500;
+}
+
+.normal {
+  font-weight: 400;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -59,4 +67,12 @@
 
 .black {
   color: black;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.max-width-510 {
+  max-width: 51rem;
 }

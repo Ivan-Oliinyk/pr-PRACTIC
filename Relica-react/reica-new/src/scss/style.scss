@@ -5,11 +5,18 @@
 @import "./common/normalize";
 @import "./common/scroll";
 @import "./common/base";
-@import "./components/_logo";
+@import "./common/margins";
+
+@import "./common/ sizes";
 
 //LAYOUT
 @import "./layout/loginPage";
 
 //COMPONENTS
 @import "./components/typography";
+@import "./components/_logo";
 @import "./components/loginContent";
+@import "./components/btn";
+@import "./components/btn-back";
+@import "./components/card";
+@import "./components/form";
