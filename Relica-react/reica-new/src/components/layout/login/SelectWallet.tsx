@@ -48,7 +48,7 @@ export const SelectWallet: React.FC = () => {
           <Button
             tagname={TagVariants.button}
             classname="btn disabled"
-            cb={() => navigate("/")}
+            cb={() => navigate("/User-name")}
             children="Continue"
           />
         </Form>

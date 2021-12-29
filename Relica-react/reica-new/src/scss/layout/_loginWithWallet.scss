@@ -1,0 +1,15 @@
+.input-wrapper__logIn {
+  margin-top: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .link_color {
+    font-size: 1.6rem;
+  }
+}
+
+.link_color {
+  color: $color-blue-v1;
+  font-weight: 600;
+}

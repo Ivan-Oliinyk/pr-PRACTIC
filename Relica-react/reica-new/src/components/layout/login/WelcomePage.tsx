@@ -1,12 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import { BtnBack } from "../../button/BtnBack";
-
 import { Typography } from "../../typography/Typography";
 import { TagVariants } from "../../typography/Typography";
 import { Button } from "../../button/Button";
-
 import { Card } from "../../card/Card";
 import { CardHeader } from "../../card/CardHeader";
 import { CardContent } from "../../card/CardContent";
@@ -34,13 +31,13 @@ export const WelcomePage: React.FC = () => {
           <Button
             tagname={TagVariants.button}
             classname="btn"
-            cb={() => navigate("/")}
+            cb={() => navigate("/Login-with-wallet")}
             children="Login with wallet"
           />
           <Button
             tagname={TagVariants.button}
             classname="btn"
-            cb={() => navigate("Select-Wallet")}
+            cb={() => navigate("/Select-Wallet")}
             children="Create an account"
           />
         </CardContent>

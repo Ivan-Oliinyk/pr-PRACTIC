@@ -5,7 +5,7 @@
   align-items: center;
   border-radius: 2.5rem;
   min-height: 5.6rem;
-  padding: 1.6rem 0;
+  // padding: 1.6rem 0;
   text-align: center;
   width: 100%;
   border: 1px solid $color-grey-base;
@@ -17,6 +17,18 @@
     border: 1px solid $color-blue-v3;
     box-shadow: 0 0 3px $color-blue-v3;
     color: $color-white;
+  }
+
+  &.active {
+    background: linear-gradient(45deg, $color-blue-v3, $color-blue-v4);
+    border: 1px solid $color-blue-v3;
+    box-shadow: 0 0 3px $color-blue-v3;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(45deg, $color-blue-v4, $color-blue-v6);
+    }
   }
 }
 

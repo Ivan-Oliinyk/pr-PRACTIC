@@ -8,14 +8,14 @@ interface Props {
   text: string;
 }
 
-export const BtnBack: React.FC<Props> = ({ linkTo, text }) => {
+export const BtnBack: React.FC<Props> = ({ linkTo = "", text }) => {
   const navigate = useNavigate();
 
   return (
     <Button
       tagname={TagVariants.button}
       classname="btn__back"
-      cb={() => navigate((linkTo = ""))}
+      cb={() => navigate(linkTo)}
     >
       <svg className="arrow-svg" width="16" height="16">
         <use href="/images/symbol-defs.svg#icon-arrow"></use>

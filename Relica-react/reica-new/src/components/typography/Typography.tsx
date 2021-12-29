@@ -16,7 +16,6 @@ export enum TagVariants {
 export interface TypographyProps {
   classname: string;
   tagname: TagVariants;
-  cb?: () => void;
   color?: string;
 }
 
@@ -24,7 +23,6 @@ export const Typography: React.FC<TypographyProps> = ({
   classname,
   tagname,
   color = "black",
-
   ...rest
 }) => {
   return React.createElement(tagname, {

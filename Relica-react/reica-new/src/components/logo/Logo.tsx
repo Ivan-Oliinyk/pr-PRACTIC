@@ -24,7 +24,13 @@ export const Logo: React.FC<Value> = ({
 
   return (
     <div className="logo-wrapper" onClick={() => navigate(linkTo)}>
-      <img className={"logo" + color} src={image} alt="Logo" />
+      <img
+        className={"logo " + color}
+        src={image}
+        alt="Logo"
+        width="78"
+        height="78"
+      />
       <Typography
         tagname={tagname}
         classname={classname}

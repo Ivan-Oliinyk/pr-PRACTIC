@@ -6,11 +6,13 @@
 @import "./common/scroll";
 @import "./common/base";
 @import "./common/margins";
-
+@import "./common/containers";
 @import "./common/ sizes";
+@import "./common/_backdrop";
 
 //LAYOUT
 @import "./layout/loginPage";
+@import "./layout/loginWithWallet";
 
 //COMPONENTS
 @import "./components/typography";
@@ -21,3 +23,11 @@
 @import "./components/card";
 @import "./components/form";
 @import "./components/inputRadio";
+@import "./components/btn-photo";
+@import "./components/inputText";
+@import "./components/_checkbox";
+@import "./components/_header";
+@import "./components/_input-search";
+@import "./components/make-post";
+@import "./components/user-menu";
+@import "./components/user-post";

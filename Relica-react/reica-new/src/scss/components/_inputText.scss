@@ -1,0 +1,35 @@
+.input-wrapper {
+  position: relative;
+
+  .input-text {
+    margin-top: 4rem;
+    padding: 1rem 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #939393;
+    color: $color-black;
+    font-size: 1.6rem;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      &::placeholder {
+        color: $color-black;
+      }
+    }
+  }
+
+  .user-name__input-descr {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    font-size: 1.2rem;
+    color: $color-grey-v3;
+    opacity: 0;
+    transition: opacity 250ms linear;
+  }
+
+  .input-text:focus + .user-name__input-descr {
+    opacity: 1;
+  }
+}
