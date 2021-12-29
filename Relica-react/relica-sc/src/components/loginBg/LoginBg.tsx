@@ -9,6 +9,7 @@ const ContainerBg = styled.div`
   background-size: cover;
   width: 56%;
   height: 100vh;
+  color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: 992px) {
     width: 100vw;
@@ -19,7 +20,7 @@ const ContainerBg = styled.div`
 export const LoginBg: FC = () => {
   return (
     <>
-      <ContainerBg />
+      <ContainerBg children="asasdd" />
     </>
   );
 };
