@@ -5,15 +5,12 @@ export const baseTheme: ITheme = {
     greyPrimary: "#939393",
     greySecondary: "#d6d6d6",
     greyLight: "#ededed",
-
     white: "#fff",
     black: "#000",
-
     blueV1: "#10a5f5",
     blueV2: "#00dbff",
     blueV3: "#00aecb",
     blueV4: "#0b91d9",
-
     shadow: "#00000008",
   },
 
@@ -33,5 +30,9 @@ export const baseTheme: ITheme = {
   order: {
     header: 50,
     modal: 100,
+  },
+
+  size: {
+    small: 12,
   },
 };

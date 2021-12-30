@@ -32,4 +32,8 @@ export interface ITheme {
     header: number;
     modal: number;
   };
+
+  size: {
+    small: number;
+  };
 }
