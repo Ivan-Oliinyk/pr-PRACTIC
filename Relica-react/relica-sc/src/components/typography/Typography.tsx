@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { baseTheme } from "../../styles/theme";
 
 export enum TagVariants {
   h1 = "h1",
@@ -14,11 +15,11 @@ export enum TagVariants {
   button = "button",
 }
 
-type TypographyProps = {
+export type TypographyProps = {
   tagName: TagVariants;
-  size: string;
-  height?: string;
-  weight: string;
+  size?: string;
+  height?: string | number;
+  weight?: string | number;
   width?: string | number;
   color?: string;
   align?: string;
@@ -30,21 +31,28 @@ const Typography: React.FC<TypographyProps> = ({
   size,
   height,
   weight,
-  width = "100%",
-  children,
-  color = "#fff",
-  align = "start",
+  width,
+  color,
+  align,
   padding,
+  children,
 }) => {
   return React.createElement(
     styled(`${tagName}`)`
-      font-size: ${size};
-      line-height: ${height};
-      font-weight: ${weight};
-      width: ${width};
-      color: ${color};
+      font-size: ${size || baseTheme.size.base};
+      line-height: ${height || baseTheme.lineHeight.normal};
+      font-weight: ${weight || baseTheme.weight.normal};
+      width: ${width || baseTheme.width.full};
+      color: ${color || baseTheme.colors.black};
       text-align: ${align};
       padding: ${padding};
+
+      @media (max-width: 992px) {
+        color: ${(props) =>
+          props.color === baseTheme.colors.white
+            ? baseTheme.colors.black
+            : "red"};
+      }
     `,
     { children }
   );

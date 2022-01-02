@@ -11,7 +11,7 @@ const WelcomeContainer = styled.div`
 `;
 
 const Welcome: FC = () => {
-  return <WelcomeContainer>sddsdd</WelcomeContainer>;
+  return <WelcomeContainer>Welcome,</WelcomeContainer>;
 };
 
 export default Welcome;
