@@ -1,33 +1,28 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface IStyled {
-  size: string;
-  height: string;
-  weight: string;
-  color?: string;
+export enum TagVariants {
+  h1 = "h1",
+  h2 = "h2",
+  h3 = "h3",
+  h4 = "h4",
+  h5 = "h5",
+  h6 = "h6",
+  p = "p",
+  div = "div",
+  span = "span",
+  button = "button",
 }
 
-const fontStyles = css<IStyled>`
-  font-size: ${(props) => props.size || "1.6rem"};
-  line-height: ${(props) => props.height || 1.2};
-  font-weight: ${(props) => props.weight || 400};
-  color: ${(props) => props.color || "#fff"};
-`;
-
-const H1 = styled.h1`
-  ${fontStyles}
-`;
-
-const H2 = styled.h2`
-  ${fontStyles}
-`;
-
 type TypographyProps = {
-  tagName: string;
+  tagName: TagVariants;
   size: string;
-  height: string;
+  height?: string;
   weight: string;
+  width?: string | number;
+  color?: string;
+  align?: string;
+  padding?: string;
 };
 
 const Typography: React.FC<TypographyProps> = ({
@@ -35,20 +30,23 @@ const Typography: React.FC<TypographyProps> = ({
   size,
   height,
   weight,
+  width = "100%",
   children,
+  color = "#fff",
+  align = "start",
+  padding,
 }) => {
-  return (
-    <>
-      {tagName === "h1" ? (
-        <H1 size={size} height={height} weight={weight}>
-          {children}
-        </H1>
-      ) : (
-        <H2 size={size} height={height} weight={weight}>
-          {children}
-        </H2>
-      )}
-    </>
+  return React.createElement(
+    styled(`${tagName}`)`
+      font-size: ${size};
+      line-height: ${height};
+      font-weight: ${weight};
+      width: ${width};
+      color: ${color};
+      text-align: ${align};
+      padding: ${padding};
+    `,
+    { children }
   );
 };
 

@@ -17,7 +17,7 @@ const LogoImg = styled.img`
 const Title = styled.p`
   margin-left: 0.46em;
   font-size: 4.3rem;
-  font-weight: 600;
+  font-weight: 700;
   color: ${(props) => props.color || baseTheme.colors.white};
 `;
 
