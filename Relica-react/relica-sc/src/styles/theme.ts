@@ -15,10 +15,12 @@ export const baseTheme: ITheme = {
   },
 
   media: {
-    extraLarge: "(max-width: 1366px)",
-    large: "(max-width: 960px)",
-    medium: "(max-width: 720px)",
-    small: "(max-width: 540px)",
+    mobileS: "320px",
+    mobileL: "480px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1366px",
+    desktopL: "1920px",
   },
 
   // in ms
@@ -53,6 +55,7 @@ export const baseTheme: ITheme = {
 
   weight: {
     bolt: 700,
+    large: 600,
     medium: 500,
     normal: 400,
   },

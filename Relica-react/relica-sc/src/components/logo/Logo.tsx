@@ -5,34 +5,78 @@ import { baseTheme } from "../../styles/theme";
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: 4.3rem;
   cursor: pointer;
+
+  @media (max-width: ${baseTheme.media.laptop}) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: ${baseTheme.media.mobileL}) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
-const LogoImg = styled.img`
-  width: 1.82em;
-  height: 1.82em;
+interface ILogoImg {
+  width?: string;
+  height?: string;
+}
+
+const LogoImg = styled.img<ILogoImg>`
+  width: ${(props) => props.width || "7.8rem"};
+  height: ${(props) => props.height || "7.8rem"};
+
+  @media (max-width: ${baseTheme.media.mobileL}) {
+    width: 4.9rem;
+    height: 4.9rem;
+  }
 `;
 
-const Title = styled.p`
-  margin-left: 0.46em;
-  font-size: 4.3rem;
-  font-weight: 700;
+interface ITitle {
+  weight?: string;
+  color?: string;
+  size?: string;
+  margin?: string;
+}
+
+const Title = styled.p<ITitle>`
+  margin-left: ${(props) => props.margin || "0 0 0 0.46em"};
+  font-size: ${(props) => props.size || baseTheme.size.titleBig};
+  font-weight: ${(props) => props.weight || baseTheme.weight.bolt};
   color: ${(props) => props.color || baseTheme.colors.white};
+
+  @media (max-width: ${baseTheme.media.mobileL}) {
+    font-size: ${baseTheme.size.titleSmall};
+  }
 `;
 
 interface ILogoProps {
+  imgWidth?: string;
+  imgHeight?: string;
   color?: string;
   imgSrc: string;
   imgAlt: string;
   title: string;
+  weight?: string;
+  size?: string;
+  margin?: string;
 }
 
-const Logo: React.FC<ILogoProps> = ({ color, imgSrc, imgAlt, title }) => {
+const Logo: React.FC<ILogoProps> = ({
+  imgWidth,
+  imgHeight,
+  color,
+  imgSrc,
+  imgAlt,
+  title,
+  size,
+  margin,
+}) => {
   return (
     <LogoWrapper>
-      <LogoImg src={imgSrc} alt={imgAlt} />
-      <Title color={color}>{title}</Title>
+      <LogoImg src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} />
+      <Title color={color} size={size} margin={margin}>
+        {title}
+      </Title>
     </LogoWrapper>
   );
 };

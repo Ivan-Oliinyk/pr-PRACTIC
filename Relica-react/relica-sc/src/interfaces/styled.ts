@@ -13,10 +13,12 @@ export interface ITheme {
   };
 
   media: {
-    extraLarge: string;
-    large: string;
-    medium: string;
-    small: string;
+    mobileS: string;
+    mobileL: string;
+    tablet: string;
+    laptop: string;
+    desktop: string;
+    desktopL: string;
   };
 
   // in ms
@@ -50,6 +52,7 @@ export interface ITheme {
 
   weight: {
     bolt: number;
+    large: number;
     medium: number;
     normal: number;
   };
@@ -61,4 +64,10 @@ export interface ITheme {
     fullHeight: string;
     halfHeight: string;
   };
+
+  // flex: {
+  //   display: string;
+  //   flexDirection: string | string;
+  //   justifyContent: string | string | string | string | string | string;
+  // };
 }
