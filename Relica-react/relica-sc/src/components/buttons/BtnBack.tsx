@@ -1,23 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 import { useNavigate } from "react-router-dom";
 
 interface IContainerStyled {
-  opacity?: string;
-  cursor?: string;
   linkTo?: string;
+  hidden?: boolean;
 }
 
 const Container = styled.button<IContainerStyled>`
   padding: 10px 0;
   display: flex;
   align-items: center;
-  opacity: ${(props) => props.opacity || "1"};
   color: ${baseTheme.colors.blueV1};
   font-size: ${baseTheme.size.base};
   font-weight: ${baseTheme.weight.bolt};
-  cursor: ${(props) => props.cursor || "pointer"};
+  cursor: "pointer";
   transition: color 300ms linear;
   svg {
     fill: ${baseTheme.colors.blueV1};
@@ -32,17 +30,25 @@ const Container = styled.button<IContainerStyled>`
       fill: ${baseTheme.colors.blueV2};
     }
   }
+
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      cursor: auto;
+      opacity: 0;
+    `}
 `;
 
 const BtnBack: React.FC<IContainerStyled> = ({
   children = "Back",
   linkTo = "",
+  hidden,
 }) => {
   const navigate = useNavigate();
 
   return (
     <>
-      <Container onClick={() => navigate(linkTo)}>
+      <Container onClick={() => navigate(linkTo)} hidden={hidden}>
         <svg width="16" height="16">
           <use href="/images/symbol-defs.svg#icon-arrow"></use>
         </svg>

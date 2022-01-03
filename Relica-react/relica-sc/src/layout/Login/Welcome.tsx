@@ -7,7 +7,7 @@ import CardContent from "../../components/card/CardContent";
 import Title from "./Title";
 import Subtitle from "./Subtitle";
 import BtnBack from "../../components/buttons/BtnBack";
-
+import Button from "../../components/buttons/Button";
 interface IWelcomeContainer {
   padding?: string;
   color?: string;
@@ -15,8 +15,8 @@ interface IWelcomeContainer {
 
 const WelcomeContainer = styled.div<IWelcomeContainer>`
   width: 44%;
-  padding: ${(props) => props.padding || "9.5rem 1.5rem 3rem"};
-  color: ${(props) => props.color || baseTheme.colors.black};
+  padding: ${({ padding }) => padding || "9.5rem 2rem 3rem"};
+  color: ${({ color }) => color || baseTheme.colors.black};
 
   @media (max-width: ${baseTheme.media.laptop}) {
     width: 100%;
@@ -29,11 +29,31 @@ const Welcome: React.FC = () => {
     <WelcomeContainer>
       <Card width="40rem" margin="0 auto" direction="column">
         <CardHeader>
-          <BtnBack></BtnBack>
+          <BtnBack hidden></BtnBack>
         </CardHeader>
         <CardContent direction="column">
           <Title>Welcome</Title>
           <Subtitle>How can we help you today?</Subtitle>
+          <Button
+            border="1px solid #939393"
+            borderRadius="3rem"
+            minHeight="5.6rem"
+            justify="center"
+            align="center"
+            weight={baseTheme.weight.bolt}
+          >
+            Login with wallet
+          </Button>
+          <Button
+            border="1px solid #939393"
+            borderRadius="3rem"
+            minHeight="5.6rem"
+            justify="center"
+            align="center"
+            weight={baseTheme.weight.bolt}
+          >
+            Create an account
+          </Button>
         </CardContent>
       </Card>
     </WelcomeContainer>

@@ -60,7 +60,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family:Roboto, system-ui, -apple-system,"Segoe UI", 
+    font-family:Roboto, 
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   }
 

@@ -22,8 +22,8 @@ interface ILogoImg {
 }
 
 const LogoImg = styled.img<ILogoImg>`
-  width: ${(props) => props.width || "7.8rem"};
-  height: ${(props) => props.height || "7.8rem"};
+  width: ${({ width }) => width || "7.8rem"};
+  height: ${({ height }) => height || "7.8rem"};
 
   @media (max-width: ${baseTheme.media.mobileL}) {
     width: 4.9rem;
@@ -39,10 +39,10 @@ interface ITitle {
 }
 
 const Title = styled.p<ITitle>`
-  margin-left: ${(props) => props.margin || "0 0 0 0.46em"};
-  font-size: ${(props) => props.size || baseTheme.size.titleBig};
-  font-weight: ${(props) => props.weight || baseTheme.weight.bolt};
-  color: ${(props) => props.color || baseTheme.colors.white};
+  margin-left: ${({ margin }) => margin || "0 0 0 0.46em"};
+  font-size: ${({ size }) => size || baseTheme.size.titleBig};
+  font-weight: ${({ weight }) => weight || baseTheme.weight.bolt};
+  color: ${({ color }) => color || baseTheme.colors.white};
 
   @media (max-width: ${baseTheme.media.mobileL}) {
     font-size: ${baseTheme.size.titleSmall};

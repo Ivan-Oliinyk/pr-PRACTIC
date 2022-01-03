@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { baseTheme } from "../../styles/theme";
 
 export interface IFlexProps {
   direction?: string;
@@ -7,16 +8,30 @@ export interface IFlexProps {
   margin?: string;
   width?: string;
   padding?: string;
+  borderRadius?: string;
+  border?: string;
+  color?: string;
+  bgColor?: string;
+  minHeight?: string;
+  size?: string;
+  weight?: string | number;
 }
 
 export const flexStyles = css<IFlexProps>`
   display: flex;
-  flex-direction: ${(props) => props.direction || "row"};
-  align-items: ${(props) => props.align || "stretch"};
-  justify-content: ${(props) => props.justify || "stretch"};
-  width: ${(props) => props.width || "100%"};
-  margin: ${(props) => props.margin || "0"};
-  padding: ${(props) => props.padding || "0"};
+  flex-direction: ${({ direction }) => direction || "row"};
+  align-items: ${({ align }) => align || "stretch"};
+  justify-content: ${({ justify }) => justify || "stretch"};
+  width: ${({ width }) => width || "100%"};
+  margin: ${({ margin }) => margin || "0"};
+  padding: ${({ padding }) => padding || "0"};
+  border: ${({ border }) => border || "none"};
+  border-radius: ${({ borderRadius }) => borderRadius || "none"};
+  color: ${({ color }) => color || baseTheme.colors.black};
+  background-color: ${({ bgColor }) => bgColor || baseTheme.colors.white};
+  min-height: ${({ minHeight }) => minHeight || "auto"};
+  font-size: ${({ size }) => size || baseTheme.size.base};
+  font-weight: ${({ weight }) => weight || baseTheme.weight.normal};
 `;
 
 export const FlexWrapper = styled("div")<IFlexProps>`
