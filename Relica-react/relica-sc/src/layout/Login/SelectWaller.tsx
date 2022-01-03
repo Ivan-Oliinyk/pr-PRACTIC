@@ -5,7 +5,6 @@ import Card from "../../components/card/Card";
 import CardHeader from "../../components/card/CardHeader";
 import CardContent from "../../components/card/CardContent";
 import Title from "./Title";
-import Subtitle from "./Subtitle";
 import BtnBack from "../../components/buttons/BtnBack";
 import Button from "../../components/buttons/Button";
 interface IWelcomeContainer {
@@ -25,16 +24,15 @@ const WelcomeContainer = styled.div<IWelcomeContainer>`
   }
 `;
 
-const Welcome: React.FC = () => {
+const SelectWaller: React.FC = () => {
   return (
     <WelcomeContainer>
       <Card width="70%" maxWidth="40rem" margin="0 auto" direction="column">
         <CardHeader>
-          <BtnBack hidden></BtnBack>
+          <BtnBack linkTo="/"></BtnBack>
         </CardHeader>
         <CardContent direction="column">
-          <Title>Welcome</Title>
-          <Subtitle>How can we help you today?</Subtitle>
+          <Title>Select waller</Title>
           <Button
             border="1px solid #939393"
             borderRadius="3rem"
@@ -42,7 +40,6 @@ const Welcome: React.FC = () => {
             justify="center"
             align="center"
             weight={baseTheme.weight.bolt}
-            linkTo="Select-wallet"
           >
             Login with wallet
           </Button>
@@ -53,7 +50,6 @@ const Welcome: React.FC = () => {
             justify="center"
             align="center"
             weight={baseTheme.weight.bolt}
-            linkTo=""
           >
             Create an account
           </Button>
@@ -63,4 +59,4 @@ const Welcome: React.FC = () => {
   );
 };
 
-export default Welcome;
+export default SelectWaller;

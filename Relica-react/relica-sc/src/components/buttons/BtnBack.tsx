@@ -15,7 +15,7 @@ const Container = styled.button<IContainerStyled>`
   color: ${baseTheme.colors.blueV1};
   font-size: ${baseTheme.size.base};
   font-weight: ${baseTheme.weight.bolt};
-  cursor: "pointer";
+  cursor: pointer;
   transition: color 300ms linear;
   svg {
     fill: ${baseTheme.colors.blueV1};
