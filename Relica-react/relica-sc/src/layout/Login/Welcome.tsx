@@ -19,6 +19,7 @@ const WelcomeContainer = styled.div<IWelcomeContainer>`
   color: ${({ color }) => color || baseTheme.colors.black};
 
   @media (max-width: ${baseTheme.media.laptop}) {
+    padding: 2rem;
     width: 100%;
     height: 50vh;
   }
@@ -27,7 +28,7 @@ const WelcomeContainer = styled.div<IWelcomeContainer>`
 const Welcome: React.FC = () => {
   return (
     <WelcomeContainer>
-      <Card width="40rem" margin="0 auto" direction="column">
+      <Card width="70%" maxWidth="40rem" margin="0 auto" direction="column">
         <CardHeader>
           <BtnBack hidden></BtnBack>
         </CardHeader>

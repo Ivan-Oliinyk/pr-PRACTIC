@@ -11,6 +11,10 @@ interface ITitleStyles {
 const SubtitleStyles = styled.h3<ITitleStyles>`
   font-size: ${(props) => props.size || baseTheme.size.base};
   font-weight: ${baseTheme.weight.bolt};
+
+  @media (max-width: ${baseTheme.media.laptop}) {
+    text-align: center;
+  }
 `;
 
 const Subtitle: React.FC = ({ children }) => {

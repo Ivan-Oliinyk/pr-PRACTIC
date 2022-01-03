@@ -7,6 +7,7 @@ export interface IFlexProps {
   justify?: string;
   margin?: string;
   width?: string;
+  maxWidth?: string;
   padding?: string;
   borderRadius?: string;
   border?: string;
@@ -23,6 +24,7 @@ export const flexStyles = css<IFlexProps>`
   align-items: ${({ align }) => align || "stretch"};
   justify-content: ${({ justify }) => justify || "stretch"};
   width: ${({ width }) => width || "100%"};
+  max-width: ${({ maxWidth }) => maxWidth || "100%"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   border: ${({ border }) => border || "none"};

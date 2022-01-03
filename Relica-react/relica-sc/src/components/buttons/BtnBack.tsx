@@ -36,6 +36,12 @@ const Container = styled.button<IContainerStyled>`
     css`
       cursor: auto;
       opacity: 0;
+
+      @media (max-width: ${baseTheme.media.laptop}) {
+        display: none;
+        padding: 0;
+        margin: 0;
+      } ;
     `}
 `;
 
