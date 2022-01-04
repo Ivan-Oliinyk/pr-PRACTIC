@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { baseTheme } from "../../styles/theme";
+import { baseTheme } from "../styles/theme";
 
 interface ITitleStyles {
   size?: string;
@@ -11,6 +11,7 @@ interface ITitleStyles {
 const SubtitleStyles = styled.h3<ITitleStyles>`
   font-size: ${(props) => props.size || baseTheme.size.base};
   font-weight: ${baseTheme.weight.bolt};
+  margin-top: 1rem;
 
   @media (max-width: ${baseTheme.media.laptop}) {
     text-align: center;

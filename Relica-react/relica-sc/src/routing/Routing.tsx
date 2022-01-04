@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
-import Welcome from "../layout/Login/Welcome";
-import SelectWaller from "../layout/Login/SelectWaller";
+import Welcome from "../layout/Welcome";
+import SelectWaller from "../layout/SelectWaller";
 
 const Routing = () => {
   return (

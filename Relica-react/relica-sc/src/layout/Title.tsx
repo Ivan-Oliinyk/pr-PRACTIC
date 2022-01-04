@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { baseTheme } from "../../styles/theme";
+import { baseTheme } from "../styles/theme";
 
 interface ITitleStyles {
   size?: string;
@@ -11,7 +11,7 @@ interface ITitleStyles {
 const TitleBig = styled.h2<ITitleStyles>`
   font-size: ${(props) => props.size || baseTheme.size.titleMedium};
   font-weight: ${baseTheme.weight.bolt};
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 
   @media (max-width: ${baseTheme.media.laptop}) {
     text-align: center;

@@ -1,19 +1,19 @@
 import React from "react";
-import styled from "styled-components";
-import { baseTheme } from "../../styles/theme";
-import Card from "../../components/card/Card";
-import CardHeader from "../../components/card/CardHeader";
-import CardContent from "../../components/card/CardContent";
+import styled, { css } from "styled-components";
+import { baseTheme } from "../styles/theme";
+import Card from "../components/card/Card";
+import CardHeader from "../components/card/CardHeader";
+import CardContent from "../components/card/CardContent";
 import Title from "./Title";
 import Subtitle from "./Subtitle";
-import BtnBack from "../../components/buttons/BtnBack";
-import Button from "../../components/buttons/Button";
-interface IWelcomeContainer {
+import BtnBack from "../components/buttons/BtnBack";
+import Button from "../components/buttons/Button";
+export interface IWelcomeContainer {
   padding?: string;
   color?: string;
 }
 
-const WelcomeContainer = styled.div<IWelcomeContainer>`
+export const StyledContainer = css<IWelcomeContainer>`
   width: 44%;
   padding: ${({ padding }) => padding || "9.5rem 2rem 3rem"};
   color: ${({ color }) => color || baseTheme.colors.black};
@@ -25,9 +25,13 @@ const WelcomeContainer = styled.div<IWelcomeContainer>`
   }
 `;
 
+export const LayoutContainer = styled.div<IWelcomeContainer>`
+  ${StyledContainer}
+`;
+
 const Welcome: React.FC = () => {
   return (
-    <WelcomeContainer>
+    <LayoutContainer>
       <Card width="70%" maxWidth="40rem" margin="0 auto" direction="column">
         <CardHeader>
           <BtnBack hidden></BtnBack>
@@ -59,7 +63,7 @@ const Welcome: React.FC = () => {
           </Button>
         </CardContent>
       </Card>
-    </WelcomeContainer>
+    </LayoutContainer>
   );
 };
 
