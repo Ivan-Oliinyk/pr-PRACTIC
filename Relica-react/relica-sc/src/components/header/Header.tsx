@@ -45,6 +45,7 @@ export const Header: React.FC = () => {
             imgHeight="5rem"
             size="2.8rem"
             margin="1rem"
+            linkTo="/home"
           />
           <InputSearch />
           <Button

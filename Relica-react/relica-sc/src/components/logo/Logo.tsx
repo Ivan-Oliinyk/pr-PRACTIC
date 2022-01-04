@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { baseTheme } from "../../styles/theme";
+import { useNavigate } from "react-router-dom";
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -59,6 +60,7 @@ interface ILogoProps {
   weight?: string;
   size?: string;
   margin?: string;
+  linkTo?: string;
 }
 
 const Logo: React.FC<ILogoProps> = ({
@@ -70,9 +72,12 @@ const Logo: React.FC<ILogoProps> = ({
   title,
   size,
   margin,
+  linkTo,
 }) => {
+  const navigate = useNavigate();
+
   return (
-    <LogoWrapper>
+    <LogoWrapper onClick={() => navigate((linkTo = ""))}>
       <LogoImg src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} />
       <Title color={color} size={size} margin={margin}>
         {title}

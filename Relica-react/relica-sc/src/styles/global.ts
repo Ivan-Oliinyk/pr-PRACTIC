@@ -185,6 +185,10 @@ export default createGlobalStyle`
   width: 5px; /* ширина для вертикального скролла */
   height: 5px; /* высота для горизонтального скролла */
   background-color: #ededed;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* ползунок скроллбара */
@@ -192,6 +196,9 @@ export default createGlobalStyle`
   background-color: #808080;
   border-radius: 9em;
   box-shadow: inset 1px 1px 10px transparent;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 `;

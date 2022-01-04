@@ -57,7 +57,7 @@ const SelectWaller: React.FC = () => {
               justify="center"
               align="center"
               weight={baseTheme.weight.bolt}
-              color={baseTheme.colors.white}
+              // color={baseTheme.colors.white}
               bgColor={baseTheme.colors.greySecondary}
               linkTo="/User-name"
             >
