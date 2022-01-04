@@ -43,6 +43,12 @@ export interface ITheme {
     little: string;
   };
 
+  gradients: {
+    bluetobluev1: string;
+    bluetobluev2: string;
+    bluetobluev3: string;
+  };
+
   lineHeight: {
     big: number | string;
     medium: number | string;

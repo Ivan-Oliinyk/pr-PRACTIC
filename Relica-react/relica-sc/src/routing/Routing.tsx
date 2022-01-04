@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import UserName from "../layout/Login/UserName";
 // import LoginWithWallet from "../layout/Login/LoginWithWallet";
 import RoutingLoginPage from "./RoutingLoginPage";
+import Home from "../pages/Home";
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
           <Route path="User-name" element={<UserName />} />
           <Route path="Login-with-wallet" element={<LoginWithWallet />} />
         </Route> */}
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

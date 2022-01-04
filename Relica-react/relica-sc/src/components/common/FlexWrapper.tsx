@@ -11,8 +11,10 @@ export interface IFlexProps {
   padding?: string;
   borderRadius?: string;
   border?: string;
+  borderColor?: string;
   color?: string;
   bgColor?: string;
+  bg?: string;
   minHeight?: string;
   size?: string;
   weight?: string | number;
@@ -28,9 +30,11 @@ export const flexStyles = css<IFlexProps>`
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   border: ${({ border }) => border || "none"};
+  border-color: ${({ borderColor }) => borderColor || "none"};
   border-radius: ${({ borderRadius }) => borderRadius || "none"};
   color: ${({ color }) => color || baseTheme.colors.black};
   background-color: ${({ bgColor }) => bgColor || baseTheme.colors.white};
+  background: ${({ bg }) => bg || baseTheme.colors.white};
   min-height: ${({ minHeight }) => minHeight || "auto"};
   font-size: ${({ size }) => size || baseTheme.size.base};
   font-weight: ${({ weight }) => weight || baseTheme.weight.normal};

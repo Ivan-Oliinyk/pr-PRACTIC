@@ -36,6 +36,7 @@ const LoginWithWallet: React.FC = () => {
               justify="center"
               align="center"
               weight={baseTheme.weight.bolt}
+              linkTo="/home"
             >
               Log in
             </Button>

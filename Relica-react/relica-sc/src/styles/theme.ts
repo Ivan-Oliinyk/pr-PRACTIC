@@ -46,6 +46,12 @@ export const baseTheme: ITheme = {
     little: "1rem",
   },
 
+  gradients: {
+    bluetobluev1: "linear-gradient(45deg, #00dbff, #10a5f5);",
+    bluetobluev2: "linear-gradient(45deg, #00aecb, #0b91d9);",
+    bluetobluev3: "linear-gradient(45deg, #10a5f5, #00dbff);",
+  },
+
   lineHeight: {
     big: 1.5,
     medium: 1.4,

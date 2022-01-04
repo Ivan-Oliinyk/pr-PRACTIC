@@ -11,11 +11,7 @@ const Container = styled.button<IFlexProps>`
 
   &:hover,
   &:focus {
-    background: linear-gradient(
-      45deg,
-      ${baseTheme.colors.blueV2},
-      ${baseTheme.colors.blueV1}
-    );
+    background: ${baseTheme.gradients.bluetobluev3}
     color: ${baseTheme.colors.white};
     border-color: ${baseTheme.colors.blueV2};
   }
