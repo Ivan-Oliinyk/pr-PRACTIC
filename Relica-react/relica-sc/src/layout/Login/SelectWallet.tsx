@@ -1,13 +1,13 @@
 import React from "react";
-import { baseTheme } from "../styles/theme";
-import Card from "../components/card/Card";
-import CardHeader from "../components/card/CardHeader";
-import CardContent from "../components/card/CardContent";
+import { baseTheme } from "../../styles/theme";
+import Card from "../../components/card/Card";
+import CardHeader from "../../components/card/CardHeader";
+import CardContent from "../../components/card/CardContent";
 import Title from "./Title";
-import BtnBack from "../components/buttons/BtnBack";
-import Button from "../components/buttons/Button";
-import Form from "../components/form/Form";
-import { InputRadio } from "../components/form/InputRadio";
+import BtnBack from "../../components/buttons/BtnBack";
+import Button from "../../components/buttons/Button";
+import Form from "../../components/form/Form";
+import { InputRadio } from "../../components/form/InputRadio";
 import { LayoutContainer } from "./Welcome";
 
 const SelectWaller: React.FC = () => {

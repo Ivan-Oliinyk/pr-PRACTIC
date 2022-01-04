@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { baseTheme } from "../styles/theme";
+import { baseTheme } from "../../styles/theme";
 
 interface ITitleStyles {
   size?: string;

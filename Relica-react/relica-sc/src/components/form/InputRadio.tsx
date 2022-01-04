@@ -55,8 +55,8 @@ const Label = styled.label`
     z-index: 1;
     transform: translateY(-50%);
     display: block;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: 2px solid ${baseTheme.colors.greySecondary};
     transition: all 250ms linear;
@@ -66,7 +66,7 @@ const Label = styled.label`
     content: "";
     position: absolute;
     top: 50%;
-    left: 3.45rem;
+    left: 3.5rem;
     z-index: 2;
     transform: translateY(-50%);
     display: block;
