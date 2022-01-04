@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../../components/logo/Logo";
-// import Typography from "../components/typography/Typography";
-// import { TagVariants } from "../components/typography/Typography";
 import { baseTheme } from "../../styles/theme";
 
 const ContainerBg = styled.div`
@@ -14,6 +12,10 @@ const ContainerBg = styled.div`
   width: 56%;
   height: 100vh;
 
+  h1 {
+    margin-top: 3rem;
+  }
+
   @media (max-width: ${baseTheme.media.laptop}) {
     width: 100vw;
     height: 50vh;
@@ -22,6 +24,10 @@ const ContainerBg = styled.div`
     align-items: center;
     justify-content: center;
     padding: 2rem 1.5rem;
+
+    h1 {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -52,15 +58,6 @@ const LoginBg: React.FC = () => {
         title="Relica"
       />
       <Title>Post photos. Make money. Maintain ownership</Title>
-      {/* <Typography
-        tagName={TagVariants.h1}
-        size={baseTheme.size.titleMedium}
-        height={baseTheme.lineHeight.medium}
-        weight={baseTheme.weight.bolt}
-        children="Post photos. Make money. Maintain ownership"
-        width="50rem"
-        color={baseTheme.colors.white}
-      /> */}
     </ContainerBg>
   );
 };

@@ -8,26 +8,27 @@ import BtnBack from "../../components/buttons/BtnBack";
 import Button from "../../components/buttons/Button";
 import Form from "../../components/form/Form";
 import { LayoutContainer } from "./Welcome";
-import { BtnPhoto } from "../../components/buttons/BtnPhoto";
 import InputText from "../../components/form/InputText";
+import { CheckboxForgot } from "../../components/checkBox&Forgot/CheckboxForgot";
+import { ForgotLink } from "../../components/checkBox&Forgot/ForgotLink";
+import { Checkbox } from "../../components/checkBox&Forgot/Checkbox";
 
-const UserName: React.FC = () => {
+const LoginWithWallet: React.FC = () => {
   return (
     <LayoutContainer>
       <Card width="70%" maxWidth="40rem" margin="0 auto" direction="column">
         <CardHeader>
-          <BtnBack linkTo="/Select-wallet"></BtnBack>
+          <BtnBack linkTo="/User-name"></BtnBack>
         </CardHeader>
         <CardContent direction="column">
-          <Title>User name</Title>
+          <Title>Login with wallet</Title>
           <Form>
-            <BtnPhoto
-              bgimage="/images/userName/userName.svg"
-              img="/images/userName/photo-camera.svg"
-              title="Profile photo"
-              subtitle="Upload your profile photo here"
-            />
-            <InputText value="User name" name="name" />
+            <InputText value="Email" name="email" />
+            <InputText value="Password" name="Password" />
+            <CheckboxForgot>
+              <Checkbox text="Remember me" />
+              <ForgotLink text="Forgot password ?" />
+            </CheckboxForgot>
             <Button
               border="1px solid #939393"
               borderRadius="3rem"
@@ -35,9 +36,8 @@ const UserName: React.FC = () => {
               justify="center"
               align="center"
               weight={baseTheme.weight.bolt}
-              linkTo="/Login-with-wallet"
             >
-              Create username
+              Log in
             </Button>
           </Form>
         </CardContent>
@@ -46,4 +46,4 @@ const UserName: React.FC = () => {
   );
 };
 
-export default UserName;
+export default LoginWithWallet;

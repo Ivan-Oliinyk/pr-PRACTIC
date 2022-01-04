@@ -9,12 +9,17 @@ interface ITitleStyles {
 }
 
 const TitleBig = styled.h2<ITitleStyles>`
-  font-size: ${(props) => props.size || baseTheme.size.titleMedium};
+  font-size: ${({ size }) => size || baseTheme.size.titleMedium};
   font-weight: ${baseTheme.weight.bolt};
   /* margin-bottom: 1rem; */
 
   @media (max-width: ${baseTheme.media.laptop}) {
     text-align: center;
+    font-size: ${baseTheme.size.titleSmall};
+  }
+
+  @media (max-width: ${baseTheme.media.mobileL}) {
+    font-size: ${baseTheme.size.big};
   }
 `;
 

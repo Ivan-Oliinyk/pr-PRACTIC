@@ -5,10 +5,6 @@ const Container = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 2.8rem;
-
-  div + div {
-    margin-top: 2.5rem;
-  }
 `;
 
 const Form: React.FC = ({ children }) => {
