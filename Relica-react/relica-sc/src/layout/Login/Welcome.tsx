@@ -46,7 +46,7 @@ const Welcome: React.FC = () => {
             justify="center"
             align="center"
             weight={baseTheme.weight.bolt}
-            linkTo="Select-wallet"
+            linkTo="Login-with-wallet"
           >
             Login with wallet
           </Button>
@@ -57,7 +57,7 @@ const Welcome: React.FC = () => {
             justify="center"
             align="center"
             weight={baseTheme.weight.bolt}
-            linkTo=""
+            linkTo="Select-wallet"
           >
             Create an account
           </Button>
