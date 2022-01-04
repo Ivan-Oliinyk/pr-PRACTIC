@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { baseTheme } from "../../styles/theme";
 
 const Container = styled.div`
   position: relative;
@@ -13,7 +14,10 @@ const Container = styled.div`
 
   &:hover,
   &:focus {
-    border: 2px solid $color-blue-v1;
+    border: 2px solid ${baseTheme.colors.blueV3};
+    ul {
+      display: block;
+    }
   }
 `;
 
@@ -21,7 +25,7 @@ const Image = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  border: 2px solid $color-white;
+  border: 2px solid ${baseTheme.colors.white};
 `;
 
 const List = styled.ul`
@@ -30,7 +34,6 @@ const List = styled.ul`
   z-index: 5;
   top: 6rem;
   right: -1.5rem;
-  display: block;
   box-shadow: 0 0 1px #d6d6d6;
   border-radius: 1rem;
 `;
@@ -42,18 +45,18 @@ const Item = styled.li`
   width: 12.5em;
   min-height: 3.5em;
   border: 1px solid #d6d6d6;
-  background-color: $color-white;
+  background-color: ${baseTheme.colors.white};
   font-size: 1.6rem;
 
   &:hover,
   &:focus {
-    background-color: $color-grey;
+    background-color: ${baseTheme.colors.greyLight};
   }
 
   &:first-of-type:hover,
   &:first-of-type:focus {
     &:before {
-      border-bottom: 1.6rem solid $color-grey;
+      border-bottom: 1.6rem solid ${baseTheme.colors.greyLight};
     }
   }
 

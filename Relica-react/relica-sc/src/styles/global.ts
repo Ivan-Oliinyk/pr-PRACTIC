@@ -180,4 +180,18 @@ export default createGlobalStyle`
     font-size: 10px;
     font-family: "Roboto";
   }
+
+  ::-webkit-scrollbar {
+  width: 5px; /* ширина для вертикального скролла */
+  height: 5px; /* высота для горизонтального скролла */
+  background-color: #ededed;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #808080;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px transparent;
+}
+
 `;

@@ -20,11 +20,13 @@ const Container = styled.button<IFlexProps>`
 interface IButtonProps extends IFlexProps {
   linkTo?: string;
   type?: "button" | "submit" | "reset" | undefined;
+  cb?: () => void;
 }
 
 const Button: React.FC<IButtonProps> = ({
   children,
   linkTo = "",
+  cb,
   type = "button",
   ...props
 }) => {
@@ -32,13 +34,19 @@ const Button: React.FC<IButtonProps> = ({
 
   return (
     <>
-      <Container
-        type={type || "button"}
-        onClick={() => navigate(linkTo)}
-        {...props}
-      >
-        {children}
-      </Container>
+      {cb ? (
+        <Container type={type || "button"} onClick={cb} {...props}>
+          {children}
+        </Container>
+      ) : (
+        <Container
+          type={type || "button"}
+          onClick={() => navigate(linkTo)}
+          {...props}
+        >
+          {children}
+        </Container>
+      )}
     </>
   );
 };

@@ -5,10 +5,8 @@ import Logo from "../logo/Logo";
 import { InputSearch } from "../form/InputSearch";
 import { SocialListLinks } from "./SocialListLinks";
 import { Avatar } from "./Avatar";
-// import { MakePost } from "../makePost/MakePost";
-// import { TagVariants } from "../typography/Typography";
+import { MakePost } from "../makePost/MakePost";
 import Button from "../buttons/Button";
-import { styleContainerMiddle } from "../common/Containers";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -60,6 +58,7 @@ export const Header: React.FC = () => {
             bg={baseTheme.gradients.bluetobluev1}
             borderColor={baseTheme.colors.blueV2}
             color={baseTheme.colors.white}
+            cb={() => setOpenedModal(!openModal)}
           >
             Post
           </Button>
@@ -68,7 +67,7 @@ export const Header: React.FC = () => {
           <Avatar />
         </HeaderContent>
       </HeaderContainer>
-      {/* {openModal && <MakePost cb={() => setOpenedModal(!openModal)} />} */}
+      {openModal && <MakePost cb={() => setOpenedModal(!openModal)} />}
     </>
   );
 };
