@@ -8,6 +8,8 @@ import Title from "./Title";
 import Subtitle from "./Subtitle";
 import BtnBack from "../../components/buttons/BtnBack";
 import Button from "../../components/buttons/Button";
+import Typography from "../../components/typography/Typography";
+import { FontSize } from "../../components/typography/Typography";
 export interface IWelcomeContainer {
   padding?: string;
   color?: string;
@@ -37,7 +39,10 @@ const Welcome: React.FC = () => {
           <BtnBack hidden></BtnBack>
         </CardHeader>
         <CardContent direction="column">
-          <Title>Welcome</Title>
+          <Typography as="h2" fontSize={FontSize.tl} weight={700}>
+            Welcome
+          </Typography>
+
           <Subtitle>How can we help you today?</Subtitle>
           <Button
             border="1px solid #939393"

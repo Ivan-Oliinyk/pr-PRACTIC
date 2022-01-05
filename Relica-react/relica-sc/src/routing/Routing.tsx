@@ -10,7 +10,7 @@ const Routing = () => {
       <Routes>
         <Route path="/*" element={<RoutingLoginPage />} />
         <Route path="/home" element={<Home />} />
-        <Route path="**" element={<NotFoundPage />} />
+        {/* <Route path="**" element={<NotFoundPage />} /> */}
       </Routes>
     </BrowserRouter>
   );

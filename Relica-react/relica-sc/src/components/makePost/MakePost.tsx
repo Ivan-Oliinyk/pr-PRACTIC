@@ -91,6 +91,7 @@ const Slide = styled.img`
 const PostFooter = styled.div`
   margin-top: 10rem;
   border-top: 2px solid ${baseTheme.colors.greySecondary};
+  padding-top: 1.5rem;
 `;
 
 const BtnWrapper = styled.div`
