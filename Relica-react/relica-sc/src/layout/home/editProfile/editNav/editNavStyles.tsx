@@ -9,6 +9,7 @@ export const Item = styled.li`
   min-height: 8rem;
   padding: 1.5em 0.75em;
   border-left: 3px solid transparent;
+  transition: background-color 300ms linear, border-left 300ms linear;
 
   font-size: 2rem;
   cursor: pointer;
@@ -30,6 +31,7 @@ export const ItemTwitter = styled.li`
     border-left: 3px solid transparent;
     color: ${baseTheme.colors.blueV1};
     cursor: pointer;
+    transition: color 300ms linear;
 
     &:hover,
     &:focus {

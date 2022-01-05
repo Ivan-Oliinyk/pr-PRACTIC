@@ -26,7 +26,11 @@ export const EditNav: React.FC = () => {
               </Typography>
             </ItemTwitter>
           ) : (
-            <Item key={i}>{title}</Item>
+            <Item key={i}>
+              <Typography as="p" fontSize={FontSize.mm}>
+                {title}
+              </Typography>
+            </Item>
           )
         )}
       </List>
