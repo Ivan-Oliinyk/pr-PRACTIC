@@ -11,6 +11,7 @@ export const baseTheme: ITheme = {
     blueV2: "#00dbff",
     blueV3: "#00aecb",
     blueV4: "#0b91d9",
+    blueLight: "#f0f9fd",
     shadow: "#00000008",
   },
 

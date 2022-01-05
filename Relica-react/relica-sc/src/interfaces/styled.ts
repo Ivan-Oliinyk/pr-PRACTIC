@@ -9,6 +9,7 @@ export interface ITheme {
     blueV2: string;
     blueV3: string;
     blueV4: string;
+    blueLight: string;
     shadow: string;
   };
 

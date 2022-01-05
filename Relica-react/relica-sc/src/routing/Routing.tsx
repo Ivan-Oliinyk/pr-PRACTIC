@@ -4,6 +4,7 @@ import RoutingLoginPage from "./RoutingLoginPage";
 import Home from "../pages/Home";
 // import { NotFoundPage } from "../pages/NotfoundPage";
 import Posts from "../layout/home/Posts";
+import { EditProfile } from "../layout/home/EditProfile";
 
 const Routing = () => {
   return (
@@ -11,7 +12,8 @@ const Routing = () => {
       <Routes>
         <Route path="/*" element={<RoutingLoginPage />} />
         <Route path="/home" element={<Home />}>
-          <Route index element={<Posts />}></Route>
+          <Route index element={<Posts />} />
+          <Route path="EditProfile" element={<EditProfile />} />
         </Route>
         {/* <Route path="**" element={<NotFoundPage />} /> */}
       </Routes>
