@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../../components/logo/Logo";
 import { baseTheme } from "../../styles/theme";
+import Typography from "../../components/typography/Typography";
+import { FontSize } from "../../components/typography/Typography";
 
 const ContainerBg = styled.div`
   padding: 12.88% 1.46% 3.66% 7.32%;
@@ -57,7 +59,17 @@ const LoginBg: React.FC = () => {
         imgAlt="logo"
         title="Relica"
       />
-      <Title>Post photos. Make money. Maintain ownership</Title>
+
+      <Title>
+        <Typography
+          as="h1"
+          fontSize={FontSize.tl}
+          weight={700}
+          color={baseTheme.colors.white}
+        >
+          Post photos. Make money. Maintain ownership
+        </Typography>
+      </Title>
     </ContainerBg>
   );
 };

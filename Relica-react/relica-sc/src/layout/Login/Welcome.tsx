@@ -39,9 +39,11 @@ const Welcome: React.FC = () => {
           <BtnBack hidden></BtnBack>
         </CardHeader>
         <CardContent direction="column">
-          <Typography as="h2" fontSize={FontSize.tl} weight={700}>
-            Welcome
-          </Typography>
+          <Title>
+            <Typography as="h2" fontSize={FontSize.tm} weight={700}>
+              Welcome
+            </Typography>
+          </Title>
 
           <Subtitle>How can we help you today?</Subtitle>
           <Button

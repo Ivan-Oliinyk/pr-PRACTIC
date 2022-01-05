@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
@@ -16,22 +15,23 @@ export enum FontSize {
   tm = "4rem",
   ts = "3.5rem",
   ms = "2.8rem",
+  mb = "2.4rem",
   mm = "2rem",
-  ml = "1.6rem",
   base = "1.6rem",
   sl = "1.4rem",
   sm = "1.2rem",
   ss = "1rem",
 }
 
-const TitleStyled = css<IStyled>`
+const TypographyStyled = css<IStyled>`
   font-weight: ${({ weight }) => weight || 400};
   color: ${({ theme, color }) => color || theme.colors.black};
-  line-height: ${({ lineHeight = "130%" }) => lineHeight};
-  margin: ${({ margin = "0" }) => margin};
-  padding: ${({ padding = "0" }) => padding};
+  line-height: ${({ lineHeight }) => lineHeight || "130%"};
+  margin: ${({ margin }) => margin || "0"};
+  padding: ${({ padding }) => padding || "0"};
   font-size: ${({ fontSize }) => fontSize || FontSize.base};
 
+  // 1024
   @media (max-width: ${baseTheme.media.laptop}) {
     ${({ fontSize }) =>
       fontSize === FontSize.tl
@@ -50,9 +50,53 @@ const TitleStyled = css<IStyled>`
         ? css`
             font-size: ${FontSize.mm};
           `
-        : fontSize === FontSize.ml
-        ? css`
+        : css`
             font-size: ${FontSize.base};
+          `}
+  }
+
+  // 768
+  @media (max-width: ${baseTheme.media.tablet}) {
+    ${({ fontSize }) =>
+      fontSize === FontSize.tl
+        ? css`
+            font-size: ${FontSize.ts};
+          `
+        : fontSize === FontSize.tm
+        ? css`
+            font-size: ${FontSize.ms};
+          `
+        : fontSize === FontSize.ts
+        ? css`
+            font-size: ${FontSize.ms};
+          `
+        : fontSize === FontSize.ms
+        ? css`
+            font-size: ${FontSize.mm};
+          `
+        : css`
+            font-size: ${FontSize.base};
+          `}
+  }
+
+  //480
+  @media (max-width: ${baseTheme.media.mobileL}) {
+    ${({ fontSize }) =>
+      fontSize === FontSize.tl
+        ? css`
+            font-size: ${FontSize.ms};
+          `
+        : fontSize === FontSize.tm
+        ? css`
+            font-size: ${FontSize.ms};
+          `
+        : fontSize === FontSize.ts
+        ? css`
+            font-size: ${FontSize.ms};
+          `
+        : fontSize === FontSize.ms
+        ? css`
+            font-size: ${FontSize.mm};
           `
         : css`
             font-size: ${FontSize.base};
@@ -61,19 +105,7 @@ const TitleStyled = css<IStyled>`
 `;
 
 const Typography = styled.div<IStyled>`
-  ${TitleStyled}
+  ${TypographyStyled}
 `;
-
-// interface ITitleProps extends IStyled {
-//   as?: string
-// }
-
-// const Typography: React.FC<ITitleProps> = ({ children, ...props }) => {
-//   return (
-//     <P {...props}>
-//       {children}
-//     </P>
-//   );
-// };
 
 export default Typography;
