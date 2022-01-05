@@ -3,11 +3,10 @@ import styled from "styled-components";
 import Typography from "../../components/typography/Typography";
 import { FontSize } from "../../components/typography/Typography";
 import { baseTheme } from "../../styles/theme";
+import InputText from "../../components/form/InputText";
+import UserPostComments from "./post/UserPostComments";
 
-const PostsWrapper = styled.div`
-  /* margin-bottom: 4rem;
-  padding: 5.6rem 0, 7rem; */
-`;
+const PostsWrapper = styled.div``;
 
 const UserPostWrapper = styled.section`
   margin-bottom: 3.5rem;
@@ -140,8 +139,8 @@ const Posts = () => {
             </LikesContent>
           </WrapperLikesComments>
 
-          {/* <UserPost title="View 5 comments" />
-          <InputText value="Add comments" /> */}
+          <UserPostComments />
+          <InputText value="Add comments" name="comments" />
         </PostContainer>
       </UserPostWrapper>
 
@@ -201,8 +200,7 @@ const Posts = () => {
             </LikesContent>
           </WrapperLikesComments>
 
-          {/* <UserPost title="View 5 comments" />
-          <InputText value="Add comments" /> */}
+          <InputText value="Add comments" name="comments" />
         </PostContainer>
       </UserPostWrapper>
     </PostsWrapper>
