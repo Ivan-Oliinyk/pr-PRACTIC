@@ -33,7 +33,7 @@ const ContainerBg = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   font-size: ${baseTheme.size.titleMedium};
   line-height: ${baseTheme.lineHeight.medium};
   font-weight: ${baseTheme.weight.bolt};

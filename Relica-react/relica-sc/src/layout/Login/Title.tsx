@@ -8,7 +8,7 @@ interface ITitleStyles {
   subtitle?: string;
 }
 
-const TitleBig = styled.h2<ITitleStyles>`
+const TitleBig = styled.div<ITitleStyles>`
   font-size: ${({ size }) => size || baseTheme.size.titleMedium};
   font-weight: ${baseTheme.weight.bolt};
   /* margin-bottom: 1rem; */
