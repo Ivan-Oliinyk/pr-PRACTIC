@@ -1,13 +1,12 @@
 import React from "react";
+import Typography from "../../../components/typography/Typography";
 
-type Value = {
-  text: string;
-};
-
-export const ChatDateMessage: React.FC<Value> = ({ text }) => {
+export const ChatDateMessage: React.FC = ({ children }) => {
   return (
     <>
-      <div className="message-date">{text}</div>
+      <Typography as="h2" weight={700} textAlign="center">
+        {children}
+      </Typography>
     </>
   );
 };

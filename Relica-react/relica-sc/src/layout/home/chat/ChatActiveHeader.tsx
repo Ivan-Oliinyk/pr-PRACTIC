@@ -15,17 +15,18 @@ const ActiveChat = styled.div`
   img {
     border-radius: 50%;
   }
-
-  .user-title {
-    margin-left: 0.7em;
-    font-size: 2rem;
-  }
 `;
 
-export const ChatActiveHeader: React.FC = () => {
+interface IChatActiveHeaderProps {
+  image: string;
+}
+
+export const ChatActiveHeader: React.FC<IChatActiveHeaderProps> = ({
+  image,
+}) => {
   return (
     <ActiveChat>
-      <img src="/images/chat/user3.png" alt="user" width="39" height="39" />
+      <img src={image} alt="user" width="39" height="39" />
       <Typography
         as="h3"
         weight={700}

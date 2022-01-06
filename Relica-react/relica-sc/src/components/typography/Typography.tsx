@@ -8,6 +8,7 @@ interface IStyled {
   lineHeight?: string;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }
 
 export enum FontSize {
@@ -30,6 +31,7 @@ const TypographyStyled = css<IStyled>`
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   font-size: ${({ fontSize }) => fontSize || FontSize.base};
+  text-align: ${({ textAlign }) => textAlign || "auto"};
 
   // 1024
   @media (max-width: ${baseTheme.media.laptop}) {
