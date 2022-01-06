@@ -1,0 +1,82 @@
+[
+  {
+    "src": "/images/chat/user1.png",
+    "alt": "user",
+    "userName": "Layla Brown",
+    "message": "Nice to meet you too!",
+    "isMessage": false,
+    "messageCount": 2
+  },
+
+  {
+    "src": "/images/chat/user2.png",
+    "alt": "user",
+    "userName": "Tom Soyer",
+    "message": "Hello friend",
+    "isMessage": true,
+    "messageCount": 8
+  },
+
+  {
+    "src": "/images/chat/user3.png",
+    "alt": "user",
+    "userName": "Max Richardson",
+    "message": "Hay",
+    "isMessage": true,
+    "messageCount": 1
+  },
+
+  {
+    "src": "/images/chat/user4.png",
+    "alt": "user",
+    "userName": "Tom Cruse",
+    "message": "Hello! Nice to meet you",
+    "isMessage": true,
+    "messageCount": 2
+  },
+
+  {
+    "src": "/images/chat/user5.png",
+    "alt": "user",
+    "userName": "Poly Jackson",
+    "message": "Hello friend",
+    "isMessage": false,
+    "messageCount": 2
+  },
+
+  {
+    "src": "/images/chat/user2.png",
+    "alt": "user",
+    "userName": "Doly Hernoly",
+    "message": "Banzay",
+    "isMessage": true,
+    "messageCount": 222
+  },
+
+  {
+    "src": "/images/chat/user2.png",
+    "alt": "user",
+    "userName": "Doly Hernoly",
+    "message": "Banzay",
+    "isMessage": false,
+    "messageCount": 0
+  },
+
+  {
+    "src": "/images/chat/user2.png",
+    "alt": "user",
+    "userName": "Doly Hernoly",
+    "message": "Banzay",
+    "isMessage": false,
+    "messageCount": 0
+  },
+
+  {
+    "src": "/images/chat/user2.png",
+    "alt": "user",
+    "userName": "Doly Hernoly",
+    "message": "Banzay",
+    "isMessage": true,
+    "messageCount": 2
+  }
+]

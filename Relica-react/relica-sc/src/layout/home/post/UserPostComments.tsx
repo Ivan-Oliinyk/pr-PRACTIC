@@ -3,8 +3,6 @@ import comments from "./comments.json";
 import { Comments } from "./Comments";
 import styled from "styled-components";
 import Typography from "../../../components/typography/Typography";
-import { FontSize } from "../../../components/typography/Typography";
-import { baseTheme } from "../../../styles/theme";
 
 const Wrapper = styled.div`
   margin-top: 2.7rem;
