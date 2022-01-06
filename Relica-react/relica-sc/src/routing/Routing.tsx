@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RoutingLoginPage from "./RoutingLoginPage";
 import Home from "../pages/Home";
-// import { NotFoundPage } from "../pages/NotfoundPage";
 import Posts from "../layout/home/Posts";
 import { Chat } from "../layout/home/Chat";
+import { EditProfile } from "../layout/home/EditProfile";
 
-const Routing = () => {
+const Routing: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -14,8 +14,10 @@ const Routing = () => {
         <Route path="/home" element={<Home />}>
           <Route index element={<Posts />}></Route>
           <Route path="Chat" element={<Chat />}></Route>
+
+          <Route index element={<Posts />} />
+          <Route path="EditProfile" element={<EditProfile />} />
         </Route>
-        {/* <Route path="**" element={<NotFoundPage />} /> */}
       </Routes>
     </BrowserRouter>
   );

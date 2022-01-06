@@ -7,7 +7,6 @@ import Button from "../buttons/Button";
 
 const Container = styled.div`
   ${backdropStyles};
-  position: relative;
 `;
 
 const MakePostWrapper = styled.div`
@@ -16,15 +15,15 @@ const MakePostWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: ${baseTheme.colors.white};
-  min-height: 600px;
-  width: 770px;
-  border-radius: 10px;
+  min-height: 60rem;
+  width: 77rem;
+  border-radius: 1rem;
   overflow: hidden;
 `;
 
 const MakePostHeader = styled.div`
   position: relative;
-  padding: 20px 0;
+  padding: 2rem 0;
   border-bottom: 2px solid ${baseTheme.colors.greySecondary};
 `;
 
