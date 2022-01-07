@@ -1,21 +1,10 @@
 import React from "react";
-import { ChatActiveHeader } from "./ChatActiveHeader";
-import { ChatDateMessage } from "./ChatDateMessage";
-import { ChatMyMessage } from "./ChatMyMessage";
-import { ChatMessage } from "./ChatMessage";
-import { ChatFooterInput } from "./ChatFooterInput";
-import styled from "styled-components";
-
-const ChatContentWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-
-const ChatWindow = styled.div`
-  flex: 1 1 auto;
-  padding-top: 4rem;
-`;
+import { ChatActiveHeader } from "../chatActiveHeader/ChatActiveHeader";
+import { ChatDateMessage } from "../ChatDateMessage";
+import { ChatMyMessage } from "../ChatMyMessage";
+import { ChatMessage } from "../ChatMessage";
+import { ChatFooterInput } from "../chatFooterInput/ChatFooterInput";
+import { ChatContentWrapper, ChatWindow } from "./ChatContentStyled";
 
 export const ChatContent: React.FC = () => {
   return (

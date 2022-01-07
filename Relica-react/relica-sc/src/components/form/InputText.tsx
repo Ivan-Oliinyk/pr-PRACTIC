@@ -2,8 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
-const Wrapper = styled.div`
+type WrapperProps = {
+  width?: string;
+};
+
+const Wrapper = styled.div<WrapperProps>`
   position: relative;
+  width: ${({ width }) => width};
 
   .user-name__input-descr {
     position: absolute;
@@ -51,14 +56,22 @@ const Descr = styled.span`
 interface IProps {
   value: string;
   type?: string;
-  name: string;
+  name?: string;
+  descr?: boolean;
+  width?: string;
 }
 
-const InputText: React.FC<IProps> = ({ value, type = "text", name }) => {
+const InputText: React.FC<IProps> = ({
+  value,
+  type = "text",
+  name = "text",
+  descr = true,
+  width = "100%",
+}) => {
   return (
-    <Wrapper>
+    <Wrapper width={width}>
       <Input type={type} name={name} placeholder={value} />
-      <Descr>{value}</Descr>
+      {descr && <Descr>{value}</Descr>}
     </Wrapper>
   );
 };

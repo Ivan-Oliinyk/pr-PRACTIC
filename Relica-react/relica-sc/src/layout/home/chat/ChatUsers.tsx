@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { InputSearch } from "../../../components/form/InputSearch";
 import { baseTheme } from "../../../styles/theme";
-import { ChatList } from "./ChatList";
+import { ChatList } from "./chatList/ChatList";
 import PropsType from "./PropsType";
 
 const ChatUsersWrapper = styled.div`

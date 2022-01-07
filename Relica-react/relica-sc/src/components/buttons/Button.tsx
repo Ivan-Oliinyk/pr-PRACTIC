@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.button<IFlexProps>`
   ${flexStyles}
   cursor: pointer;
+  box-shadow: 0 0 3px ${baseTheme.colors.greyPrimary};
 
   &:hover,
   &:focus {
