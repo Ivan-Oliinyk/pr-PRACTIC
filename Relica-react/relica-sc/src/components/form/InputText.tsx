@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
 type WrapperProps = {
@@ -21,7 +21,12 @@ const Wrapper = styled.div<WrapperProps>`
   }
 `;
 
-const Input = styled.input`
+interface IInputTextProps {
+  pushMessage?: boolean;
+  url: string;
+}
+
+const Input = styled.input<IInputTextProps>`
   margin-top: 2rem;
   padding: 1rem 0;
   width: 100%;
@@ -31,10 +36,31 @@ const Input = styled.input`
   font-size: 1.6rem;
   outline: none;
 
+  ${({ pushMessage }) =>
+    pushMessage &&
+    css`
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 3px;
+        display: block;
+        background: url("./images/svg/telegram.svg");
+        /* background: url({url}); */
+        background-repeat: no-repeat;
+        background-color: red;
+        width: 3.4rem;
+        height: 3.4rem;
+        cursor: pointer;
+      }
+    `}
   &:hover,
   &:focus {
     &::placeholder {
-      color: $color-black;
+      color: ${baseTheme.colors.black};
     }
   }
 
@@ -59,6 +85,8 @@ interface IProps {
   name?: string;
   descr?: boolean;
   width?: string;
+  url?: string;
+  pushMessage?: boolean;
 }
 
 const InputText: React.FC<IProps> = ({
@@ -67,10 +95,18 @@ const InputText: React.FC<IProps> = ({
   name = "text",
   descr = true,
   width = "100%",
+  url = "",
+  pushMessage = false,
 }) => {
   return (
     <Wrapper width={width}>
-      <Input type={type} name={name} placeholder={value} />
+      <Input
+        type={type}
+        name={name}
+        placeholder={value}
+        url={url}
+        pushMessage={pushMessage}
+      />
       {descr && <Descr>{value}</Descr>}
     </Wrapper>
   );

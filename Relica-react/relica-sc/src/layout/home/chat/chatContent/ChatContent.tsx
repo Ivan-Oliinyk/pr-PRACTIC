@@ -1,8 +1,8 @@
 import React from "react";
 import { ChatActiveHeader } from "../chatActiveHeader/ChatActiveHeader";
 import { ChatDateMessage } from "../ChatDateMessage";
-import { ChatMyMessage } from "../ChatMyMessage";
-import { ChatMessage } from "../ChatMessage";
+import { ChatMyMessage } from "../chatMyMessage/ChatMyMessage";
+import { ChatMessage } from "../chatGuestMessage/ChatMessage";
 import { ChatFooterInput } from "../chatFooterInput/ChatFooterInput";
 import { ChatContentWrapper, ChatWindow } from "./ChatContentStyled";
 

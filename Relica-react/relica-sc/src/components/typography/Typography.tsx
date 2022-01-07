@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
 interface IStyled {
-  weight?: 200 | 300 | 400 | 500 | 600 | 700;
+  weight?: 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
   fontSize?: FontSize;
   color?: string;
   lineHeight?: string;
