@@ -15,6 +15,7 @@ export enum FontSize {
   tl = "4.3rem",
   tm = "4rem",
   ts = "3.5rem",
+  ml = "3rem",
   ms = "2.8rem",
   mb = "2.4rem",
   mm = "2rem",

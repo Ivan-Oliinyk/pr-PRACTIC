@@ -1,4 +1,7 @@
 import React from "react";
+import Typography, {
+  FontSize,
+} from "../../../../components/typography/Typography";
 
 export type RowProps = {
   image: string;
@@ -25,16 +28,28 @@ export const TableBodyRow: React.FC<RowProps> = ({
         <img src={image} alt="photo1" width="80" height="80" />
       </td>
       <td>
-        <span className="text1">{likesCount}</span>
-        <span className="text2">{likesPersent}</span>
+        <Typography as="p" weight={600}>
+          {likesCount}
+        </Typography>
+        <Typography as="p" fontSize={FontSize.ml} weight={500} color="#2db922">
+          {likesPersent}
+        </Typography>
       </td>
       <td>
-        <span className="text1">{commentCount}</span>
-        <span className="text2">{commentPersent}</span>
+        <Typography as="p" weight={600}>
+          {commentCount}
+        </Typography>
+        <Typography as="p" fontSize={FontSize.ml} weight={500} color="#2db922">
+          {commentPersent}
+        </Typography>
       </td>
       <td>
-        <span className="text1">{favoritesCount}</span>
-        <span className="text2">{favoritesPersent}</span>
+        <Typography as="p" weight={600}>
+          {favoritesCount}
+        </Typography>
+        <Typography as="p" fontSize={FontSize.ml} weight={500} color="#2db922">
+          {favoritesPersent}
+        </Typography>
       </td>
     </tr>
   );
