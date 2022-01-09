@@ -3,6 +3,9 @@ import { baseTheme } from "../../../../styles/theme";
 
 export const List = styled.ul`
   width: 30rem;
+  border-right: 1px solid ${baseTheme.colors.greySecondary};
+  height: calc(100vh - 9.6rem);
+  position: fixed;
 `;
 
 export const Item = styled.li`

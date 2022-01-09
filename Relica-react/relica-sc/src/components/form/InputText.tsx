@@ -49,7 +49,6 @@ const Input = styled.input<IInputTextProps>`
         right: 3px;
         display: block;
         background: url("./images/svg/telegram.svg");
-        /* background: url({url}); */
         background-repeat: no-repeat;
         background-color: red;
         width: 3.4rem;
