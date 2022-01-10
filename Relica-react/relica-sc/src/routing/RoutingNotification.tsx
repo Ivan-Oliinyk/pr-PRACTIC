@@ -6,7 +6,7 @@ import { Income } from "../layout/home/notification/income/Income";
 export const RoutingNotification = () => {
   return (
     <Routes>
-      <Route path="Notification" element={<Notification />}>
+      <Route path="/" element={<Notification />}>
         <Route index element={<ActiveLog />} />
         <Route path="Income" element={<Income />} />
       </Route>
