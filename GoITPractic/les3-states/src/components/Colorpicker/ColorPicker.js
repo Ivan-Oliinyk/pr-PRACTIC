@@ -6,38 +6,47 @@ class ColorPicker extends Component {
     activeOptionsIdx: 0,
   };
 
-  changeColor = (value) => {
-    this.setState({ activeOptionsIdx: value });
+  changeColor = (index) => {
+    this.setState({ activeOptionsIdx: index });
+  };
+
+  makeOptionClassName = (index) => {
+    const optionClasses = ["img__wrapper"];
+
+    index === this.state.activeOptionsIdx && optionClasses.push("active-btn");
+
+    return optionClasses.join(" ");
   };
 
   render() {
+    const { activeOptionsIdx } = this.state;
+    const { options } = this.props;
+    const activeOptionColor = options[activeOptionsIdx].color;
+    const activeOptionLabel = options[activeOptionsIdx].label;
+
     return (
       <div
         className="ColorPicker__wrapper"
         style={{
-          backgroundColor:
-            this.props.options[this.state.activeOptionsIdx].color,
+          backgroundColor: activeOptionColor,
         }}
       >
-        <h1 className="Color__name">Name</h1>
+        <h1 className="Color__name">{activeOptionLabel}</h1>
         <div className="Img__wrapper-container">
-          {this.props.options.map(({ label, color }, index) => (
-            <button
-              type="button"
-              key={index}
-              style={{
-                backgroundColor: color,
-                boxShadow:
-                  this.state.activeOptionsIdx === index && `0 0 20px ${color}`,
-              }}
-              className={
-                this.state.activeOptionsIdx === index
-                  ? "img__wrapper active-btn"
-                  : "img__wrapper"
-              }
-              onClick={() => this.changeColor(index)}
-            ></button>
-          ))}
+          {options.map(({ label, color }, index) => {
+            return (
+              <button
+                type="button"
+                key={label}
+                style={{
+                  backgroundColor: color,
+                  boxShadow: activeOptionsIdx === index && `0 0 20px ${color}`,
+                }}
+                className={this.makeOptionClassName(index)}
+                onClick={() => this.changeColor(index)}
+              ></button>
+            );
+          })}
         </div>
       </div>
     );
