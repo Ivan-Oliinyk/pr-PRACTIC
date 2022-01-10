@@ -8,6 +8,7 @@ export const RoutingNotification = () => {
     <Routes>
       <Route path="/" element={<Notification />}>
         <Route index element={<ActiveLog />} />
+        <Route path="Active-log" element={<ActiveLog />} />
         <Route path="Income" element={<Income />} />
       </Route>
     </Routes>
