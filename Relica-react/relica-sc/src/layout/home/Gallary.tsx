@@ -12,7 +12,12 @@ const Container = styled.section`
 export const Gallery: React.FC = () => {
   return (
     <Container>
-      <Typography fontSize={FontSize.ts} weight={700} textAlign="center">
+      <Typography
+        as="h2"
+        fontSize={FontSize.ts}
+        weight={700}
+        textAlign="center"
+      >
         Explore
       </Typography>
       <GallatyNavigatin />
