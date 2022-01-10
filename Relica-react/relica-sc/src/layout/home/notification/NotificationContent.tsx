@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ActiveLogItem } from "./ActiveLogItem";
-import { Props } from "./ActiveLogItem";
+import { ActiveLogItem } from "./activeLog/ActiveLogItem";
+import { Props } from "./activeLog/ActiveLogItem";
 
 const ContentWrapper = styled.div`
   padding: 2rem 0;

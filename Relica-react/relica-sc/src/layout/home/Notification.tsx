@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { NotificationNavigate } from "./notification/activeLog/NotificationNavigate";
+import { NotificationNavigate } from "./notification/NotificationNavigate";
 import styled from "styled-components";
 import Typography, { FontSize } from "../../components/typography/Typography";
 

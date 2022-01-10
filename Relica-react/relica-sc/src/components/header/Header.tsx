@@ -37,8 +37,8 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <HeaderContainer className="header">
-        <HeaderContent className="header-container container">
+      <HeaderContainer>
+        <HeaderContent>
           <Logo
             color={baseTheme.colors.black}
             imgSrc="/images/logo.png"
@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
             imgHeight="5rem"
             size="2.8rem"
             margin="1rem"
-            linkTo="/home"
+            linkTo="/Posts"
           />
           <InputSearch />
           <Button
@@ -66,7 +66,6 @@ export const Header: React.FC = () => {
           >
             Post
           </Button>
-
           <SocialListLinks />
           <Avatar />
         </HeaderContent>
