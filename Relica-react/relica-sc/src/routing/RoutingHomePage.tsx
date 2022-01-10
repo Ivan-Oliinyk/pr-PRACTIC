@@ -11,6 +11,7 @@ const RoutingHomePage = () => {
     <Routes>
       <Route path="/" element={<Home />}>
         <Route index element={<Posts />} />
+        <Route path="Posts" element={<Posts />} />
         <Route path="Chat" element={<Chat />}></Route>
         <Route path="EditProfile" element={<EditProfile />} />
         <Route path="Gallery" element={<Gallery />} />

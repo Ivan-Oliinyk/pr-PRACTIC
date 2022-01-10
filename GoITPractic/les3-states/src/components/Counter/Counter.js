@@ -1,42 +1,33 @@
 import React from "react";
-import style from "./Counter.module.css";
-
-const { counter, counter__value, counter__controls } = style;
+import "./Counter.css";
+import Controls from "./Controls";
+import Value from "./Value";
 
 class Counter extends React.Component {
-  constructor() {
-    super();
+  static defaultProps = {
+    initialvalue: 0,
+  };
 
-    this.state = {
-      value: 0,
-    };
-  }
+  state = {
+    value: this.props.initialvalue,
+  };
 
-  handleIncrement = (event) => {
-    console.log("increment");
-    const { target } = event;
-
-    setTimeout(() => {
-      console.log(target);
-    }, 1000);
+  handleIncrement = () => {
+    this.setState((prev) => ({ value: prev.value + 1 }));
   };
 
   handleDecreement = () => {
-    console.log("decrement");
+    this.setState((prev) => ({ value: prev.value - 1 }));
   };
 
   render() {
     return (
-      <div className={counter}>
-        <span className={counter__value}>0</span>
-        <div className={counter__controls}>
-          <button type="button" onClick={this.handleIncrement}>
-            Add 1
-          </button>
-          <button type="button" onClick={this.handleDecreement}>
-            Minus 1
-          </button>
-        </div>
+      <div className="counter">
+        <Value value={this.state.value} />
+        <Controls
+          onIcrement={this.handleIncrement}
+          onDecrement={this.handleDecreement}
+        />
       </div>
     );
   }
