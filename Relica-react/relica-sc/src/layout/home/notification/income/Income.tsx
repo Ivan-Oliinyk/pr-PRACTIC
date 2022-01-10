@@ -1,11 +1,11 @@
 import React from "react";
-import { StaticList } from "./income/StaticList";
-import dataList from "./income/dataList.json";
-import { StatTable } from "./income/StatTable";
+import { StaticList } from "../income/StaticList";
+import dataList from "../income/dataList.json";
+import { StatTable } from "../income/StatTable";
 import styled from "styled-components";
 import Typography, {
   FontSize,
-} from "../../../components/typography/Typography";
+} from "../../../../components/typography/Typography";
 
 const Container = styled.div`
   max-width: 97rem;

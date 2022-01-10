@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { baseTheme } from "../../../../styles/theme";
+import { baseTheme } from "../../../styles/theme";
 
 export const Navigate = styled.nav`
   font-size: 1.6rem;
