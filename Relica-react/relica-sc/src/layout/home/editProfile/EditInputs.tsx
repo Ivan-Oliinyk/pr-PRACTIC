@@ -1,21 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+import InputText from "../../../components/form/InputText";
+
+const InputWrapper = styled.div`
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem;
+`;
 
 export const EditInputs: React.FC = () => {
   const dataInput = ["Display name", "Email", "Bio"];
 
   return (
-    <ul className="input-wrapper">
+    <InputWrapper>
       {dataInput.map((item, i) => (
-        <li key={i} className="user-name__input-wrapper input-wrapper">
-          <input
-            className="input-text"
-            type="text"
-            name="name"
-            placeholder={item}
-          />
-          <span className="user-name__input-descr">{item}</span>
+        <li key={i}>
+          <InputText value={item}></InputText>
         </li>
       ))}
-    </ul>
+    </InputWrapper>
   );
 };

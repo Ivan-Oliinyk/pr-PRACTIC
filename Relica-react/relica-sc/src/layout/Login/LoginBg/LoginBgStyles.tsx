@@ -1,11 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import Logo from "../../components/logo/Logo";
-import { baseTheme } from "../../styles/theme";
-import Typography from "../../components/typography/Typography";
-import { FontSize } from "../../components/typography/Typography";
+import { baseTheme } from "../../../styles/theme";
 
-const ContainerBg = styled.div`
+export const ContainerBg = styled.div`
   padding: 12.88% 1.46% 3.66% 7.32%;
   background-image: url("/images/bg2x.png");
   background-repeat: no-repeat;
@@ -33,7 +29,7 @@ const ContainerBg = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.div`
   font-size: ${baseTheme.size.titleMedium};
   line-height: ${baseTheme.lineHeight.medium};
   font-weight: ${baseTheme.weight.bolt};
@@ -49,29 +45,3 @@ const Title = styled.h1`
     font-size: ${baseTheme.size.big};
   }
 `;
-
-const LoginBg: React.FC = () => {
-  return (
-    <ContainerBg>
-      <Logo
-        color={baseTheme.colors.white}
-        imgSrc="/images/logo.png"
-        imgAlt="logo"
-        title="Relica"
-      />
-
-      <Title>
-        <Typography
-          as="h1"
-          fontSize={FontSize.tl}
-          weight={700}
-          color={baseTheme.colors.white}
-        >
-          Post photos. Make money. Maintain ownership
-        </Typography>
-      </Title>
-    </ContainerBg>
-  );
-};
-
-export default LoginBg;

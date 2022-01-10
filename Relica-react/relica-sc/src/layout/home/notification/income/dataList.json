@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/images/svg/st3.svg",
+    "title": "Total earned (USD)",
+    "price": "$5.00"
+  },
+  {
+    "image": "/images/svg/st2.svg",
+    "title": "Referrals",
+    "price": "$5.00"
+  },
+  {
+    "image": "/images/svg/st1.svg",
+    "title": "Followers",
+    "price": "243"
+  }
+]

@@ -7,6 +7,10 @@ export default createGlobalStyle`
     padding: 0;
   }
 
+  li {
+    list-style: none;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
@@ -58,9 +62,9 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
+  
   body {
-    font-family: Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: 'Roboto', sans-serif;;
   }
 
   hr {

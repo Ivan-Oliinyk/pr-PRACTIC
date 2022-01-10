@@ -1,4 +1,5 @@
 import React from "react";
+import { GuestMessage, GuestMessageWrapper } from "./ChatMessageStyled";
 
 type Props = {
   message: string;
@@ -7,9 +8,9 @@ type Props = {
 
 export const ChatMessage: React.FC<Props> = ({ message, imgsrc }) => {
   return (
-    <div className="guest-message__wrapper">
+    <GuestMessageWrapper>
       <img src={imgsrc} alt="user" width="39" height="39" />
-      <div className="guest-message">{message}</div>
-    </div>
+      <GuestMessage>{message}</GuestMessage>
+    </GuestMessageWrapper>
   );
 };

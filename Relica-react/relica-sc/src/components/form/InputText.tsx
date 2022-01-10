@@ -1,9 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
-const Wrapper = styled.div`
+type WrapperProps = {
+  width?: string;
+};
+
+const Wrapper = styled.div<WrapperProps>`
   position: relative;
+  width: ${({ width }) => width};
 
   .user-name__input-descr {
     position: absolute;
@@ -16,7 +21,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const Input = styled.input`
+interface IInputTextProps {
+  pushMessage?: boolean;
+  url: string;
+}
+
+const Input = styled.input<IInputTextProps>`
   margin-top: 2rem;
   padding: 1rem 0;
   width: 100%;
@@ -26,10 +36,30 @@ const Input = styled.input`
   font-size: 1.6rem;
   outline: none;
 
+  ${({ pushMessage }) =>
+    pushMessage &&
+    css`
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 3px;
+        display: block;
+        background: url("./images/svg/telegram.svg");
+        background-repeat: no-repeat;
+        background-color: red;
+        width: 3.4rem;
+        height: 3.4rem;
+        cursor: pointer;
+      }
+    `}
   &:hover,
   &:focus {
     &::placeholder {
-      color: $color-black;
+      color: ${baseTheme.colors.black};
     }
   }
 
@@ -51,14 +81,32 @@ const Descr = styled.span`
 interface IProps {
   value: string;
   type?: string;
-  name: string;
+  name?: string;
+  descr?: boolean;
+  width?: string;
+  url?: string;
+  pushMessage?: boolean;
 }
 
-const InputText: React.FC<IProps> = ({ value, type = "text", name }) => {
+const InputText: React.FC<IProps> = ({
+  value,
+  type = "text",
+  name = "text",
+  descr = true,
+  width = "100%",
+  url = "",
+  pushMessage = false,
+}) => {
   return (
-    <Wrapper>
-      <Input type={type} name={name} placeholder={value} />
-      <Descr>{value}</Descr>
+    <Wrapper width={width}>
+      <Input
+        type={type}
+        name={name}
+        placeholder={value}
+        url={url}
+        pushMessage={pushMessage}
+      />
+      {descr && <Descr>{value}</Descr>}
     </Wrapper>
   );
 };

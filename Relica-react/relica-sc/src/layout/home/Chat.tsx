@@ -1,6 +1,6 @@
 import React from "react";
-import { ChatUsers } from "./chat/ChatUsers";
-import { ChatContent } from "./chat/ChatContent";
+import { ChatUsers } from "./chat/chatUsers/ChatUsers";
+import { ChatContent } from "./chat/chatContent/ChatContent";
 import chatUsers from "./chat/chatUsers.json";
 import styled from "styled-components";
 import { baseTheme } from "../../styles/theme";

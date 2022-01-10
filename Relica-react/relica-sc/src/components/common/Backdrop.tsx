@@ -6,5 +6,4 @@ export const backdropStyles = css`
   background-color: #47474752;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 `;

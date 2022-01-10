@@ -2,18 +2,20 @@ import styled, { css } from "styled-components";
 import { baseTheme } from "../../styles/theme";
 
 interface IStyled {
-  weight?: 200 | 300 | 400 | 500 | 600 | 700;
+  weight?: 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
   fontSize?: FontSize;
   color?: string;
   lineHeight?: string;
   margin?: string;
   padding?: string;
+  textAlign?: string;
 }
 
 export enum FontSize {
   tl = "4.3rem",
   tm = "4rem",
   ts = "3.5rem",
+  ml = "3rem",
   ms = "2.8rem",
   mb = "2.4rem",
   mm = "2rem",
@@ -30,6 +32,7 @@ const TypographyStyled = css<IStyled>`
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   font-size: ${({ fontSize }) => fontSize || FontSize.base};
+  text-align: ${({ textAlign }) => textAlign || "auto"};
 
   // 1024
   @media (max-width: ${baseTheme.media.laptop}) {
