@@ -5,10 +5,11 @@ import Typography, {
 import { List, NavWrapper } from "./GallatyNavigatinStyles";
 
 type Props = {
-  cb?: React.MouseEventHandler;
+  // cb?: React.MouseEventHandler;
+  sortFuncArr: (() => void)[];
 };
 
-export const GallatyNavigatin: React.FC<Props> = ({ cb }) => {
+export const GallatyNavigatin: React.FC<Props> = ({ sortFuncArr }) => {
   const listContent = ["Most recent", "Most liked", "Discovered"];
 
   return (
@@ -16,7 +17,7 @@ export const GallatyNavigatin: React.FC<Props> = ({ cb }) => {
       <List>
         {listContent.map((el, i) => (
           <li key={i}>
-            <button onClick={cb}>
+            <button onClick={sortFuncArr[i]}>
               <Typography
                 as="p"
                 fontSize={FontSize.base}

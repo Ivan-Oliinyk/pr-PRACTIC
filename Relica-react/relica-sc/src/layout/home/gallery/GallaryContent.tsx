@@ -17,11 +17,11 @@ const GallaryList = styled.ul`
   margin-bottom: -1rem;
 `;
 
-interface List {
+export interface IList {
   data: Props[];
 }
 
-export const GallaryContent: React.FC<List> = ({ data }) => {
+export const GallaryContent: React.FC<IList> = ({ data }) => {
   return (
     <GallaryContentWrapper>
       <GallaryList>

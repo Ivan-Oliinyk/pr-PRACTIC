@@ -20,7 +20,7 @@ const ChatContainer = styled.section`
 
 export const Chat: React.FC = () => {
   return (
-    <ChatContainer className="container chat__wrapper">
+    <ChatContainer>
       <ChatUsers data={chatUsers} />
       <ChatContent />
     </ChatContainer>

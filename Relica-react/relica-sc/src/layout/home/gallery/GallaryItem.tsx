@@ -5,6 +5,7 @@ export type Props = {
   image: string;
   likes: number | string;
   comments: number | string;
+  data?: number;
 };
 
 export const GallaryItem: React.FC<Props> = ({ image, likes, comments }) => {
