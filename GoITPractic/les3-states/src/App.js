@@ -15,15 +15,17 @@ const colorPickerOptions = [
   { label: "blue", color: "blue" },
 ];
 
+const todos = [
+  { id: "id-1", text: "Todo 1", complited: false },
+  { id: "id-2", text: "Todo 2", complited: true },
+  { id: "id-3", text: "Todo 3", complited: false },
+  { id: "id-4", text: "Todo 4", complited: false },
+  { id: "id-5", text: "Todo 5", complited: false },
+];
+
 class App extends Component {
   state = {
-    todos: [
-      { id: "id-1", text: "Todo 1", complited: false },
-      { id: "id-2", text: "Todo 2", complited: true },
-      { id: "id-3", text: "Todo 3", complited: false },
-      { id: "id-4", text: "Todo 4", complited: false },
-      { id: "id-5", text: "Todo 5", complited: false },
-    ],
+    todos: todos,
   };
 
   deleteTodo = (todoId) => {
