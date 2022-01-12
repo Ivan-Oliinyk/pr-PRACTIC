@@ -7,7 +7,6 @@ const GallaryContentWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 97rem;
-  /* padding-top: 25rem; */
 `;
 
 const GallaryList = styled.ul`
@@ -31,6 +30,7 @@ export const GallaryContent: React.FC<IList> = ({ data }) => {
             image={image}
             likes={likes}
             comments={comments}
+            idx={i}
           />
         ))}
       </GallaryList>

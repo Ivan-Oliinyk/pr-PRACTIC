@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { IconWrapper, Item } from "./GallaryItemStyles";
 
 export type Props = {
@@ -6,11 +7,19 @@ export type Props = {
   likes: number | string;
   comments: number | string;
   data?: number;
+  idx?: number | string;
 };
 
-export const GallaryItem: React.FC<Props> = ({ image, likes, comments }) => {
+export const GallaryItem: React.FC<Props> = ({
+  image,
+  likes,
+  comments,
+  idx,
+}) => {
+  const navigate = useNavigate();
+
   return (
-    <Item>
+    <Item onClick={() => navigate(`/home/${idx}`)}>
       <img src={image} alt="image1" />
       <IconWrapper>
         <div>

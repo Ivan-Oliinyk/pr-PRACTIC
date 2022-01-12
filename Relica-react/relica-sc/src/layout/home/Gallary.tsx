@@ -4,7 +4,6 @@ import { GallaryContent } from "./gallery/GallaryContent";
 import Gallary from "./gallery/gallary.json";
 import styled from "styled-components";
 import Typography, { FontSize } from "../../components/typography/Typography";
-import { Context } from "./gallery/Context";
 
 const Container = styled.section`
   padding: 6rem 0;

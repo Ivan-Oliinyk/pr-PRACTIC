@@ -1,8 +1,9 @@
-import { basename } from "path/posix";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { baseTheme } from "../../../styles/theme";
 import InputText from "../../../components/form/InputText";
+import { useParams } from "react-router-dom";
+import gallary from "./gallary.json";
 
 const Container = styled.div`
   max-width: 136.6rem;
@@ -46,21 +47,25 @@ const ContextFooter = styled.div`
   max-width: 48.5rem;
 `;
 
-interface IGallaryPostProps {
-  src: string;
-  alt: string;
-}
+// interface IGallaryPostProps {
+//   src: string;
+//   alt: string;
+// }
 
 const GallaryPost: React.FC = () => {
+  // const [Gallary, setGallary] = useState(gallary);
+  const { id } = useParams();
+  const i: number = Number(id || 0);
+
   return (
     <Container>
       <ImgWrapper>
-        <img src="/images/chat/img2.png" alt="{alt}" />
+        <img src={gallary[i].image} alt="{alt}" />
       </ImgWrapper>
       <Content>
         <ContentBody></ContentBody>
         <ContextFooter>
-          <InputText value="Add comments"></InputText>
+          <InputText value="Add comments" autoComplete="off"></InputText>
         </ContextFooter>
       </Content>
     </Container>
