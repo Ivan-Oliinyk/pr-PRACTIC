@@ -5,7 +5,6 @@ import Typography, {
 import { List, NavWrapper } from "./GallatyNavigatinStyles";
 
 type Props = {
-  // cb?: React.MouseEventHandler;
   sortFuncArr: (() => void)[];
 };
 

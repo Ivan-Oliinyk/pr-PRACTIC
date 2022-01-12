@@ -86,6 +86,7 @@ interface IProps {
   width?: string;
   url?: string;
   pushMessage?: boolean;
+  autoComplete?: string;
 }
 
 const InputText: React.FC<IProps> = ({
@@ -96,6 +97,7 @@ const InputText: React.FC<IProps> = ({
   width = "100%",
   url = "",
   pushMessage = false,
+  autoComplete = "on",
 }) => {
   return (
     <Wrapper width={width}>
@@ -105,6 +107,7 @@ const InputText: React.FC<IProps> = ({
         placeholder={value}
         url={url}
         pushMessage={pushMessage}
+        autoComplete={autoComplete}
       />
       {descr && <Descr>{value}</Descr>}
     </Wrapper>
