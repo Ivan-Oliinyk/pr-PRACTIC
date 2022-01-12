@@ -24,13 +24,14 @@ export const GallaryContent: React.FC<IList> = ({ data }) => {
   return (
     <GallaryContentWrapper>
       <GallaryList>
-        {data.map(({ image, likes, comments }, i) => (
+        {data.map(({ image, likes, comments, id, alt }) => (
           <GallaryItem
-            key={i}
+            key={id}
             image={image}
             likes={likes}
             comments={comments}
-            idx={i}
+            id={id}
+            alt={alt}
           />
         ))}
       </GallaryList>

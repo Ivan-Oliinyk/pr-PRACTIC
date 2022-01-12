@@ -1,72 +1,96 @@
 [
   {
+    "id": 1,
     "image": "/images/chat/img1.png",
+    "alt": "post image",
     "likes": 120,
     "comments": 23,
     "date": 1641908296347
   },
   {
+    "id": 2,
     "image": "/images/chat/img2.png",
+    "alt": "post image",
     "likes": 421,
     "comments": 83,
     "date": 1641908296327
   },
   {
+    "id": 3,
     "image": "/images/chat/img3.png",
+    "alt": "post image",
     "likes": 140,
     "comments": 13,
     "date": 1641908296397
   },
   {
+    "id": 4,
     "image": "/images/chat/img4.png",
+    "alt": "post image",
     "likes": 170,
     "comments": 43,
     "date": 1641908226347
   },
   {
+    "id": 5,
     "image": "/images/chat/img5.png",
+    "alt": "post image",
     "likes": 150,
     "comments": 43,
     "date": 1641902296347
   },
   {
+    "id": 6,
     "image": "/images/chat/img6.png",
+    "alt": "post image",
     "likes": 127,
     "comments": 53,
     "date": 1641909296347
   },
   {
+    "id": 7,
     "image": "/images/chat/img7.png",
+    "alt": "post image",
     "likes": 520,
     "comments": 123,
     "date": 1641928296347
   },
   {
+    "id": 8,
     "image": "/images/chat/img8.png",
+    "alt": "post image",
     "likes": 67,
     "comments": 13,
     "date": 1641108296347
   },
   {
+    "id": 9,
     "image": "/images/chat/img9.png",
+    "alt": "post image",
     "likes": 80,
     "comments": 41,
     "date": 1641908206347
   },
   {
+    "id": 10,
     "image": "/images/chat/img1.png",
+    "alt": "post image",
     "likes": 80,
     "comments": 41,
     "date": 1641908296387
   },
   {
+    "id": 11,
     "image": "/images/chat/img3.png",
+    "alt": "post image",
     "likes": 80,
     "comments": 41,
     "date": 1641968296347
   },
   {
+    "id": 12,
     "image": "/images/chat/img5.png",
+    "alt": "post image",
     "likes": 80,
     "comments": 41,
     "date": 1641608296347

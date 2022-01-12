@@ -7,20 +7,22 @@ export type Props = {
   likes: number | string;
   comments: number | string;
   data?: number;
-  idx?: number | string;
+  id?: number | string;
+  alt?: string;
 };
 
 export const GallaryItem: React.FC<Props> = ({
   image,
   likes,
   comments,
-  idx,
+  id,
+  alt,
 }) => {
   const navigate = useNavigate();
 
   return (
-    <Item onClick={() => navigate(`/home/gallary-${idx}`)}>
-      <img src={image} alt="image1" />
+    <Item onClick={() => navigate(`/home/gallary-${id}`)}>
+      <img src={image} alt={alt} />
       <IconWrapper>
         <div>
           <svg width="40" height="40">

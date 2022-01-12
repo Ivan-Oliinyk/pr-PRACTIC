@@ -18,7 +18,6 @@ export const List = styled.ul`
 
   button {
     padding: 0.5em;
-    /* width: calc(100% / 3); */
     width: 100%;
     color: ${baseTheme.colors.greyPrimary};
     border-bottom: 3px solid ${baseTheme.colors.greyPrimary};
