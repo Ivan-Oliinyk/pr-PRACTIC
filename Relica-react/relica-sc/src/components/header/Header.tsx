@@ -14,7 +14,6 @@ const HeaderContainer = styled.header`
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  padding: 2rem 9rem;
   min-height: 9.6rem;
   background-color: ${baseTheme.colors.white};
   box-shadow: 0px 5px 15px ${baseTheme.colors.greyLight};
@@ -25,6 +24,7 @@ const HeaderContainer = styled.header`
 const HeaderContent = styled.div`
   width: 100%;
   max-width: 136.6rem;
+  padding: 0 2rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;

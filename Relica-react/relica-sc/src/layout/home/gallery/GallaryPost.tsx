@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { baseTheme } from "../../../styles/theme";
 import InputText from "../../../components/form/InputText";
 import { useParams } from "react-router-dom";
-import gallary from "./gallary.json";
+import gallaryJSON from "./gallary.json";
 
 const Container = styled.div`
   max-width: 136.6rem;
@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const ImgWrapper = styled.div`
-  width: 63rem;
+  width: 50%;
   height: 63rem;
   margin-right: 2.5rem;
   margin-top: 2.5rem;
@@ -29,7 +29,7 @@ const ImgWrapper = styled.div`
 
 const Content = styled.div`
   height: 100%;
-  width: 62rem;
+  width: 50%;
   border-left: 2px solid ${baseTheme.colors.greyLight};
   border-right: 2px solid ${baseTheme.colors.greyLight};
 `;
@@ -47,13 +47,8 @@ const ContextFooter = styled.div`
   max-width: 48.5rem;
 `;
 
-// interface IGallaryPostProps {
-//   src: string;
-//   alt: string;
-// }
-
 const GallaryPost: React.FC = () => {
-  // const [Gallary, setGallary] = useState(gallary);
+  const [gallary, setGallary] = useState(gallaryJSON);
   const { id } = useParams();
   const i: number = Number(id || 0);
 

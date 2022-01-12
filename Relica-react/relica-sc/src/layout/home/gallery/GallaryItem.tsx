@@ -19,7 +19,7 @@ export const GallaryItem: React.FC<Props> = ({
   const navigate = useNavigate();
 
   return (
-    <Item onClick={() => navigate(`/home/${idx}`)}>
+    <Item onClick={() => navigate(`/home/gallary-${idx}`)}>
       <img src={image} alt="image1" />
       <IconWrapper>
         <div>

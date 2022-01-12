@@ -16,7 +16,7 @@ const RoutingHomePage = () => {
         <Route path="Chat" element={<Chat />}></Route>
         <Route path="EditProfile" element={<EditProfile />} />
         <Route path="Gallery" element={<Gallery />} />
-        <Route path=":id" element={<GallaryPost />} />
+        <Route path="gallary-:id" element={<GallaryPost />} />
         <Route path="/Notification/*" element={<RoutingNotification />} />
       </Route>
     </Routes>
