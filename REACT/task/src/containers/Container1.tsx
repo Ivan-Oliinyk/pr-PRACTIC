@@ -1,28 +1,24 @@
-import React, { useContext, useState } from 'react'
-import Component1 from '../components/Component1'
-import ProfileContext from '../contexts/ProfileContext'
+import React, { useContext, useState } from "react";
+import Component1 from "../components/Component1";
+import ProfileContext from "../contexts/ProfileContext";
 
 type Container1Props = {
   // data: {[key: string]: string},
-  setData: (data: {[key: string]: string}) => void
-}
+  setData: (data: { [key: string]: string }) => void;
+};
 
-export default ({setData}: Container1Props) => {
+export default ({ setData }: Container1Props) => {
+  const { data, onChange } = useContext(ProfileContext);
 
-  const {data, onChange} = useContext(ProfileContext)
-
-  const handleOnChange = (key: string, value: string) => { 
+  const handleOnChange = (key: string, value: string) => {
     onChange({
       ...data,
-      [key]: value
-    })
-    console.log('handleOnChange1', data)
-    
-  }
+      [key]: value,
+    });
+    console.log("handleOnChange11", data);
+  };
 
-  console.log('Component1', data)
+  console.log("Component1", data);
 
-  return (
-    <Component1 data={data} onChange={handleOnChange} />
-  )
-}
+  return <Component1 data={data} onChange={handleOnChange} />;
+};

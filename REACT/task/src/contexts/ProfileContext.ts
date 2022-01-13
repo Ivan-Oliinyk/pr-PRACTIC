@@ -1,24 +1,23 @@
-import React from 'react'
+import React from "react";
 
 export interface TypeProfileContext {
-  data: {[key: string]: string},
-  onChange: (data: TypeProfileContext['data']) => void
+  data: { [key: string]: string };
+  onChange: (data: TypeProfileContext["data"]) => void;
 }
 
-export const defaultProfile: TypeProfileContext['data'] = {
-  name: "asasdasd",
-  email: "131213"
-}
+export const defaultProfile: TypeProfileContext["data"] = {
+  name: "aaaaaaaa",
+  email: "33333333",
+};
 
 class ProfileContext implements TypeProfileContext {
-  data = {...defaultProfile}
+  data = { ...defaultProfile };
 
-  onChange = (data: TypeProfileContext['data']) => {
-    this.data = {...data}
-  }
+  onChange = (data: TypeProfileContext["data"]) => {
+    this.data = { ...data };
+  };
 }
 
-export const defaultContext = new ProfileContext()
+export const defaultContext = new ProfileContext();
 
-
-export default React.createContext<TypeProfileContext>(defaultContext)
+export default React.createContext<TypeProfileContext>(defaultContext);
