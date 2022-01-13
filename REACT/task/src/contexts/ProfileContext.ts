@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export interface TypeProfileContext {
   data: { [key: string]: string };
@@ -6,15 +6,21 @@ export interface TypeProfileContext {
 }
 
 export const defaultProfile: TypeProfileContext["data"] = {
-  name: "aaaaaaaa",
-  email: "33333333",
+  name: "Sara",
+  email: "Sara@gmail.com",
 };
+
+// const [Data, setData] = useState({ name: "aa", email: "33" });
 
 class ProfileContext implements TypeProfileContext {
   data = { ...defaultProfile };
 
   onChange = (data: TypeProfileContext["data"]) => {
     this.data = { ...data };
+
+    console.log("666");
+    console.log("data=> ", this.data);
+    console.log("defaultProfile => ", defaultProfile);
   };
 }
 

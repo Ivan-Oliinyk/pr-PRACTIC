@@ -3,8 +3,8 @@ import Container1 from "../containers/Container1";
 import Container2 from "../containers/Container2";
 
 const defaultData: { [key: string]: string } = {
-  name: "gdfgjdkjfgkldf",
-  email: "",
+  name: "666",
+  email: "666",
 };
 
 export default () => {

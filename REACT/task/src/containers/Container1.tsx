@@ -15,10 +15,8 @@ export default ({ setData }: Container1Props) => {
       ...data,
       [key]: value,
     });
-    console.log("handleOnChange11", data);
+    setData(data);
   };
-
-  console.log("Component1", data);
 
   return <Component1 data={data} onChange={handleOnChange} />;
 };
