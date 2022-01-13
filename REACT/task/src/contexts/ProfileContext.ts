@@ -1,29 +1,24 @@
-import React, { useState } from "react";
+import React from 'react'
 
 export interface TypeProfileContext {
-  data: { [key: string]: string };
-  onChange: (data: TypeProfileContext["data"]) => void;
+  data: {[key: string]: string},
+  onChange: (data: TypeProfileContext['data']) => void
 }
 
-export const defaultProfile: TypeProfileContext["data"] = {
-  name: "Sara",
-  email: "Sara@gmail.com",
-};
-
-// const [Data, setData] = useState({ name: "aa", email: "33" });
+export const defaultProfile: TypeProfileContext['data'] = {
+  name: "asasdasd",
+  email: "131213"
+}
 
 class ProfileContext implements TypeProfileContext {
-  data = { ...defaultProfile };
+  data = {...defaultProfile}
 
-  onChange = (data: TypeProfileContext["data"]) => {
-    this.data = { ...data };
-
-    console.log("666");
-    console.log("data=> ", this.data);
-    console.log("defaultProfile => ", defaultProfile);
-  };
+  onChange = (data: TypeProfileContext['data']) => {
+    this.data = {...data}
+  }
 }
 
-export const defaultContext = new ProfileContext();
+export const defaultContext = new ProfileContext()
 
-export default React.createContext<TypeProfileContext>(defaultContext);
+
+export default React.createContext<TypeProfileContext>(defaultContext)

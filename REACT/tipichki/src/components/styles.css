@@ -1,0 +1,109 @@
+.list {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 85%;
+  border: 2px solid black;
+  border-radius: 5px;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.list li {
+  width: 20%;
+  min-height: 300px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: rgb(204, 199, 199);
+  padding: 10px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+nav button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  min-width: 140px;
+  cursor: pointer;
+  background-color: rgb(231, 220, 220);
+  color: rgb(3, 7, 0);
+  margin: 0 5px;
+}
+
+.port {
+  display: flex;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.port input {
+  padding: 10px;
+  border: 2px solid black;
+  font-size: 20px;
+  height: 30px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.Create {
+  padding: 10px 15px;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 200px;
+  cursor: pointer;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  min-width: 100px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.edit {
+  background-color: rgb(4, 83, 4);
+}
+
+.delete {
+  background-color: rgb(165, 4, 4);
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 700;
+}
