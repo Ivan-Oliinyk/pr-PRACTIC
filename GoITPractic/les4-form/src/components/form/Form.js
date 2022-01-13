@@ -9,47 +9,76 @@ class Form extends Component {
     email: "",
   };
 
-  handleNameChange = (event) => {
-    this.setState({ name: event.target.value });
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   };
 
-  handlePhoneChange = (event) => {
-    this.setState({ phone: event.target.value });
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.data(this.state);
+    this.reset();
   };
 
-  handleEmailChange = (event) => {
-    this.setState({ email: event.target.value });
+  reset = () => {
+    this.setState({ name: "", phone: "", email: "" });
   };
+
+  labelsData = [
+    { name: "name", type: "text", title: "Name :" },
+    { name: "phone", type: "phone", title: "Phone :" },
+    { name: "email", type: "email", title: "Email :" },
+  ];
 
   render() {
     return (
       <>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h2>Form</h2>
+          {this.labelsData.map(({ name, type, title }, i) => (
+            <>
+              <label key={i}>
+                <h3>{title}</h3>
+                <input
+                  name={name}
+                  type={type}
+                  value={this.state[name]}
+                  onChange={this.handleChange}
+                ></input>
+              </label>
+            </>
+          ))}
+          {/* <h2>Form</h2>
           <label>
             <h3>Name :</h3>
             <input
+              name="name"
               type="text"
               value={this.state.name}
-              onChange={this.handleNameChange}
+              onChange={this.handleChange}
             ></input>
-          </label>
-          <label>
+          </label> */}
+          {/* <label>
             <h3>Phone :</h3>
             <input
+              name="phone"
               type="phone"
               value={this.state.phone}
-              onChange={this.handlePhoneChange}
+              onChange={this.handleChange}
             ></input>
           </label>
           <label>
             <h3>Email :</h3>
             <input
+              name="email"
               type="email"
               value={this.state.email}
-              onChange={this.handleEmailChange}
+              onChange={this.handleChange}
             ></input>
-          </label>
+          </label> */}
+          <button className="btn" type="submit">
+            Submit
+          </button>
         </form>
       </>
     );

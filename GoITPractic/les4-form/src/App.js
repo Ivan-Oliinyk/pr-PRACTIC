@@ -5,6 +5,11 @@ import Form from "./components/form/Form";
 class App extends Component {
   state = {
     inputValue: "1",
+    formData: {},
+  };
+
+  getFormData = (data) => {
+    this.setState({ formData: { ...this.formData, ...data } });
   };
 
   handleInputChange = (event) => {
@@ -35,7 +40,7 @@ class App extends Component {
           onChange={this.handleInputChange}
         />
 
-        <Form></Form>
+        <Form data={this.getFormData}></Form>
       </div>
     );
   }
