@@ -1,12 +1,10 @@
-import React from 'react'
-import { TTableField, TTableProps } from '.'
+import React from "react";
+import { TTableField, TTableProps } from ".";
 
 export type TTableHeadFieldProps = {
-  title: string
-}
+  title: string;
+};
 
-export default ({title}: TTableHeadFieldProps) => {
-  return (
-    <th>{title}</th>
-  )
-}
+export default ({ title }: TTableHeadFieldProps) => {
+  return <th>{title}</th>;
+};

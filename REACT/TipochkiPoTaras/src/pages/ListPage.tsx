@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ListContainer from '../containers/ListContainer'
+import React from "react";
+import { Link } from "react-router-dom";
+import ListContainer from "../containers/ListContainer";
 
 export default () => {
   return (
@@ -8,11 +8,11 @@ export default () => {
       <h2>Users - List</h2>
       <hr />
       <div className="Container">
-        <div>
-          <Link to="/create">New</Link>
+        <div className="crete">
+          <Link to="/create">Create new user</Link>
         </div>
         <ListContainer />
       </div>
     </div>
-  )
-}
+  );
+};

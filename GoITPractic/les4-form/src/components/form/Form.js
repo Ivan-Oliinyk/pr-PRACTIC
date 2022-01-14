@@ -36,46 +36,16 @@ class Form extends Component {
         <form onSubmit={this.handleSubmit}>
           <h2>Form</h2>
           {this.labelsData.map(({ name, type, title }, i) => (
-            <>
-              <label key={i}>
-                <h3>{title}</h3>
-                <input
-                  name={name}
-                  type={type}
-                  value={this.state[name]}
-                  onChange={this.handleChange}
-                ></input>
-              </label>
-            </>
+            <label key={i}>
+              <h3>{title}</h3>
+              <input
+                name={name}
+                type={type}
+                value={this.state[name]}
+                onChange={this.handleChange}
+              ></input>
+            </label>
           ))}
-          {/* <h2>Form</h2>
-          <label>
-            <h3>Name :</h3>
-            <input
-              name="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            ></input>
-          </label> */}
-          {/* <label>
-            <h3>Phone :</h3>
-            <input
-              name="phone"
-              type="phone"
-              value={this.state.phone}
-              onChange={this.handleChange}
-            ></input>
-          </label>
-          <label>
-            <h3>Email :</h3>
-            <input
-              name="email"
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            ></input>
-          </label> */}
           <button className="btn" type="submit">
             Submit
           </button>
