@@ -13,8 +13,13 @@ const handleOnChange =
 
 const Search = ({ value, onChange }: TSearchInputProps) => {
   return (
-    <div>
-      <input type="search" value={value} onChange={handleOnChange(onChange)} />
+    <div className="input-search">
+      <input
+        placeholder="Search..."
+        type="search"
+        value={value}
+        onChange={handleOnChange(onChange)}
+      />
     </div>
   );
 };
