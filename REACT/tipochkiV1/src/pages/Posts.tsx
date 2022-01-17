@@ -8,12 +8,7 @@ const Posts = () => {
       <h2 className="title-2">Posts</h2>
       <hr />
       <div className="Container">
-        <div className="link__wrapper">
-          <Link className="link" to="/">
-            List Page
-          </Link>
-          <PostContainer />
-        </div>
+        <PostContainer />
       </div>
     </div>
   );

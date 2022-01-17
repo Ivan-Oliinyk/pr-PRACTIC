@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Pagination, { TPaginationData } from "../components/List/Pagination";
 import Search from "../components/List/Search";
 import Table, { TTableField } from "../components/Table";
 import { PostsStateContext } from "../contexts/PostsContext";
-import { UsersStateContext } from "../contexts/UsersContext";
 
 const defaultPagination = {
   page: 1,
@@ -70,6 +69,7 @@ const PostContainer = () => {
   const posts = useContext(PostsStateContext);
 
   const [sortField, setSortField] = useState<string>("_id");
+
   const [sortDirection, setSortDirection] = useState<"ASC" | "DESC">("ASC");
 
   const [searchValue, setSearchValue] = useState<string>("");
@@ -98,7 +98,15 @@ const PostContainer = () => {
 
   return (
     <div>
-      <Search value={searchValue} onChange={setSearchValue} />
+      {/* <Search value={searchValue} onChange={setSearchValue} /> */}
+      <Search
+        value={searchValue}
+        onChange={setSearchValue}
+        createPath="/posts/create"
+        moveToPath="/"
+        firstBtnChildren="Create post"
+        secondBtnChildren="Go to users"
+      />
       <Table
         fields={FIELDS}
         items={paginatedItems}

@@ -6,6 +6,7 @@ import EditPage from "./pages/EditPage";
 import CreatePage from "./pages/CreatePage";
 import Posts from "./pages/Posts";
 import PostEditPage from "./pages/PostEditPage";
+import PostCreateContainer from "./containers/PostCreateContainer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/create" element={<CreatePage />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id/edit" element={<PostEditPage />} />
-          {/* <Route path="/posts/create" element={<PostCreatePage />} /> */}
+          <Route path="/posts/create" element={<PostCreateContainer />} />
         </Routes>
       </div>
     </div>

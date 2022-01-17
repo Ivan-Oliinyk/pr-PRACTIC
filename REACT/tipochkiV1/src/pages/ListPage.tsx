@@ -8,14 +8,6 @@ const ListPage = () => {
       <h2 className="title-2">Users - List</h2>
       <hr />
       <div className="Container">
-        <div className="link__wrapper">
-          <Link className="link" to="/create">
-            New
-          </Link>
-          <Link className="link" to="posts">
-            Posts
-          </Link>
-        </div>
         <ListContainer />
       </div>
     </div>
