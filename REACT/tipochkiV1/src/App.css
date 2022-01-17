@@ -1,0 +1,109 @@
+.Container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title-2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 10px;
+  background-color: green;
+  color: white;
+}
+
+.link__wrapper {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid green;
+  margin-right: 10px;
+  color: green;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: black;
+  transition: all 300ms linear;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input:hover,
+input:focus {
+  border-color: green;
+  color: green;
+}
+
+table {
+  background-color: green;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+table th {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+table th:hover {
+  color: green;
+}
+
+table tr {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+table tr:hover {
+  background-color: white;
+  color: black;
+}
+
+.pagination {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination button {
+  display: block;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  min-width: 40px;
+  border: 2px solid green;
+  cursor: pointer;
+  transition: all 300ms linear;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pagination button:hover {
+  background-color: white;
+  color: green;
+}
