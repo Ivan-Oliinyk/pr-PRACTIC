@@ -1,0 +1,13 @@
+.input-filter {
+  display: flex;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  max-width: 300px;
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
