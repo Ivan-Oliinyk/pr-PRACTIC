@@ -1,19 +1,27 @@
-import React from 'react'
-import { TTableProps } from '.'
-import HeadField from './HeadField'
-import HeadFieldSortable from './HeadFieldSortable'
+import React from "react";
+import { TTableProps } from ".";
+import HeadField from "./HeadField";
+import HeadFieldSortable from "./HeadFieldSortable";
 
-export type TTableHeadProps = Omit<TTableProps, "items" | "onClick">
+export type TTableHeadProps = Omit<TTableProps, "items" | "onClick">;
 
-export default (
-  {fields, ...rest}: TTableHeadProps
-  ) => {
+const Head = ({ fields, ...rest }: TTableHeadProps) => {
   return (
     <tr>
-      {fields.map((field) => (
-        field.sortable ? <HeadFieldSortable key={field._id} id={field._id} title={field.title} {...rest} /> : 
-        <HeadField key={field._id} title={field.title} /> 
-      ))}
+      {fields.map((field) =>
+        field.sortable ? (
+          <HeadFieldSortable
+            key={field._id}
+            id={field._id}
+            title={field.title}
+            {...rest}
+          />
+        ) : (
+          <HeadField key={field._id} title={field.title} />
+        )
+      )}
     </tr>
-  )
-}
+  );
+};
+
+export default Head;
