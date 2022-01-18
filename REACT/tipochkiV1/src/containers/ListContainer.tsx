@@ -113,6 +113,7 @@ export default () => {
         onSortFieldChange={setSortField}
         onSortDirectionChange={setSortDirection}
         onClick={handleNavEdit}
+        post={true}
       />
       <Pagination pagination={pagination} onChange={setPage} />
     </div>

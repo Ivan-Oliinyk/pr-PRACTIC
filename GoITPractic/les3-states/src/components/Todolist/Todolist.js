@@ -7,7 +7,7 @@ const Todolist = ({ todos, onDeleteTodo, onCompliteTodo }) => (
     <ul className="Todo__list">
       {todos.map(({ id, text, complited }, idx) => (
         <li className="Todo__item" key={id}>
-          <p>{text}</p>
+          <p className={complited ? "comlited" : ""}>{text}</p>
           <div className="Btn__wrapper">
             <button
               onClick={() => onCompliteTodo(idx)}

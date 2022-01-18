@@ -79,3 +79,7 @@
   background-color: green;
   margin-bottom: 10px;
 }
+
+.comlited {
+  text-decoration: line-through;
+}
