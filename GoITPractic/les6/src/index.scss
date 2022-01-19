@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.Pokemon__form {
+  display: flex;
+  align-items: center;
+  // flex-direction: column;
+  width: 500px;
+  border: 2px solid green;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: rgb(176, 216, 176);
+}
+
+.form-input {
+  padding: 0 5px;
+  height: 44px;
+  width: 350px;
+  font-size: 16px;
+  border: 2px solid green;
+  border-radius: 5px;
+  color: green;
+  transition: all 300ms linear;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: blue;
+    border-color: blue;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid green;
+  color: green;
+  transition: all 300ms linear;
+  cursor: pointer;
+  background-color: #fff;
+  margin: 10px auto;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: blue;
+    border-color: blue;
+  }
+}
+
+.PokemonInfo__wrapper {
+  width: 500px;
+  background-color: rgb(188, 218, 188);
+  border: 2px solid green;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.item:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
