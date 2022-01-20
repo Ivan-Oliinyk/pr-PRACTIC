@@ -16,10 +16,13 @@ code {
     monospace;
 }
 
+img {
+  display: block;
+}
+
 .Pokemon__form {
   display: flex;
   align-items: center;
-  // flex-direction: column;
   width: 500px;
   border: 2px solid green;
   padding: 5px 10px;
@@ -67,6 +70,10 @@ code {
 }
 
 .PokemonInfo__wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 500px;
   background-color: rgb(188, 218, 188);
   border: 2px solid green;
@@ -77,4 +84,34 @@ code {
 .item:nth-of-type(2) {
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+
+.icon-spin {
+  margin-right: 10px;
+  animation: icon-spin 2s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  max-width: 500px;
+}
+
+div[role="alert"] {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -64,14 +64,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="container">
         <ToastContainer autoClose={3000} />
         <h1>Pokemon</h1>
         <div>
           <PokemonForm onSubmit={this.handleFormSubmit} />
           <PokemonInfo pokemonInfo={this.state.pokemonName} />
         </div>
-      </>
+      </div>
     );
   }
 }

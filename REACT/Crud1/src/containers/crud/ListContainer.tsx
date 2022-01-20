@@ -8,6 +8,7 @@ import useFilter from '../../hooks/crud/useFilter'
 import usePagination from '../../hooks/crud/usePagination'
 import useSort from '../../hooks/crud/useSort'
 import { TCrudContainer } from '../../pages/crud/types'
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 export type TListContainerProps<T extends TCrudItem = any> = {
   fields: TTableField[],
@@ -17,11 +18,12 @@ export type TListContainerProps<T extends TCrudItem = any> = {
 
 export default ({fields, searchFields, context, basePath}: TListContainerProps) => {
   const navigate = useNavigate()
-  const items = useContext(context.store) as TCrudItem[]
+  const items = useTypedSelector(context.store) as TCrudItem[]
 
   const [searchValue, setSearchValue, filteredItems] = useFilter(items, searchFields)
   const [sortField, sortDirection, setSortField, setSortDirection, sortedItems] = useSort(filteredItems)
   const [pagination, setPage, paginatedItems] = usePagination(sortedItems, searchValue)
+
 
   const handleNavEdit = (id: string) => {
     navigate(`${basePath}/${id}/edit`)
