@@ -23,14 +23,16 @@ export default function Component1() {
       )}
       validate={(values) => {
         const errors: { [key: string]: string } = {};
+
         if (!values.password) {
-          errors.password = "Пусто";
+          errors.password = "Enter password";
         } else if (!regexPassword.test(values.password)) {
           errors.password =
             "Пароль должен именть символы в верхнем и нижнем регистре, длина 6-12 символов";
         }
+
         if (!values.email) {
-          errors.email = "Пусто";
+          errors.email = "Enter Email";
         } else if (!regexEmail.test(values.email)) {
           errors.email = "Не валидный пароль";
         }
@@ -44,7 +46,6 @@ export default function Component1() {
       <Form>
         {Object.keys(list).map((key: string, i) => (
           <div key={i}>
-            <h2>Form: {i + 1}</h2>
             <Field name={key} type={list[key].type} />
             <ErrorMessage name={key} component="div" />
           </div>

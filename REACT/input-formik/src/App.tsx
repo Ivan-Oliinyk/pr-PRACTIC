@@ -68,7 +68,8 @@ const AppWraper = styled.div`
   }
 
   input + div {
-    width: 200px;
+    padding: 5px;
+    width: 230px;
     background-color: red;
     color: white;
     margin: 3px;
