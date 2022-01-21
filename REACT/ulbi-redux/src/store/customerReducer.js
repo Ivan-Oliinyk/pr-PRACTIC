@@ -6,9 +6,12 @@ const ADD_USER = "ADD_USER";
 const REMOVE_USER = "REMOVE_USER";
 const CLEAR_USER = "CLEAR_USER";
 const CLEAR_LIST = "CLEAR_LIST";
+const ADD_MANY_CUSTOMERS = "ADD_MANY_CUSTOMERS";
 
 export const customerReducer = (state = deafaultState, action) => {
   switch (action.type) {
+    case ADD_MANY_CUSTOMERS:
+      return { ...state, users: [...state.users, ...action.payload] };
     case ADD_USER:
       return { ...state, users: [...state.users, action.payload] };
     case REMOVE_USER:
@@ -35,3 +38,5 @@ export const addUser = (payload) => ({ type: ADD_USER, payload });
 export const removeUser = (payload) => ({ type: REMOVE_USER, payload });
 export const clearUser = (payload) => ({ type: CLEAR_USER, payload });
 export const clearAllUsers = () => ({ type: CLEAR_LIST });
+
+export const addManyUser = (payload) => ({ type: ADD_MANY_CUSTOMERS, payload });

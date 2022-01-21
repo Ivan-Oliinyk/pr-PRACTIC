@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchCustomers } from "./asyncActions/customers";
 import { addCash, getCash, clearCash } from "./store/cashReducer";
 import {
   addUser,
@@ -78,6 +79,9 @@ const App = () => {
           </button>
           <button type="button" onClick={() => clearUserList()}>
             Clear all
+          </button>
+          <button type="button" onClick={() => dispatch(fetchCustomers())}>
+            Get user from dB
           </button>
         </div>
         {users.length === 0 ? (
