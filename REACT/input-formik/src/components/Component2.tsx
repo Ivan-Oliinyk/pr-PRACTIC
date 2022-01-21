@@ -1,5 +1,4 @@
 import { useAppSelector } from "../hooks/redux";
-import { TItem } from "../store/reducers/mainReducer";
 
 const styleItem: React.CSSProperties | undefined = {
   width: "200px",
@@ -20,7 +19,7 @@ export default function Component2() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       COMPONENT 2
-      {Array(1000)
+      {Array(4)
         .fill("")
         .map((_, idx) => (
           <div key={idx}>

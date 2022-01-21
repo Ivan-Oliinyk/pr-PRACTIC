@@ -58,6 +58,21 @@ const AppWraper = styled.div`
     height: 100rem;
     background: red;
   }
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid green;
+    font-size: 16px;
+    margin: 3px;
+  }
+
+  input + div {
+    width: 200px;
+    background-color: red;
+    color: white;
+    margin: 3px;
+  }
 `;
 
 function App() {
