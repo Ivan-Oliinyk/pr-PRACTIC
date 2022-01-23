@@ -1,0 +1,6 @@
+
+  {
+    "port": 5000,
+    "mongoUri": "mongodb+srv://ivan91:97865900Ff@cluster0.eh8tx.mongodb.net/app?retryWrites=true&w=majority",
+    "jwtSecret": "ya est grunt" 
+  }
