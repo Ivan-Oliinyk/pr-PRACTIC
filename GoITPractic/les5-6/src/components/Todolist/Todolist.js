@@ -1,4 +1,5 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 import "./Todolist.css";
 
 const Todolist = ({ todos, onDeleteTodo, onCompliteTodo }) => (
@@ -6,25 +7,13 @@ const Todolist = ({ todos, onDeleteTodo, onCompliteTodo }) => (
     <h2 className="Todo__title">Todo List</h2>
     <ul className="Todo__list">
       {todos.map(({ id, text, complited }, idx) => (
-        <li className="Todo__item" key={id}>
-          <p className={complited ? "comlited" : ""}>{text}</p>
-          <div className="Btn__wrapper">
-            <button
-              onClick={() => onCompliteTodo(idx)}
-              className="btn__complited"
-              type="button"
-            >
-              Complited
-            </button>
-            <button
-              onClick={() => onDeleteTodo(id)}
-              className="btn__delete"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </li>
+        <TodoItem
+          key={id}
+          text={text}
+          complited={complited}
+          onComplited={() => onCompliteTodo(idx)}
+          onDelete={() => onDeleteTodo(idx)}
+        />
       ))}
     </ul>
     <p>Todo Counter: {todos.length} </p>

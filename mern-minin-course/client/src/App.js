@@ -1,16 +1,23 @@
 import "materialize-css";
 import { userRoutes } from "./routes";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { useAuth } from "./hooks/auth.hooks";
+import { AuthContext } from "./context/AuthContext";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const routes = userRoutes(false);
+  const { token, login, logout, userId } = useAuth();
+  const isAutenticated = !!token;
+  const routes = userRoutes(isAutenticated);
   return (
-    <BrowserRouter>
-      <div className="container">
-        {/* <h1>Hellow</h1> */}
-        {routes}
-      </div>
-    </BrowserRouter>
+    <AuthContext.Provider
+      value={{ token, login, logout, userId, isAutenticated }}
+    >
+      <BrowserRouter>
+        {isAutenticated && <Navbar />}
+        <div className="container">{routes}</div>
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 

@@ -5,6 +5,10 @@ import Dropdown from "./components/Dropdown/Dropdown";
 import Todolist from "./components/Todolist";
 import TodoEditor from "./components/TodoEditor/TodoEditor";
 import Filter from "./components/Filter/Filter";
+import Modal from "./components/Modal/Modal";
+import Clock from "./components/Clock/Clock";
+import Tabs from "./components/Tabs/Tabs";
+import tabsItrem from "./tabs.json";
 
 const colorPickerOptions = [
   { label: "red", color: "red" },
@@ -29,6 +33,7 @@ class App extends Component {
   state = {
     todos: [],
     filter: "",
+    showModal: false,
   };
 
   componentDidMount() {
@@ -43,12 +48,6 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log(prevState);
-    // console.log(this.state);
-    // if (this.state.todos !== prevState.todos) {
-    //   console.log("Change todos !");
-    // }
-
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
   }
 
@@ -91,12 +90,44 @@ class App extends Component {
     );
   };
 
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
+
   render() {
-    const { todos, filter } = this.state;
+    const { todos, filter, showModal } = this.state;
     const visibleTodos = this.getVisibleTodos();
 
     return (
       <>
+        <button className="btn modal" type="button" onClick={this.toggleModal}>
+          Open modal
+        </button>
+        {showModal && (
+          <Modal close={this.toggleModal}>
+            <Clock></Clock>
+            <h2>This is modal</h2>
+            <p>
+              Существует несколько стадий жизненного цикла, каждый из которых
+              вызывает для компонента методы наследуемые от React.Component. Мы
+              можем переопределить их поведение добавив необходимый функционал,
+              в рамках установленных правил. Существует несколько стадий
+              жизненного цикла, каждый из которых вызывает для компонента методы
+              наследуемые от React.Component. Мы можем переопределить их
+              поведение добавив необходимый функционал, в рамках установленных
+              правил. Существует несколько стадий жизненного цикла, каждый из
+              которых вызывает для компонента методы наследуемые от
+              React.Component. Мы можем переопределить их поведение добавив
+              необходимый функционал, в рамках установленных правил.
+            </p>
+            <button type="button" onClick={this.toggleModal}>
+              Close modal
+            </button>
+          </Modal>
+        )}
+        <Tabs items={tabsItrem}></Tabs>
         <Counter />
         <Dropdown />
         <ColorPicker options={colorPickerOptions} />

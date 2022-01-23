@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid green;
+  color: green;
+  background-color: #fff !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.btn:hover {
+  border: 2px solid rgb(0, 0, 0);
+  color: black;
+  background-color: green !important;
+}
+
+.btn.modal {
+  width: 200px;
+  display: block;
+  margin: 50px auto;
+}
+
+.Clock__face {
+  margin: 40px auto;
+  display: block;
+  width: 200px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px;
+  border: 3px solid green;
+  border-radius: 10px;
+  color: green;
+  text-shadow: 0 0 2px black;
+}
+
+.tab__wrapper {
+  max-width: 600px;
+  min-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+.tab__wrapper button {
+  width: 30%;
+  margin-right: 10px;
+}

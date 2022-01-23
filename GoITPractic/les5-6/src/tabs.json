@@ -1,0 +1,16 @@
+[
+  {
+    "label": "tab1",
+    "text": "The extension provides power-ups for your Redux development workflow. Apart from Redux, it can be used with any other architectures which handle the state."
+  },
+
+  {
+    "label": "tab2",
+    "text": "Redux DevTools for debugging application's state changes."
+  },
+
+  {
+    "label": "tab3",
+    "text": "This is an open source project. See the official repository for more details: https://github.com/reduxjs/redux-devtools"
+  }
+]
