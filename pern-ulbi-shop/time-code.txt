@@ -1,0 +1,31 @@
+Backend
+
+32 - квери 
+33 - апиеррор
+34 - хендле еррор мидлвар
+41 - работа с файлами (npm express-fileupload)
+42 - регистрация app.use(fileUpload())
+42 - генерация случайного имени (npm uuid)
+43 - folder static + вызов функции mv
+45 - form-data
+48 - работа с бренд 
+49 - постраничный вывод базовая пагинация
+52 - парсим строку на вронте в джсон строку на беки в джсон обьекты
+56 - работа с авторизацией
+  (npm jsonwebtoken, bcrypt)
+101 - jwt.io - декодирование токена
+104 - authMiddleware
+107 - check 
+108 - checkRoleMiddleware
+
+FrontEnd
+111 - start
+  (react-router-dom, mobx mobx-react-lite )
+114 - настройка роутов
+115 - создаем файл с константами
+120 - создаем UseStore
+122 - создание контекста
+
+144 - use History
+
+202 - интеграция с бекендом
