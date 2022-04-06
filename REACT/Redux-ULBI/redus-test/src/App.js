@@ -1,3 +1,4 @@
+import uniqid from "uniqid";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCustomerAction,
@@ -6,6 +7,7 @@ import {
 } from "./store/customerReducer";
 
 import { ADD_CASH, GET_CASH } from "./store/cashReducer";
+import { fetchCustomers } from "./asyncActions/customers";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,13 +20,21 @@ function App() {
 
   const addCustomer = (name) => {
     if (name !== "") {
-      dispatch(addCustomerAction(name));
+      const customer = {
+        name,
+        id: Date.now(),
+      };
+
+      dispatch(addCustomerAction(customer));
     }
   };
 
   const removeCustomer = (name) => dispatch(removeCustomerAction(name));
 
   const removeAllCostomer = () => dispatch(removeAllCustomers());
+
+  const addManyUsersFromApi = () => dispatch(fetchCustomers());
+  // console.log(addManyUsersFromApi());
 
   console.log(cash);
   console.log(customers);
@@ -41,6 +51,7 @@ function App() {
       <div>
         <h2>Customers</h2>
         <div>
+          <button onClick={() => addManyUsersFromApi()}>Add many users</button>
           <button onClick={() => addCustomer(prompt())}>Add customer</button>
           <button onClick={() => removeCustomer(prompt())}>
             Remove customer
@@ -52,10 +63,10 @@ function App() {
         ) : (
           <div>
             <ol>
-              {customers.map((name, i) => (
+              {customers.map(({ name, id }) => (
                 <li
                   onClick={() => removeCustomer(name)}
-                  key={i}
+                  key={uniqid()}
                   style={{
                     cursor: "pointer",
                     padding: "10px",
