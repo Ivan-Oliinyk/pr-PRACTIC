@@ -1,0 +1,31 @@
+{
+    "family": "goally-api",
+    "networkMode": "awsvpc",
+      "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/goally-api",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "image": "018332327644.dkr.ecr.us-east-1.amazonaws.com/goally-api:prod",
+      "name": "goally-api"
+    }
+  ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+	"cpu": "1024",
+	"memory": "4096",
+	"executionRoleArn": "arn:aws:iam::018332327644:role/ecsTaskExecutionRole"
+}

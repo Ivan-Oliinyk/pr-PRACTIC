@@ -1,0 +1,40 @@
+name,tag1,tag2,tag3
+asset_105,clean,sweep,
+asset_108,dish,wash,clean
+asset_110,sink,clean,wash
+asset_114,toys,clean,
+asset_15,lawn,mower,grass
+asset_16,clean ,sponge,soap
+asset_17,clothes,clean,wash
+asset_18,dust,clean,
+asset_20,dish,clean,
+asset_23,clean,mop,
+asset_27,trash,garbage,
+asset_31,mail,,
+asset_4,water ,,
+asset_45,broom,sweep,clean
+asset_48,car,wash,clean
+asset_49,bucket,,
+asset_54,plunger,,
+asset_58,clothes ,basket,
+asset_62,gloves,clean,rubber
+asset_64,rake,,
+asset_66,vacuum,clean,
+asset_69,clean ,dish,
+asset_70,wash,clean,clothes
+asset_71,table,,
+asset_77,trash,garbage,
+asset_78,dish,clean,
+asset_80,toilet,potty,clean
+asset_87,window,clean,
+asset_89,vacuum,clean,
+asset_94,clothes,hamper,
+asset_98,dish,dishes,clean
+clean3,dish,wash,
+clean5,broom,sweep,
+trash1,,,
+trash2,garbage,,
+turn_off_lights_1,,,
+turn_off_lights_2,,,
+lamp_1,,,
+lamp_2,,,

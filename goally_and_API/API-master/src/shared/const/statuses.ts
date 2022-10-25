@@ -1,0 +1,2 @@
+const STATUSES = { ACTIVE: 'ACTIVE', DISABLED: 'DISABLED' };
+export { STATUSES };

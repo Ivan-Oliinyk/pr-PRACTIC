@@ -1,0 +1,4 @@
+export const TEMP_UNITS = {
+  FAHRENHEIT: 'FAHRENHEIT',
+  CELSIUS: 'CELSIUS',
+};

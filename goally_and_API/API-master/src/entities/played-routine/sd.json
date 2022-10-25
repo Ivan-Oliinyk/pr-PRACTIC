@@ -1,0 +1,58 @@
+{
+  "migrated": false,
+  "offlinePlayed": true,
+  "additionalPrompts": "None",
+  "activities": [
+    {
+      "allowCancelActivity": true,
+      "allowPauseActivity": true,
+      "allowPush": true,
+      "audioUrl": "",
+      "createdBy": "5f861874ff529800126276fb",
+      "_id": "5fda5103271df800133e20e9",
+      "imgURL": "https://goally-media.s3.amazonaws.com/aws/1604870002417.gif",
+      "libraryType": "CHILD",
+      "maxCompletionTime": 3,
+      "minCompletionTime": 1,
+      "name": "test ne activity",
+      "ordering": 0,
+      "parentActivityId": "5fa85f98cd76ac00121d699b",
+      "showTimer": true,
+      "status": "CANCELED",
+      "timeRanges": [
+        {
+          "finishedAt": "2020-12-16T18:57:07Z",
+          "startedAt": "2020-12-16T18:56:07Z"
+        }
+      ]
+    }
+  ],
+  "savedBy": null,
+  "parentSaved": false,
+  "startedBy": null,
+  "routineId": "5fda5103271df800133e20e8",
+  "_id": "5fda589b271df800133e2100",
+  "finishedAt": "2020-12-16T18:57:07.000Z",
+  "initiator": "CLIENT",
+  "routine": {
+    "clientId": "5fc4995942ad1e0013393cc9",
+    "createdBy": "5f861874ff529800126276fb",
+    "_id": "5fda5103271df800133e20e8",
+    "imgURL": "https://goally-media.s3.amazonaws.com/aws/1604869889603.jpg",
+    "libraryType": "CHILD",
+    "name": "Test Routine",
+    "numberOfPointsLate": 10,
+    "numberOfPointsOnTime": 50,
+    "parentRoutineId": "5fa85f98cd76ac00121d699a",
+    "type": "MANUAL"
+  },
+  "status": "FINISHED",
+  "clientId": "5fc4995942ad1e0013393cc9",
+  "createdAt": "2020-12-16T18:57:31.213Z",
+  "updatedAt": "2020-12-16T18:57:31.238Z",
+  "__v": 0,
+  "maxCompletionTime": 3,
+  "totalSpentTime": 3,
+  "finishedOnTime": true,
+  "earnedPoints": 50
+}

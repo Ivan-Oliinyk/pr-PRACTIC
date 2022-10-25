@@ -1,0 +1,4 @@
+export const QUIZLET_CORRECT_TYPE = {
+  MULTIPLE: 'MULTIPLE',
+  ONE: 'ONE',
+};

@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  back_app_hot:
+    build:
+      context: .
+      dockerfile: Dockerfile.hot
+    depends_on:
+      - db
+      - redis
+    restart: always
+    ports:
+      - '3000:3000'
+    env_file: .env.local
+    environment:
+      - DB_URL=mongodb://db_mongo/goally
+      - NODE_ENV=LOCAL
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  db:
+    image: mongo
+    container_name: db_mongo
+    env_file: .env.local
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - '27017:27017'
+  redis:
+    image: redis
+    command: ['redis-server', '--requirepass', 'TEST', '--appendonly', 'yes']
+    volumes:
+      - redisdata:/data/redis
+    restart: unless-stopped
+
+volumes:
+  mongodata:
+  redisdata:

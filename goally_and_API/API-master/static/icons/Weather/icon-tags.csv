@@ -1,0 +1,16 @@
+name,tag1,tag2,tag3
+clouds,Cloud,Partly cloudy,
+heavy_rain,Rain,Heavy rain,Raining
+heavy_snow,Snow,Heavy snow,Snowing
+light_rain,Rain,Light rain,Raining
+light_snow,Snow,Light snow,Snowing
+mixed,Snow,Rain,Weather
+partly_cloudy,Partly cloudy,Partly sunny,Cloud
+storm,Thunder,Storm,Raining
+sun,Sun,Sunny,Day
+sunny,Sun,Sunny,Day
+tree,Tree,Nature,Outside
+up2,Flood,High water,
+weather,Partly cloudy,Partly sunny,Rain
+morning,Day,Morning,Sun
+night,Night,Goodnight,Moon

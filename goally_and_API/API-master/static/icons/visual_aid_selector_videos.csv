@@ -1,0 +1,42 @@
+upload_to_admin,uploaded_to_drive,location,description,file_name,keyword_1,keyword_2,keyword_3,keyword_4,keyword_5
+,TRUE,other,Choose a playdough color,choose.playdough.mp4,playdough,PlayDoh,clay,putty,pink
+,TRUE,Kitchen,Clean the countertop,cleancountertop.mp4,wipe counter,clean counter,wipe off,clean,counter
+,TRUE,Kitchen,Put the clean dishes away,cleandishesaway.mp4,dish,clean,plate,away,do the dishes
+,TRUE,Kitchen,Put the clean glasses away,cleanglass.mp4,glass,clean,cup,dish,do the dishes
+,TRUE,Kitchen,Close the dishwasher,closedishwasher.mp4,close,dishwasher,,,closing
+,TRUE,Kitchen,Close the fridge,closefridge.mp4,fridge,close fridge,close,closing,
+,TRUE,Kitchen,Close fridge,closefridge.mp4,close,fridge,,door,closing
+,TRUE,Bathroom,Close toilet lid,closetoilet.mp4,toilet,lid,close lid,potty,close toilet lid
+,TRUE,Kitchen,Have mom help you put the cookies in the oven,cookiesinoven.mp4,oven,cookie,bake cookies,make cookies,open oven
+,TRUE,Bathroom,Dry hands on towel,dryhands.mp4,wash,hands,towel,dry,
+,TRUE,other,Make the duck's beak,duckbeak.mp4,playdough duck,duck beak,playdoh duck,,
+,TRUE,other,Put the beak on!,duckbeakon.mp4,playdough duck,duck beak,orange playdough,orange,playdough
+,TRUE,other,Make the duck's body,duckbody.mp4,playdough duck,duck body,playdough ball,,
+,TRUE,other,Put the body and head together,duckbodyandhead.mp4,playdough duck,put playdough together,playdoh duck,playdough,
+,TRUE,other,Make the duck's head,duckhead.mp4,playdough duck,duck head,playdoh duck,,
+,TRUE,Kitchen,Eat the cookies!,eatcookies.mp4,eat,eat cookie,snack,treat,eating
+,TRUE,Bathroom,Flush toilet,flushtoilet.mp4,toilet,flush,,potty,
+,TRUE,Kitchen,Get a bowl,getbowl.mp4,bowl,dish,utensil,cupboard,
+,TRUE,Kitchen,Get the milk out of the fridge,getmilk.mp4,milk,fridge,open fridge,open,opening
+,TRUE,Kitchen,Load the dirty dishes into the dishwasher,loaddishes.mp4,load dishes,dishwasher,dirty dish,wash,loading
+,TRUE,Kitchen,Open the cookie package ,opencookiedough.mp4,cookies,cookie,cookie dough,dough,baking
+,TRUE,Kitchen,Open the dishwasher,opendishwasher.mp4,open,dishwasher,dishes,,opening
+,TRUE,Kitchen,Open the fridge,openfridge.mp4,open,fridge,,door,opening
+,TRUE,Kitchen,Put one cup behind each plate,placecups.mp4,cups,cup,glass,set table,water glass
+,TRUE,Kitchen,Put silverware next to each plate,placesilverware.mp4,silverware,utensil,fork,set table,setting
+,TRUE,Kitchen,Pour the cereal into the bowl,pourcereal.mp4,cereal,snack,pour,breakfast,pouring
+,TRUE,Kitchen,Pour the milk into the bowl,pourmilkinbowl.mp4,pour,milk,bowl,cereal,pouring
+,TRUE,Kitchen,Put the cereal away,putcerealaway.mp4,cereal,away,put cereal away,put on shelf,
+,TRUE,Kitchen,Put the cookies on the baking sheet,putcookieson.mp4,cookie pan,cookie,cookie dough,make cookies,baking
+,TRUE,Kitchen,Put the milk back in the fridge and close the fridge,putmilkinfridge.mp4,milk,fridge,in,put milk in,
+,TRUE,Bathroom,put soap on hands with bar of soap,putsoaponhandsbar.mp4,soap,soap on hands,suds,soap bar,bar of soap
+,TRUE,Bathroom,Put soap on hands,putsoaponhands.mp4,soap,soap on hands,suds,pump soap,squirt soap
+,TRUE,Kitchen,Rinse the sink,rinsesink.mp4,rinse,wash,sink,clean,kitchen sink
+,TRUE,Bathroom,Scrub soap into hands,scruphands.mp4,wash,hands,scrub,soap,rub hands
+,TRUE,Kitchen,Put dishwasher soap in the dishwasher,soapindishwasher.mp4,dishwasher,soap,wash dishes,detergent,
+,TRUE,Kitchen,Spray oil onto pan,sprayoil.mp4,spray,oil,pan,butter,nonstick
+,TRUE,Kitchen,Take the cookies out of the oven,takecookiesout.mp4,take out,open oven,cookies,oven,bake
+,TRUE,Bathroom,Turn on water and rinse hands,turnonwater.mp4,wash,rinse,hands,wash off,
+,TRUE,Kitchen,mix pancake batter,mixpancakebatter.mp4,stir,pancake batter,mix,batter,
+,TRUE,Kitchen,Pour a little circle of batter onto the pan and cook for 3 minutes,pourpancakes.mp4,batter,pour,griddle,pancake,pouring
+,TRUE,Kitchen,Flip the circle and cook until it is lightly golden,flippancake.mp4,flip,pancake,cook,golden,flipping

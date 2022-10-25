@@ -1,0 +1,20 @@
+const AIDS_CATEGORIES = {
+  BEHAVIORS: 'behaviors',
+  CHORES: 'chores',
+  CLOTHES: 'clothes',
+  FOOD: 'food',
+  HYGIENE: 'hygiene',
+  MACHINES: 'machines',
+  OTHER: 'other',
+  PEOPLE: 'people',
+  PETS: 'pets',
+  REWARDS: 'rewards',
+  ROUTINES: 'routines',
+  SCHOOL: 'school',
+  SPORTS: 'sports',
+  WEATHER: 'weather',
+  AAC: 'aac',
+  BATHROOM: 'bathroom',
+  KITCHEN: 'kitchen',
+};
+export { AIDS_CATEGORIES };

@@ -1,0 +1,92 @@
+on:
+  push:
+    branches: aws-development
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Declare some variables
+        id: vars
+        shell: bash
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setting variables in config
+        shell: bash
+        run: |
+          sed -i "s*MONGODBUSERNAME**g" .env
+          sed -i "s*MONGODBPASSWORD**g" .env
+          sed -i "s*MONGODBDATABASENAME*${{ secrets.DEVDATABASENAME }}*g" .env
+          sed -i "s*DBURL*${{ secrets.DEVDBURL }}*g" .env
+          sed -i "s*REDISPASSWORD**g" .env
+          sed -i "s*REDISPORT*${{ secrets.DEVREDISPORT }}*g" .env
+          sed -i "s*REDISHOST*${{ secrets.DEVREDISHOST }}*g" .env
+          sed -i "s*FEBASEURL*${{ secrets.AWSDEVFEBASEURL }}*g" .env
+          sed -i "s*KLAYVIOAPIKEY*${{ secrets.DEVKLAYVIOAPIKEY }}*g" .env
+          sed -i "s*APIBASEURL*${{ secrets.APIBASEURLAWSDEV }}*g" .env
+          sed -i "s*AWSSECRETKEY*${{ secrets.AWSSECRETKEY }}*g" .env
+          sed -i "s*AWSACCESSKEY*${{ secrets.AWSACCESSKEY }}*g" .env
+          sed -i "s*AWSREGION*${{ secrets.AWSREGION }}*g" .env
+          sed -i "s*AWSBUCKET*${{ secrets.AWSBUCKET }}*g" .env
+          sed -i "s*CLOUDCONVERTTOKEN*${{ secrets.CLOUDCONVERTTOKEN }}*g" .env
+          sed -i "s*STRIPEPUBLICKEY*${{ secrets.STRIPEPUBLICKEY }}*g" .env
+          sed -i "s*STRIPEPRIVATEKEY*${{ secrets.STRIPEPRIVATEKEY }}*g" .env
+          sed -i "s*REFERSIONPUBLICKEY*${{ secrets.REFERSIONPUBLICKEY }}*g" .env
+          sed -i "s*REFERSIONPRIVATEKEY*${{ secrets.REFERSIONPRIVATEKEY }}*g" .env
+          sed -i "s*FCMSERVERKEY*${{ secrets.FCMSERVERKEY }}*g" .env
+          sed -i "s*CHATAPIKEY*${{ secrets.CHATAPIKEY }}*g" .env
+          sed -i "s*CHATAUTHKEY*${{ secrets.CHATAUTHKEY }}*g" .env
+          sed -i "s*CHATAPPID*${{ secrets.CHATAPPID }}*g" .env
+          sed -i "s*GOOGLEMAPSAPIKEY*${{ secrets.GOOGLEMAPSAPIKEY }}*g" .env
+          sed -i "s*SUPERADMINEMAIL*${{ secrets.SUPERADMINEMAIL }}*g" .env
+          sed -i "s*SUPERADMINPWD*${{ secrets.SUPERADMINPWD }}*g" .env
+          sed -i "s*RECURLYPUBLICKEY*${{ secrets.RECURLYPUBLICKEY }}*g" .env
+          sed -i "s*RECURLYPRIVATEKEY*${{ secrets.RECURLYPRIVATEKEY }}*g" .env
+          sed -i "s*TWILIOACCOUNTSID*${{ secrets.TWILIOACCOUNTSID }}*g" .env
+          sed -i "s*TWILIOAUTHTOKEN*${{ secrets.TWILIOAUTHTOKEN }}*g" .env
+          sed -i "s*TWILIOFROMNUM*${{ secrets.TWILIOFROMNUM }}*g" .env
+          sed -i "s*TINYURLAPIKEY*${{ secrets.TINYURLAPIKEY }}*g" .env
+          sed -i "s*SHIPPOPRIVATEKEY*${{ secrets.SHIPPOPRIVATEKEY }}*g" .env
+          sed -i "s*FIREBASEPROJECTID*${{ secrets.FIREBASEPROJECTID }}*g" .env
+          sed -i "s*FIREBASEPRIVATEKEY*${{ secrets.FIREBASEPRIVATEKEY }}*g" .env
+          sed -i "s*FIREBASECLIENTEMAIL*${{ secrets.FIREBASECLIENTEMAIL }}*g" .env
+          sed -i "s*SENTRYDSN*${{ secrets.SENTRYDSNDEV }}*g" .env
+          sed -i "s*AUTH0BASEURL*${{ secrets.AUTH0BASEURL }}*g" .env
+          sed -i "s*AUTH0WPCLIENTID*${{ secrets.AUTH0WPCLIENTID }}*g" .env
+          sed -i "s*AUTH0WPCLIENTSECRET*${{ secrets.AUTH0WPCLIENTSECRET }}*g" .env
+          sed -i "s*AUTH0CTACLIENTID*${{ secrets.AUTH0CTACLIENTID }}*g" .env
+          sed -i "s*AUTH0CTACLIENTSECRET*${{ secrets.AUTH0CTACLIENTSECRET }}*g" .env
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          context: .
+          tags: |
+            goally/api:latest
+            goally/api:${{ steps.vars.outputs.branch }}
+      - name: Update repo description
+        uses: peter-evans/dockerhub-description@v2
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+          DOCKERHUB_REPOSITORY: goally/api
+      - name: Update docker image on server
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: /bin/bash /home/goally/deploy/aws-develop.sh
+          host: ${{ secrets.AWS_DEV_HOST }}
+          username: ${{ secrets.AWS_DEV_USER }}
+          privateKey: ${{ secrets.AWS_KEY }}
+          port: ${{ secrets.AWS_DEV_PORT }}

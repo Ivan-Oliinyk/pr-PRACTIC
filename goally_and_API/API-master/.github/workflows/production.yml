@@ -1,0 +1,87 @@
+on:
+  push:
+    branches: master
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Declare some variables
+        id: vars
+        shell: bash
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setting variables in config
+        shell: bash
+        run: |
+          sed -i "s*MONGODBUSERNAME**g" .env
+          sed -i "s*MONGODBPASSWORD**g" .env
+          sed -i "s*MONGODBDATABASENAME*${{ secrets.PRODDATABASENAME }}*g" .env
+          sed -i "s*DBURL*${{ secrets.PRODDBURL }}*g" .env
+          sed -i "s*REDISPASSWORD**g" .env
+          sed -i "s*REDISPORT*${{ secrets.PRODREDISPORT }}*g" .env
+          sed -i "s*REDISHOST*${{ secrets.PRODREDISHOST }}*g" .env
+          sed -i "s*FEBASEURL*${{ secrets.PRODFEBASEURL }}*g" .env
+          sed -i "s*KLAYVIOAPIKEY*${{ secrets.PRODKLAYVIOAPIKEY }}*g" .env
+          sed -i "s*APIBASEURL*${{ secrets.PRODAPIBASEURL }}*g" .env
+          sed -i "s*AWSSECRETKEY*${{ secrets.PRODAWSSECRETKEY }}*g" .env
+          sed -i "s*AWSACCESSKEY*${{ secrets.PRODAWSACCESSKEY }}*g" .env
+          sed -i "s*AWSREGION*${{ secrets.PRODAWSREGION }}*g" .env
+          sed -i "s*AWSBUCKET*${{ secrets.PRODAWSBUCKET }}*g" .env
+          sed -i "s*CLOUDCONVERTTOKEN*${{ secrets.PRODCLOUDCONVERTTOKEN }}*g" .env
+          sed -i "s*STRIPEPUBLICKEY*${{ secrets.PRODSTRIPEPUBLICKEY }}*g" .env
+          sed -i "s*STRIPEPRIVATEKEY*${{ secrets.PRODSTRIPEPRIVATEKEY }}*g" .env
+          sed -i "s*REFERSIONPUBLICKEY*${{ secrets.PRODREFERSIONPUBLICKEY }}*g" .env
+          sed -i "s*REFERSIONPRIVATEKEY*${{ secrets.PRODREFERSIONPRIVATEKEY }}*g" .env
+          sed -i "s*FCMSERVERKEY*${{ secrets.FCMSERVERKEY }}*g" .env
+          sed -i "s*CHATAPIKEY*${{ secrets.CHATAPIKEY }}*g" .env
+          sed -i "s*CHATAPPID*${{ secrets.CHATAPPID }}*g" .env
+          sed -i "s*CHATAUTHKEY*${{ secrets.CHATAUTHKEY }}*g" .env
+          sed -i "s*GOOGLEMAPSAPIKEY*${{ secrets.GOOGLEMAPSAPIKEY }}*g" .env
+          sed -i "s*SUPERADMINEMAIL*${{ secrets.SUPERADMINEMAIL }}*g" .env
+          sed -i "s*SUPERADMINPWD*${{ secrets.SUPERADMINPWD }}*g" .env
+          sed -i "s*RECURLYPUBLICKEY*${{ secrets.PRODRECURLYPUBLICKEY }}*g" .env
+          sed -i "s*RECURLYPRIVATEKEY*${{ secrets.PRODRECURLYPRIVATEKEY }}*g" .env
+          sed -i "s*TWILIOACCOUNTSID*${{ secrets.PRODTWILIOACCOUNTSID }}*g" .env
+          sed -i "s*TWILIOAUTHTOKEN*${{ secrets.PRODTWILIOAUTHTOKEN }}*g" .env
+          sed -i "s*TWILIOFROMNUM*${{ secrets.PRODTWILIOFROMNUM }}*g" .env
+          sed -i "s*TINYURLAPIKEY*${{ secrets.TINYURLAPIKEY }}*g" .env
+          sed -i "s*SHIPPOPRIVATEKEY*${{ secrets.PRODSHIPPOPRIVATEKEY }}*g" .env
+          sed -i "s*FIREBASEPROJECTID*${{ secrets.FIREBASEPROJECTID }}*g" .env
+          sed -i "s*FIREBASEPRIVATEKEY*${{ secrets.FIREBASEPRIVATEKEY }}*g" .env
+          sed -i "s*FIREBASECLIENTEMAIL*${{ secrets.FIREBASECLIENTEMAIL }}*g" .env
+          sed -i "s*SENTRYDSN*${{ secrets.SENTRYDSN }}*g" .env
+          sed -i "s*AUTH0BASEURL*${{ secrets.AUTH0BASEURL }}*g" .env
+          sed -i "s*AUTH0WPCLIENTID*${{ secrets.AUTH0WPCLIENTID }}*g" .env
+          sed -i "s*AUTH0WPCLIENTSECRET*${{ secrets.AUTH0WPCLIENTSECRET }}*g" .env
+          sed -i "s*AUTH0CTACLIENTID*${{ secrets.AUTH0CTACLIENTID }}*g" .env
+          sed -i "s*AUTH0CTACLIENTSECRET*${{ secrets.AUTH0CTACLIENTSECRET }}*g" .env
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: goally-api
+          IMAGE_TAG: prod
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      - name: Deploy to Amazon ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: deploy/task-definition-api.json
+          service: goally-api
+          cluster: goally
+          wait-for-service-stability: true

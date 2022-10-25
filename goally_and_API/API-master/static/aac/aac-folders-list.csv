@@ -1,0 +1,79 @@
+parentFolderId,subFolderId,folderId,parentFolderName,subFolderName,gridPosition,qty,type
+1,0,1,Food 1,,1,0,Folder
+1,1,1.1,Food 1,Fruit,1,40,SubFolder
+1,2,1.2,Food 1,Vegetable,2,34,SubFolder
+1,3,1.3,Food 1,Dairy,7,7,SubFolder
+1,4,1.4,Food 1,Meat,8,22,SubFolder
+1,5,1.5,Food 1,Grain,13,24,SubFolder
+1,6,1.6,Food 1,Common,14,10,SubFolder
+2,0,2,Food 2,,2,0,Folder
+2,1,2.1,Food 2,Snack,1,13,SubFolder
+2,2,2.2,Food 2,Dessert,2,23,SubFolder
+2,3,2.3,Food 2,Drink,7,11,SubFolder
+2,4,2.4,Food 2,Condiments,8,20,SubFolder
+2,5,2.5,Food 2,Meal,13,30,SubFolder
+2,6,2.6,Food 2,Things,14,28,SubFolder
+3,0,3,Describe,,3,0,Folder
+3,1,3.1,Describe,General,1,325,SubFolder
+3,2,3.2,Describe,Feelings,2,65,SubFolder
+3,3,3.3,Describe,Weather,7,30,SubFolder
+3,4,3.4,Describe,Colors,8,11,SubFolder
+4,0,4,Activities,,4,0,Folder
+4,1,4.1,Activities,General,1,26,SubFolder
+4,2,4.2,Activities,Sports,2,37,SubFolder
+5,0,5,Animals,,5,0,Folder
+5,1,5.1,Animals,Dinosaurs,1,21,SubFolder
+5,2,5.2,Animals,Water,2,42,SubFolder
+5,3,5.3,Animals,Bugs,7,30,SubFolder
+5,4,5.4,Animals,Pets,8,26,SubFolder
+5,5,5.5,Animals,Farm,13,52,SubFolder
+5,6,5.6,Animals,Wild,14,77,SubFolder
+5,7,5.7,Animals,Common,19,9,SubFolder
+6,0,6,Vehicles,,6,77,Folder
+7,0,7,People,,7,0,Folder
+7,1,7.1,People,Family,1,41,SubFolder
+7,2,7.2,People,Friends,2,3,SubFolder
+7,3,7.3,People,School,7,6,SubFolder
+7,4,7.4,People,General,8,100,SubFolder
+7,5,7.5,People,Characters,14,108,SubFolder
+8,0,8,Places,,8,0,Folder
+8,1,8.1,Places,Home,1,30,SubFolder
+8,2,8.2,Places,School,2,10,SubFolder
+8,3,8.3,Places,Community,7,29,SubFolder
+8,4,8.4,Places,Nature,8,45,SubFolder
+8,5,8.5,Places,Common,14,20,SubFolder
+9,0,9,Things,,9,0,Folder
+9,1,9.1,Things,General,1,89,SubFolder
+9,2,9.2,Things,Toys,2,17,SubFolder
+9,3,9.3,Things,Supplies,7,42,SubFolder
+9,4,9.4,Things,Tools,8,41,SubFolder
+9,5,9.5,Things,Care,13,46,SubFolder
+9,6,9.6,Things,Clothing,14,83,SubFolder
+9,7,9.7,Things,Musical,19,20,SubFolder
+10,0,10,Household,,10,122,Folder
+11,0,11,Shapes,Shapes,11,20,Folder
+12,0,12,Numbers,,12,0,Folder
+12,1,12.1,Numbers,Words,1,33,SubFolder
+12,2,12.2,Numbers,Numbers,2,29,SubFolder
+13,0,13,Letters,,13,0,Folder
+13,1,13.1,Letters,Uppercase,1,26,SubFolder
+13,2,13.2,Letters,Lowercase,2,26,SubFolder
+13,3,13.3,Letters,Sounds,7,26,SubFolder
+13,4,13.4,Letters,Words,8,4,SubFolder
+14,0,14,Days / Times,,14,45,Folder
+15,0,15,Body,Body,15,0,Folder
+15,1,15.1,Body,General,1,89,SubFolder
+15,2,15.2,Body,Private,2,8,SubFolder
+15,3,15.3,Body,Hurt,7,30,SubFolder
+15,4,15.4,Body,Sick,8,9,SubFolder
+16,0,16,Chat,,16,0,Folder
+16,1,16.1,Chat,Little,1,19,SubFolder
+16,2,16.2,Chat,Questions,2,9,SubFolder
+16,3,16.3,Chat,Social,7,14,SubFolder
+18,0,18,Actions,,17,0,Folder
+18,1,18.1,Actions,A-D,1,178,SubFolder
+18,2,18.2,Actions,E-H,2,116,SubFolder
+18,3,18.3,Actions,I-L,7,90,SubFolder
+18,4,18.4,Actions,M-P,8,93,SubFolder
+18,5,18.5,Actions,Q-S,13,160,SubFolder
+18,6,18.6,Actions,T-Z,14,317,SubFolder

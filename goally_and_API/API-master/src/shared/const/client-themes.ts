@@ -1,0 +1,4 @@
+export const CLIENT_THEMES = {
+  CLASSIC: 'CLASSIC',
+  PARTY_TIME: 'PARTY_TIME',
+};
